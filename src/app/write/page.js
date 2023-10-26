@@ -1,6 +1,6 @@
 "use client"
 
-import Image from "next/image";
+
 import styles from "./writePage.module.css";
 import { useState } from "react";
 import ReactQuill from "react-quill";
@@ -17,7 +17,6 @@ const WritePage = () => {
       <div className={styles.editor}>
         <button className={styles.button} onClick={() => setOpen(!open)}>
             <AiOutlinePlus width={16} height={16} />
-          {/* <Image src="/plus.png" alt="" width={16} height={16} /> */}
         </button>
         {open && (
             <div className={styles.add}>
