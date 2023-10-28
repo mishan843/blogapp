@@ -3,7 +3,7 @@ import styles from "./singlePage.module.css";
 import Menu from "@/components/menu/Menu";
 import Comments from "@/components/comments/Comments";
 
-const SinglePage = () => {
+const Page = () => {
   return (
     <div className={styles.container}>
       <div className={styles.infoContainer}>
@@ -62,4 +62,4 @@ const SinglePage = () => {
   );
 };
 
-export default SinglePage;
+export default Page;

@@ -11,11 +11,11 @@ export const ThemeContextProvider = ({ children }) => {
   const toggle = () => {
     setTheme(theme === "light" ? "dark" : "light");
   };
-
+  
   useEffect(() => {
     localStorage.setItem("theme", theme);
-    //react-hooks/exhaustive-deps
   }, [theme]);
+  
 
   return (
     <ThemeContext.Provider value={{ theme, toggle }}>
