@@ -17,12 +17,13 @@ const MenuPosts = ({ withImage }) => {
       .catch((error) => {
         console.error('Error fetching data:', error);
       });
-  }, []); // The empty dependency array ensures this effect runs only once when the component mounts.
+  }, []);
 
   return (
     <div className={styles.items}>
-      {data.map((obj) => (
-        <Link key={obj._id} href="/" className={styles.item}>
+      {data.map((obj) => {
+        let blogUrl = `/blog/getblogbyid?id=${obj._id}`
+        return (<Link key={obj._id} href={blogUrl} className={styles.item}>
           {withImage && (
             <div className={styles.imageContainer}>
               <Image src={obj.coverImage} alt="" fill className={styles.image} />
@@ -35,8 +36,8 @@ const MenuPosts = ({ withImage }) => {
               <span className={styles.date}>{obj.createdAt}</span>
             </div>
           </div>
-        </Link>
-      ))}
+        </Link>)
+      })}
     </div>
   );
 };

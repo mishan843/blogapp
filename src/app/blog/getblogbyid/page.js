@@ -61,22 +61,6 @@ const Page = () => {
             <p>
               {singleBlog[0]?.description}
             </p>
-            <h2>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem,
-              ipsa.
-            </h2>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam
-              eius vel velit rem dolores. Minus, vero dolores. Assumenda alias
-              sit architecto corrupti sunt placeat corporis! Quae pariatur qui
-              exercitationem amet!
-            </p>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam
-              eius vel velit rem dolores. Minus, vero dolores. Assumenda alias
-              sit architecto corrupti sunt placeat corporis! Quae pariatur qui
-              exercitationem amet!
-            </p>
             <div>
               <Comments singleBlog={singleBlog} />
             </div>
