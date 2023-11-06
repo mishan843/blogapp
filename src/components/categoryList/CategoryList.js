@@ -1,15 +1,18 @@
+"use client"
+
 import React from "react";
 import styles from "./categorylist.module.css";
 import Link from "next/link";
 import Image from "next/image";
 
 const CategoryList = () => {
+
   return (
     <div className={styles.container}>
       <h1 className={styles.title}>Popular Categories</h1>
       <div className={styles.categories}>
-        <Link
-          href="/blog?cat=style"
+        <Link 
+          href="/blog/getallblogs?categoryFilter=Finance&searchFilter=blog"
           className={`${styles.category} ${styles.style}`}
         >
           <Image
@@ -19,10 +22,10 @@ const CategoryList = () => {
             alt=""
             className={styles.image}
           />
-          Style
+          Finance
         </Link>
         <Link
-          href="/blog?cat=style"
+          href="/blog/getallblogs?categoryFilter=Coding&searchFilter=blog"
           className={`${styles.category} ${styles.coding}`}
         >
           <Image
@@ -35,20 +38,7 @@ const CategoryList = () => {
           Coding
         </Link>
         <Link
-          href="/blog?cat=style"
-          className={`${styles.category} ${styles.culture}`}
-        >
-          <Image
-            src="/culture.png"
-            width={32}
-            height={32}
-            alt=""
-            className={styles.image}
-          />
-          Culture
-        </Link>
-        <Link
-          href="/blog?cat=style"
+          href="/blog/getallblogs?categoryFilter=Travel&searchFilter=blog"
           className={`${styles.category} ${styles.travel}`}
         >
           <Image
@@ -61,7 +51,7 @@ const CategoryList = () => {
           Travel
         </Link>
         <Link
-          href="/blog?cat=style"
+          href="/blog/getallblogs?categoryFilter=Food&searchFilter=blog"
           className={`${styles.category} ${styles.food}`}
         >
           <Image
@@ -74,7 +64,7 @@ const CategoryList = () => {
           Food
         </Link>
         <Link
-          href="/blog?cat=style"
+          href="/blog/getallblogs?categoryFilter=Fashion&searchFilter=blog"
           className={`${styles.category} ${styles.fashion}`}
         >
           <Image
@@ -85,6 +75,19 @@ const CategoryList = () => {
             className={styles.image}
           />
           Fashion
+        </Link>
+        <Link
+          href="/blog/getallblogs?categoryFilter=Style&searchFilter=blog"
+          className={`${styles.category} ${styles.fashion}`}
+        >
+          <Image
+            src="/fashion.png"
+            width={32}
+            height={32}
+            alt=""
+            className={styles.image}
+          />
+          Style
         </Link>
       </div>
     </div>

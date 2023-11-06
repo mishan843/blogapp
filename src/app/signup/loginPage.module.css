@@ -31,6 +31,7 @@
     background-color: #111;
     color: white;
     border: none;
+    cursor: pointer;
 }
 .socialButton{
     padding: 20px;

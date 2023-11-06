@@ -4,6 +4,10 @@
     align-items: center;
     gap: 50px;
 }
+.homeCardContainer{
+    display: flex !important;
+    flex-direction: column !important;
+}
 .imageContainer{
     flex: 1;
     height: 350px;
