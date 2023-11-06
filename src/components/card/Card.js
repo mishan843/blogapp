@@ -20,9 +20,9 @@ const Card = () => {
       try {
         let endpoint;
         if (search) {
-          endpoint = `${process.env.NEXT_PUBLIC_API_URL}/blog/getAllBlogs?categoryFilter=${search}&searchFilter=blog`;
+          endpoint = `${process.env.NEXT_PUBLIC_API_URL}/blog/getAllBlogs?categoryFilter=${search}&searchFilter=blog&page=1&limit=10`;
         } else {
-          endpoint = `${process.env.NEXT_PUBLIC_API_URL}/blog/getAllBlogs`;
+          endpoint = `${process.env.NEXT_PUBLIC_API_URL}/blog/getAllBlogs?page=1&limit=10`;
         }
 
         let response = await fetch(endpoint);
