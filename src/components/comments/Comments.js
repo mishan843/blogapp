@@ -53,7 +53,7 @@ const Comments = ({ singleBlog }) => {
       )}
       {singleBlog.map((item) => {
         return (
-          <div className={styles.comments}>
+          <div key={item.id} className={styles.comments}>
             {item.userComment.map((item, index) => {
               if (item.name) {
                 return (

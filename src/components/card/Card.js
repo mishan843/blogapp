@@ -50,7 +50,7 @@ const Card = () => {
 
       {search ? blogByCat.map((item) => {
         return (
-          <div className={styles.container}>
+          <div key={item.id} className={styles.container}>
             <div key={item.id} className={styles.imageContainer}>
               <Image src={item.coverImage} alt="" fill className={styles.image} />
             </div>
@@ -75,7 +75,7 @@ const Card = () => {
       }) :
         blogs.map((item) => {
           return (
-            <div className={styles.container}>
+            <div key={item.id} className={styles.container}>
               <div key={item.id} className={styles.imageContainer}>
                 <Image src={item.coverImage} alt="" fill className={styles.image} />
               </div>

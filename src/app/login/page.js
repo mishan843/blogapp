@@ -50,7 +50,7 @@ const Page = () => {
           <input type="password" placeholder='password' value={password} onChange={(e) => setPassword(e.target.value)} required />
           <button onClick={handleSubmit} type='submit' className={styles.registerButton}>Login</button>
         </form>
-        <p>Don't have accout? <Link href="/signup">Register now</Link></p>
+        <p>Don&apos;t have accout? <Link href="/signup">Register now</Link></p>
         <div className={styles.socialButton}>Sign in with Google</div>
         <div className={styles.socialButton}>Sign in with Github</div>
         <div className={styles.socialButton}>Sign in with Facebook</div>
