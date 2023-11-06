@@ -1,6 +1,5 @@
-"use client"
+"use client";
 
-import Image from "next/image";
 import styles from "./singlePage.module.css";
 import Menu from "@/components/menu/Menu";
 import Comments from "@/components/comments/Comments";
@@ -8,26 +7,30 @@ import { useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
 
 const Page = () => {
+  const searchParams = useSearchParams();
 
-  const searchParams = useSearchParams()
-  const search = searchParams.get('id')
+  // console.log(search);
 
-  const [singleBlog, setSingleBlog] = useState([])
+  const [singleBlog, setSingleBlog] = useState([]);
+  console.log(singleBlog);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/blog/getBlogById?id=${search}`);
+        const search = await searchParams.get("id");
+        const response = await fetch(
+          `${process.env.NEXT_PUBLIC_API_URL}/blog/getBlogById?id=${search}`
+        );
 
         if (response.ok) {
           let result = await response.json();
 
           setSingleBlog(result);
         } else {
-          console.error('Error fetching data:', response.statusText);
+          console.error("Error fetching data:", response.statusText);
         }
       } catch (error) {
-        console.error('Error fetching data:', error);
+        console.error("Error fetching data:", error);
       }
     };
 
@@ -38,9 +41,7 @@ const Page = () => {
     <div className={styles.container}>
       <div className={styles.infoContainer}>
         <div className={styles.textContainer}>
-          <h1 className={styles.title}>
-            {singleBlog[0]?.title}
-          </h1>
+          <h1 className={styles.title}>{singleBlog[0]?.title}</h1>
           <div className={styles.user}>
             <div className={styles.userImageContainer}>
               <img src="/p1.jpeg" alt="" fill className={styles.avatar} />
@@ -58,9 +59,7 @@ const Page = () => {
       <div className={styles.content}>
         <div className={styles.post}>
           <div className={styles.description}>
-            <p>
-              {singleBlog[0]?.description}
-            </p>
+            <p>{singleBlog[0]?.description}</p>
             <div>
               <Comments singleBlog={singleBlog} />
             </div>
@@ -73,5 +72,3 @@ const Page = () => {
 };
 
 export default Page;
-
-

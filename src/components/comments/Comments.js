@@ -1,6 +1,5 @@
 import Link from "next/link";
 import styles from "./comments.module.css";
-import Image from "next/image";
 import { useState } from "react";
 import { useSearchParams } from "next/navigation";
 

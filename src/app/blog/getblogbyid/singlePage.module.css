@@ -19,15 +19,10 @@
     gap: 20px;
 }
 
-.userImageContainer {
-    width: 50px;
-    height: 50px;
-    position: relative;
-}
-
 .avatar {
     border-radius: 50%;
-    object-fit: cover;
+    width: 50px;
+    height: 50px;
 }
 
 .userTextContainer {
@@ -44,12 +39,10 @@
 
 .imageContainer {
     flex: 1;
-    height: 350px;
-    position: relative;
 }
 
 .image {
-    object-fit: cover;
+    width: 100%;
 }
 
 .content {
@@ -92,12 +85,9 @@
     .title{
         text-align: center;
     }
-    .imageContainer {
-        width: 100%;
-    }
 
     .image {
-        object-fit: cover !important;
+        width: 100% !important;
         position: unset !important;
     }
 }
@@ -105,11 +95,6 @@
 @media screen and (max-width: 768px) {
     .username {
         font-size: 15px;
-    }
-
-    .userImageContainer {
-        width: 30px;
-        height: 30px;
     }
 
     .date {
@@ -132,11 +117,6 @@
 
     .username {
         font-size: 12px;
-    }
-
-    .userImageContainer {
-        width: 20px;
-        height: 20px;
     }
 
     .date {

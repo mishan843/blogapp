@@ -1,15 +1,20 @@
 "use client"
+
 import React, { useEffect, useState } from 'react';
 import styles from './menuPosts.module.css';
 import Link from 'next/link';
-import Image from 'next/image';
+import { useRouter, useSearchParams } from 'next/navigation';
 
 const MenuPosts = ({ withImage }) => {
   const [data, setData] = useState([]);
+  const router = useRouter()
+
+  const searchParams = useSearchParams()
+  const search = searchParams.get('id')
 
   useEffect(() => {
     // Fetch data from the API
-    fetch(`${process.env.NEXT_PUBLIC_API_URL}/blog/getAllBlogs?isPopularpost=true&page=1&limit=5`)
+    fetch(`${process.env.NEXT_PUBLIC_API_URL}/blog/getallblogs?ispopularpost=true&page=1&limit=5`)
       .then((response) => response.json())
       .then((data) => {
         setData(data.data);
@@ -17,13 +22,15 @@ const MenuPosts = ({ withImage }) => {
       .catch((error) => {
         console.error('Error fetching data:', error);
       });
-  }, []);
+  }, [router.query]);
+
+
 
   return (
     <div className={styles.items}>
       {data.map((obj) => {
-        let blogUrl = `/blog/getblogbyid?id=${obj._id}`
-        return (<Link key={obj._id} href={blogUrl} className={styles.item}>
+        // let blogUrl = 
+        return (<Link key={obj._id} href={`/blog/getblogbyid?id=${obj._id}`} className={styles.item}>
           {withImage && (
             <div className={styles.imageContainer}>
               <img src={obj.coverImage} alt="" fill className={styles.image} />

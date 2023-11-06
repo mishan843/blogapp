@@ -3,7 +3,6 @@
 import React from "react";
 import styles from "./categorylist.module.css";
 import Link from "next/link";
-import Image from "next/image";
 
 const CategoryList = () => {
 
