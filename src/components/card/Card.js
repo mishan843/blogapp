@@ -8,10 +8,10 @@ import { useSearchParams } from 'next/navigation'
 
 
 const Card = () => {
-    
+
   const searchParams = useSearchParams()
   const search = searchParams.get('categoryFilter')
-  
+
   const [blogByCat, setBlogByCat] = useState([]);
   const [blogs, setBlogs] = useState([])
 
@@ -20,9 +20,9 @@ const Card = () => {
       try {
         let endpoint;
         if (search) {
-          endpoint = `https://blogapp-q8b0.onrender.com/blog/getAllBlogs?categoryFilter=${search}&searchFilter=blog`;
+          endpoint = `${process.env.NEXT_PUBLIC_API_URL}/blog/getAllBlogs?categoryFilter=${search}&searchFilter=blog`;
         } else {
-          endpoint = "https://blogapp-q8b0.onrender.com/blog/getAllBlogs";
+          endpoint = `${process.env.NEXT_PUBLIC_API_URL}/blog/getAllBlogs`;
         }
 
         let response = await fetch(endpoint);
@@ -46,8 +46,8 @@ const Card = () => {
 
   return (
     <>
-    
-      
+
+
       {search ? blogByCat.map((item) => {
         return (
           <div className={styles.container}>
@@ -69,34 +69,34 @@ const Card = () => {
                 Read More
               </Link>
             </div>
-            </div>
+          </div>
 
         );
-      }) : 
-      blogs.map((item) => {
-        return (
-          <div className={styles.container}>
-            <div key={item.id} className={styles.imageContainer}>
-              <Image src={item.coverImage} alt="" fill className={styles.image} />
-            </div>
-            <div className={styles.textContainer}>
-              <div className={styles.detail}>
-                <span className={styles.date}>{item.createdAt} - </span>
-                <span className={styles.category}>{item.category}</span>
+      }) :
+        blogs.map((item) => {
+          return (
+            <div className={styles.container}>
+              <div key={item.id} className={styles.imageContainer}>
+                <Image src={item.coverImage} alt="" fill className={styles.image} />
               </div>
-              <Link href={`/blog/getblogbyid?id=${item._id}`}>
-                <h1>{item.title}</h1>
-              </Link>
-              <p className={styles.desc}>
-                {item.content}
-              </p>
-              <Link href={`/blog/getblogbyid?id=${item._id}`} className={styles.link}>
-                Read More
-              </Link>
+              <div className={styles.textContainer}>
+                <div className={styles.detail}>
+                  <span className={styles.date}>{item.createdAt} - </span>
+                  <span className={styles.category}>{item.category}</span>
+                </div>
+                <Link href={`/blog/getblogbyid?id=${item._id}`}>
+                  <h1>{item.title}</h1>
+                </Link>
+                <p className={styles.desc}>
+                  {item.content}
+                </p>
+                <Link href={`/blog/getblogbyid?id=${item._id}`} className={styles.link}>
+                  Read More
+                </Link>
+              </div>
             </div>
-          </div>
-        );
-      })
+          );
+        })
       }
     </>
   );

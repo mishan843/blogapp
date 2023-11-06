@@ -17,7 +17,7 @@ const Page = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(`https://blogapp-q8b0.onrender.com/blog/getBlogById?id=${search}`);
+        const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/blog/getBlogById?id=${search}`);
 
         if (response.ok) {
           let result = await response.json();
@@ -37,7 +37,7 @@ const Page = () => {
   return (
     <div className={styles.container}>
       <div className={styles.infoContainer}>
-            <div className={styles.textContainer}>
+        <div className={styles.textContainer}>
           <h1 className={styles.title}>
             {singleBlog[0]?.title}
           </h1>

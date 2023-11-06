@@ -6,7 +6,7 @@ import { useRouter } from 'next/navigation';
 import styles from './loginPage.module.css'
 
 const Page = () => {
-const router = useRouter()
+  const router = useRouter()
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -15,7 +15,7 @@ const router = useRouter()
     e.preventDefault();
 
     try {
-      const response = await fetch('https://blogapp-q8b0.onrender.com/user/signup', {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/user/signup`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -41,19 +41,19 @@ const router = useRouter()
   };
 
   return (
-    <div className={styles.container}> 
+    <div className={styles.container}>
       <div className={styles.wrapper}>
         <form onSubmit={handleSubmit}>
-          <input type="text" id="" placeholder='name' name='name' value={name} onChange={(e) => setName(e.target.value)} required/>
-          <input type="email" placeholder='email' value={email} onChange={(e) => setEmail(e.target.value)} required/>
-          <input type="password" placeholder='password' value={password} onChange={(e) => setPassword(e.target.value)} required/>
+          <input type="text" id="" placeholder='name' name='name' value={name} onChange={(e) => setName(e.target.value)} required />
+          <input type="email" placeholder='email' value={email} onChange={(e) => setEmail(e.target.value)} required />
+          <input type="password" placeholder='password' value={password} onChange={(e) => setPassword(e.target.value)} required />
           <button type='submit' className={styles.registerButton}>Register</button>
         </form>
         <p>Already have accout? <Link href="/login">login</Link></p>
-        
-            <div className={styles.socialButton}>Sign in with Google</div>
-            <div className={styles.socialButton}>Sign in with Github</div>
-            <div className={styles.socialButton}>Sign in with Facebook</div>
+
+        <div className={styles.socialButton}>Sign in with Google</div>
+        <div className={styles.socialButton}>Sign in with Github</div>
+        <div className={styles.socialButton}>Sign in with Facebook</div>
       </div>
     </div>
   )
