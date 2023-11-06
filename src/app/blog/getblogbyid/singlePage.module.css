@@ -1,83 +1,145 @@
-
-
-.infoContainer{
+.infoContainer {
     display: flex;
     align-items: center;
     gap: 50px;
 }
-.textContainer{
+
+.textContainer {
     flex: 1;
 }
-.title{
-    font-size: 55px;    
+
+.title {
+    font-size: 55px;
     margin-bottom: 50px;
 }
-.user{
+
+.user {
     display: flex;
     align-items: center;
     gap: 20px;
 }
-.userImageContainer{
+
+.userImageContainer {
     width: 50px;
     height: 50px;
     position: relative;
 }
-.avatar{
+
+.avatar {
     border-radius: 50%;
     object-fit: cover;
 }
-.userTextContainer{
+
+.userTextContainer {
     display: flex;
     flex-direction: column;
     gap: 5px;
     color: var(--softTextColor);
 }
-.username{
+
+.username {
     font-size: 20px;
     font-weight: 500;
 }
-.imageContainer{
+
+.imageContainer {
     flex: 1;
     height: 350px;
     position: relative;
 }
-.image{
+
+.image {
     object-fit: cover;
 }
-.content{
+
+.content {
     display: flex;
     gap: 50px;
 }
-.post{
+
+.post {
     flex: 5;
     margin-top: 50px;
 }
-.description p{
+
+.description p {
     font-size: 20px;
     font-weight: 300;
     margin-bottom: 20px;
 }
 
 @media screen and (max-width: 1536px) {
-    .title{
+    .title {
         font-size: 54px;
     }
 }
+
 @media screen and (max-width: 1280px) {
-    .title{
+    .title {
         font-size: 48px;
     }
 }
+
 @media screen and (max-width: 1024px) {
-    .imageContainer{
-        display: none;
+    .infoContainer {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .textContainer{
+        width: 100%;
+    }
+    .title{
+        text-align: center;
+    }
+    .imageContainer {
+        width: 100%;
+    }
+
+    .image {
+        object-fit: cover !important;
+        position: unset !important;
     }
 }
+
+@media screen and (max-width: 768px) {
+    .username {
+        font-size: 15px;
+    }
+
+    .userImageContainer {
+        width: 30px;
+        height: 30px;
+    }
+
+    .date {
+        font-size: 15px;
+    }
+}
+
 @media screen and (max-width: 640px) {
-    .title{
+    .title {
         font-size: 36px;
     }
-    .description p{
+
+    .description p {
         font-size: 18px;
+    }
+
+    .user {
+        gap: 20px;
+    }
+
+    .username {
+        font-size: 12px;
+    }
+
+    .userImageContainer {
+        width: 20px;
+        height: 20px;
+    }
+
+    .date {
+        font-size: 12px;
     }
 }

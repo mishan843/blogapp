@@ -4,14 +4,10 @@
     align-items: center;
     gap: 50px;
 }
-.homeCardContainer{
-    display: flex !important;
-    flex-direction: column !important;
-}
 .imageContainer{
-    flex: 1;
+    flex: 1;    
     height: 350px;
-    position: relative;
+    position: relative; 
 }
 
 .textContainer{
@@ -42,8 +38,24 @@
     width: max-content;
     padding: 2px 0;
 }
-@media screen and (max-width: 1280px) {
-    .imageContainer{
-        display: none;
+@media screen and (max-width: 1024px) {
+    .container{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
     }
-}
+    .textContainer{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+    }
+    .imageContainer{
+        width: 100%;
+    }
+    .image{
+        object-fit: cover !important;
+        position: unset !important;
+    }
+}  
