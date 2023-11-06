@@ -11,11 +11,11 @@ const CategoryList = () => {
     <div className={styles.container}>
       <h1 className={styles.title}>Popular Categories</h1>
       <div className={styles.categories}>
-        <Link 
+        <Link
           href="/blog/getallblogs?categoryFilter=Finance&searchFilter=blog"
           className={`${styles.category} ${styles.style}`}
         >
-          <Image
+          <img
             src="/style.png"
             width={32}
             height={32}
@@ -28,7 +28,7 @@ const CategoryList = () => {
           href="/blog/getallblogs?categoryFilter=Coding&searchFilter=blog"
           className={`${styles.category} ${styles.coding}`}
         >
-          <Image
+          <img
             src="/coding.png"
             width={32}
             height={32}
@@ -41,7 +41,7 @@ const CategoryList = () => {
           href="/blog/getallblogs?categoryFilter=Travel&searchFilter=blog"
           className={`${styles.category} ${styles.travel}`}
         >
-          <Image
+          <img
             src="/travel.png"
             width={32}
             height={32}
@@ -54,7 +54,7 @@ const CategoryList = () => {
           href="/blog/getallblogs?categoryFilter=Food&searchFilter=blog"
           className={`${styles.category} ${styles.food}`}
         >
-          <Image
+          <img
             src="/food.png"
             width={32}
             height={32}
@@ -67,7 +67,7 @@ const CategoryList = () => {
           href="/blog/getallblogs?categoryFilter=Fashion&searchFilter=blog"
           className={`${styles.category} ${styles.fashion}`}
         >
-          <Image
+          <img
             src="/fashion.png"
             width={32}
             height={32}
@@ -80,7 +80,7 @@ const CategoryList = () => {
           href="/blog/getallblogs?categoryFilter=Style&searchFilter=blog"
           className={`${styles.category} ${styles.fashion}`}
         >
-          <Image
+          <img
             src="/fashion.png"
             width={32}
             height={32}

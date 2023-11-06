@@ -43,7 +43,7 @@ const Page = () => {
           </h1>
           <div className={styles.user}>
             <div className={styles.userImageContainer}>
-              <Image src="/p1.jpeg" alt="" fill className={styles.avatar} />
+              <img src="/p1.jpeg" alt="" fill className={styles.avatar} />
             </div>
             <div className={styles.userTextContainer}>
               <span className={styles.username}>John doe</span>
@@ -52,7 +52,7 @@ const Page = () => {
           </div>
         </div>
         <div className={styles.imageContainer}>
-          <Image src={singleBlog[0]?.coverImage} alt="" fill className={styles.image} />
+          <img src={singleBlog[0]?.coverImage} alt="" fill className={styles.image} />
         </div>
       </div>
       <div className={styles.content}>

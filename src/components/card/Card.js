@@ -52,7 +52,7 @@ const Card = () => {
         return (
           <div key={item.id} className={styles.container}>
             <div key={item.id} className={styles.imageContainer}>
-              <Image src={item.coverImage} alt="" fill className={styles.image} />
+              <img src={item.coverImage} alt="" fill className={styles.image} />
             </div>
             <div className={styles.textContainer}>
               <div className={styles.detail}>
@@ -77,7 +77,7 @@ const Card = () => {
           return (
             <div key={item.id} className={styles.container}>
               <div key={item.id} className={styles.imageContainer}>
-                <Image src={item.coverImage} alt="" fill className={styles.image} />
+                <img src={item.coverImage} alt="" fill className={styles.image} />
               </div>
               <div className={styles.textContainer}>
                 <div className={styles.detail}>

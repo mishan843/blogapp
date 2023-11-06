@@ -60,7 +60,7 @@ const Comments = ({ singleBlog }) => {
 
                   <div className={styles.comment} key={index}>
                     <div className={styles.user}>
-                      <Image
+                      <img
                         src="/p1.jpeg"
                         alt=""
                         width={50}
