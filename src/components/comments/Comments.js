@@ -12,17 +12,21 @@ const Comments = ({ singleBlog, setSingleBlog }) => {
   const [currentPage, setCurrentPage] = useState(1);
   const commentsPerPage = 5;
   const allcomment = [...singleBlog[0]?.userComment || []]
+  console.log("allcomment", allcomment)
+
   // Calculate the index range for comments to display on the current page
   const indexOfLastComment = currentPage * commentsPerPage;
   const indexOfFirstComment = indexOfLastComment - commentsPerPage;
   allcomment.reverse()
   const currentComments = allcomment.slice(indexOfFirstComment, indexOfLastComment) || [];
+  console.log("currentComments", currentComments)
 
   const handleComment = async (e) => {
     e.preventDefault();
     try {
       setText('');
       setCurrentPage(1)
+      console.log("userData", userData)
       singleBlog[0]?.userComment.push({
         name: userData.name,
         text: text,
