@@ -3,23 +3,21 @@
 import styles from "./singlePage.module.css";
 import Menu from "@/components/menu/Menu";
 import Comments from "@/components/comments/Comments";
-import { useSearchParams } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
 
 const Page = () => {
   const searchParams = useSearchParams();
-
-  // console.log(search);
+  const search = searchParams.get("id")
+  const router = useRouter();
 
   const [singleBlog, setSingleBlog] = useState([]);
-  console.log(singleBlog);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const search = await searchParams.get("id");
         const response = await fetch(
-          `${process.env.NEXT_PUBLIC_API_URL}/blog/getBlogById?id=${search}`
+          `${process.env.NEXT_PUBLIC_API_URL}/blog/getblogbyid?id=${search}`
         );
 
         if (response.ok) {
@@ -35,7 +33,7 @@ const Page = () => {
     };
 
     fetchData();
-  }, []);
+  }, [router.query]);
 
   return (
     <div className={styles.container}>

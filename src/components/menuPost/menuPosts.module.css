@@ -5,7 +5,7 @@
   flex-direction: column;
   gap: 35px;
   padding: 20px;
-  background-color: #fff;
+  /* background-color: #fff; */
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
   border-radius: 15px;
   transition: transform 0.2s ease-in-out;
@@ -46,7 +46,7 @@
   padding: 5px 12px;
   border-radius: 15px;
   font-size: 14px;
-  color: #fff;
+  /* color: #fff; */
   text-transform: uppercase;
   font-weight: bold;
   width: max-content;
@@ -61,6 +61,7 @@
 .category.food {
   background-color: #7fb881;
 }
+/* Add a hover effect for post titles */
 .category.travel {
   background-color: #ff7857;
 }
@@ -74,11 +75,10 @@
 .posttitle {
   font-size: 20px;
   font-weight: 600;
-  color: #333;
+  color: var(--softTextColor);
   transition: color 0.2s ease-in-out;
 }
 
-/* Add a hover effect for post titles */
 .posttitle:hover {
   color: #ff6b6b;
 }
@@ -89,7 +89,7 @@
 }
 
 .date {
-  color: #999;
+  /* color: #999; */
 }
 
 /* Add a subtle animation to items */

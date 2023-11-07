@@ -9,8 +9,6 @@ const MenuPosts = ({ withImage }) => {
   const [data, setData] = useState([]);
   const router = useRouter()
 
-  const searchParams = useSearchParams()
-  const search = searchParams.get('id')
 
   useEffect(() => {
     // Fetch data from the API

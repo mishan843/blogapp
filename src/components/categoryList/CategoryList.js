@@ -12,7 +12,7 @@ const CategoryList = () => {
       <div className={styles.categories}>
         <Link
           href="/blog/getallblogs?categoryFilter=Finance&searchFilter=blog"
-          className={`${styles.category} ${styles.style}`}
+          className={`${styles.category} ${styles.finance}`}
         >
           <img
             src="/style.png"
@@ -77,7 +77,7 @@ const CategoryList = () => {
         </Link>
         <Link
           href="/blog/getallblogs?categoryFilter=Style&searchFilter=blog"
-          className={`${styles.category} ${styles.fashion}`}
+          className={`${styles.category} ${styles.style}`}
         >
           <img
             src="/fashion.png"
