@@ -45,8 +45,8 @@ const Page = () => {
               <img src="/p1.jpeg" alt="" fill className={styles.avatar} />
             </div>
             <div className={styles.userTextContainer}>
-              <span className={styles.username}>John doe</span>
-              <span className={styles.date}>24.10.2023</span>
+              <span className={styles.username}>LFB</span>
+              <span className={styles.date}>written by</span>
             </div>
           </div>
         </div>
@@ -57,9 +57,9 @@ const Page = () => {
       <div className={styles.content}>
         <div className={styles.post}>
           <div className={styles.description}>
-            <p>{singleBlog[0]?.description}</p>
+            <p className={styles.blog_content}>{singleBlog[0]?.description}</p>
             <div>
-              <Comments singleBlog={singleBlog} />
+              <Comments singleBlog={singleBlog} setSingleBlog={setSingleBlog} />
             </div>
           </div>
         </div>

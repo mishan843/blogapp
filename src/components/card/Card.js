@@ -80,8 +80,8 @@ const Card = () => {
               </div>
               <div className={styles.textContainer}>
                 <div className={styles.detail}>
-                  <span className={styles.date}>{item.createdAt} - </span>
                   <span className={styles.category}>{item.category}</span>
+                  <span className={styles.date}>{item.createdAt}</span>
                 </div>
                 <Link href={`/blog/getblogbyid?id=${item._id}`}>
                   <h1>{item.title}</h1>

@@ -35,6 +35,9 @@
   font-size: 14px;
 }
 
+.detail {
+  display: contents;
+}
 .category {
   color: rgb(255, 255, 255);
   font-weight: 500;

@@ -1,20 +1,35 @@
 import Link from "next/link";
 import styles from "./comments.module.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useSearchParams } from "next/navigation";
 
-const Comments = ({ singleBlog }) => {
+const Comments = ({ singleBlog, setSingleBlog }) => {
   const status = localStorage.getItem("user");
-  const userData = JSON.parse(status)
-  const searchParams = useSearchParams()
-  const search = searchParams.get('id')
-  console.log('singleBlog :>> ', singleBlog);
-  const [text, setText] = useState('')
+  const userData = JSON.parse(status);
+  const searchParams = useSearchParams();
+  const search = searchParams.get('id');
+  const [text, setText] = useState('');
+  const [currentPage, setCurrentPage] = useState(1);
+  const commentsPerPage = 5;
+  const allcomment = [...singleBlog[0]?.userComment || []]
+  // Calculate the index range for comments to display on the current page
+  const indexOfLastComment = currentPage * commentsPerPage;
+  const indexOfFirstComment = indexOfLastComment - commentsPerPage;
+  allcomment.reverse()
+  const currentComments = allcomment.slice(indexOfFirstComment, indexOfLastComment) || [];
 
   const handleComment = async (e) => {
     e.preventDefault();
-    // useEffect(async() => {
     try {
+      setText('');
+      setCurrentPage(1)
+      singleBlog[0]?.userComment.push({
+        name: userData.name,
+        text: text,
+        userId: userData._id
+      })
+      setSingleBlog(singleBlog)
+
       const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/blog/addComment`, {
         method: 'POST',
         headers: {
@@ -23,21 +38,23 @@ const Comments = ({ singleBlog }) => {
         body: JSON.stringify({
           text,
           blogId: search,
-          userId: userData.data._id
+          userId: userData._id,
         }),
       });
 
       if (response.ok) {
-        alert("comment successful")
+
       } else {
-        console.error('Error signing up:', response.statusText);
       }
     } catch (error) {
-      console.error('Error signing up:', error);
+      console.error('Error adding a comment:', error);
     }
-    // }, [router.query])
   };
 
+  // Function to handle page change
+  const handlePageChange = (newPage) => {
+    setCurrentPage(newPage);
+  };
 
   return (
     <div className={styles.container}>
@@ -50,35 +67,40 @@ const Comments = ({ singleBlog }) => {
       ) : (
         <Link href="/login">Login to write a comment</Link>
       )}
-      {singleBlog.map((item) => {
-        return (
-          <div key={item.id} className={styles.comments}>
-            {item.userComment.map((item, index) => {
-              if (item.name) {
-                return (
-
-                  <div className={styles.comment} key={index}>
-                    <div className={styles.user}>
-                      <img
-                        src="/p1.jpeg"
-                        alt=""
-                        width={50}
-                        height={50}
-                        className={styles.image}
-                      />
-                      <div className={styles.userInfo}>
-                        <span className={styles.username}>{item.name}</span>
-                        <span className={styles.date}>26.10.2023</span>
-                      </div>
-                    </div>
-                    <p className={styles.desc}>{item.text}</p>
-                  </div>
-                )
-              }
-            })}
-          </div>
-        );
+      {currentComments.map((item, index) => {
+        if (item.name) {
+          return (
+            <div className={styles.comment} key={index}>
+              <div className={styles.user}>
+                <img
+                  src="/p1.jpeg"
+                  alt=""
+                  width={50}
+                  height={50}
+                  className={styles.image}
+                />
+                <div className={styles.userInfo}>
+                  <span className={styles.username}>{item.name}</span>
+                  <span className={styles.date}>26.10.2023</span>
+                </div>
+              </div>
+              <p className={styles.desc}>{item.text}</p>
+            </div>
+          );
+        }
       })}
+      {/* Pagination */}
+      <div className={styles.pagination}>
+        {
+          Array.from({ length: Math.ceil(singleBlog[0]?.userComment.length / commentsPerPage) }, (_, i) => {
+            console.log("currentPage", currentPage)
+            console.log("i + 1", i)
+
+            return (<button className={i + 1 == currentPage ? styles.active_page : styles.pagination_button} key={i} onClick={() => handlePageChange(i + 1)}>
+              {i + 1}
+            </button>)
+          })}
+      </div>
     </div>
   );
 };

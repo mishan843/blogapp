@@ -1,126 +1,150 @@
+/* Container styles */
 .infoContainer {
-    display: flex;
-    align-items: center;
-    gap: 50px;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  background-color: #f5f5f5; /* Use a light background color */
+  padding: 20px;
+  border-radius: 10px;
 }
 
 .textContainer {
-    flex: 1;
+  flex: 1;
 }
 
 .title {
-    font-size: 55px;
-    margin-bottom: 50px;
+  font-size: 36px; /* Choose a more readable font size */
+  margin-bottom: 20px; /* Adjust spacing */
+  color: #333; /* Text color */
 }
 
 .user {
-    display: flex;
-    align-items: center;
-    gap: 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
 
 .avatar {
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border: 2px solid teal; /* Enhance the user's avatar */
 }
 
 .userTextContainer {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    color: var(--softTextColor);
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  color: #888; /* Use a softer text color */
 }
 
 .username {
-    font-size: 20px;
-    font-weight: 500;
+  font-size: 18px; /* Adjust font size */
+  font-weight: 500;
 }
 
 .imageContainer {
-    flex: 1;
+  flex: 1;
 }
 
 .image {
-    margin-top: 30px;
-    width: 100%;
+  width: 100%;
+  height: auto; /* Maintain aspect ratio */
 }
 
 .content {
-    display: flex;
-    gap: 50px;
+  display: flex;
+  gap: 20px; /* Adjust spacing */
 }
 
 .post {
-    flex: 5;
-    margin-top: 50px;
+  flex: 5;
+  margin-top: 50px;
 }
 
-.description p {
-    font-size: 20px;
-    font-weight: 300;
-    margin-bottom: 20px;
+.blog_content {
+  font-family: "Helvetica Neue", sans-serif;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f5f5f5;
+  text-align: left;
+  letter-spacing: 0.02em;
+  word-spacing: 0.1em;
+}
+.blog_content h1,
+.blog_content h2,
+.blog_content h3,
+.blog_content h4,
+.blog_content h5,
+.blog_content h6 {
+  font-family: "Georgia", serif; /* Use a serif font for headings for a classic look */
+  color: #444; /* Slightly darker text color for headings */
+  font-weight: bold; /* Bold headings for emphasis */
+  margin: 10px 0; /* Adjust heading margins for better spacing */
+}
+.blog_content a {
+  color: #007a6e; /* A contrasting color for links */
+  text-decoration: underline; /* Underline links for better visibility */
+  transition: color 0.3s; /* Smooth color transition on hover */
 }
 
-@media screen and (max-width: 1536px) {
-    .title {
-        font-size: 54px;
-    }
+.blog_content a:hover {
+  color: #005550; /* Darker link color on hover for emphasis */
 }
 
-@media screen and (max-width: 1280px) {
-    .title {
-        font-size: 48px;
-    }
+/* Blockquote styles */
+.blog_content blockquote {
+  font-style: italic; /* Italicize blockquotes for distinction */
+  border-left: 4px solid #007a6e; /* Add a colored border to blockquotes */
+  padding: 10px; /* Add padding for spacing within blockquotes */
+  margin: 20px 0; /* Adjust margins for blockquotes */
+  background-color: #f7f7f7; /* Light background for blockquotes */
 }
 
+/* List styles */
+.blog_content ul,
+.blog_content ol {
+  margin: 0 0 20px 20px; /* Adjust list margins for spacing */
+}
 @media screen and (max-width: 1024px) {
-    .infoContainer {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-    }
-    .textContainer{
-        width: 100%;
-    }
-    .title{
-        text-align: center;
-    }
+  .infoContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .textContainer {
+    width: 100%;
+  }
+  .title {
+    text-align: center;
+  }
 
-    .image {
-        width: 100% !important;
-        position: unset !important;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .username {
-        font-size: 15px;
-    }
-
-    .date {
-        font-size: 15px;
-    }
+  .image {
+    width: 100% !important;
+    position: unset !important;
+  }
 }
 
 @media screen and (max-width: 640px) {
-    .title {
-        font-size: 36px;
-    }
+  .title {
+    font-size: 24px; /* Adjust font size for smaller screens */
+  }
 
-    .description p {
-        font-size: 18px;
-    }
+  .description p {
+    font-size: 14px; /* Adjust font size for smaller screens */
+  }
 
-    .user {
-        gap: 20px;
-    }
+  .username {
+    font-size: 14px; /* Adjust font size for smaller screens */
+  }
+}
 
-    .username {
-        font-size: 12px;
-    }
-
-    .date {
-        font-size: 12px;
-    }
+@media screen and (max-width: 768px) {
+  .blog_content {
+    font-size: 16px; /* Adjust font size for smaller screens */
+  }
 }
