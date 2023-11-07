@@ -7,6 +7,7 @@ import { useRouter, useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
 
 const Page = () => {
+
   const searchParams = useSearchParams();
   const search = searchParams.get("id")
   const router = useRouter();

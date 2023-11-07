@@ -31,7 +31,7 @@ const MenuCategories = () => {
       </Link>
       <Link
         href="/blog/getallblogs?categoryFilter=Finance&searchFilter=blog"
-        className={`${styles.categoryItem} ${styles.culture}`}
+        className={`${styles.categoryItem} ${styles.finance}`}
       >
         Finance
       </Link>

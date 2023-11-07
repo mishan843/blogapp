@@ -6,7 +6,30 @@ import { useEffect, useState } from "react";
 import { useSearchParams } from 'next/navigation'
 
 
+
 const Card = () => {
+  const getColors = (name) => {
+    switch (name) {
+      case 'Finance':
+        return styles.finance
+        break;
+      case 'Coding':
+        return styles.coding
+        break;
+      case 'Travel':
+        return styles.travel
+        break;
+        case 'Food':
+        return styles.food
+        break;
+        case 'Fashion':
+        return styles.fashion
+        break;
+      default:
+        return styles.style
+        break;
+    }
+  }
 
   const searchParams = useSearchParams()
   const search = searchParams.get('categoryFilter')
@@ -42,21 +65,22 @@ const Card = () => {
 
     fetchData();
   }, [search]);
-
   return (
     <>
 
 
       {search ? blogByCat.map((item) => {
+        const categoryColor = getColors(item.category[0]); 
+
         return (
           <div key={item.id} className={styles.container}>
-            <div key={item.id} className={styles.imageContainer}>
+            <div key={item.id} clFinanceassName={styles.imageContainer}>
               <img src={item.coverImage} alt="" fill className={styles.image} />
             </div>
             <div className={styles.textContainer}>
               <div className={styles.detail}>
                 <span className={styles.date}>{item.createdAt} - </span>
-                <span className={styles.category}>{item.category}</span>
+                <span className={`${categoryColor} ${styles.category} `}>{item.category}</span>
               </div>
               <Link href={`/blog/getblogbyid?id=${item._id}`}>
                 <h1>{item.title}</h1>
@@ -64,7 +88,7 @@ const Card = () => {
               <p className={styles.desc}>
                 {item.content}
               </p>
-              <Link href={`/blog/getblogbyid?id=${item._id}`} className={styles.link}>
+              <Link href={`/blog/getblogbyid?id=${item._id}`} className={`${styles.link} ${categoryColor}`}>
                 Read More
               </Link>
             </div>
@@ -73,6 +97,8 @@ const Card = () => {
         );
       }) :
         blogs.map((item) => {
+        const categoryColor = getColors(item.category[0]); 
+
           return (
             <div key={item.id} className={styles.container}>
               <div key={item.id} className={styles.imageContainer}>
@@ -80,7 +106,7 @@ const Card = () => {
               </div>
               <div className={styles.textContainer}>
                 <div className={styles.detail}>
-                  <span className={styles.category}>{item.category}</span>
+                  <span className={`${categoryColor} ${styles.category}`}>{item.category}</span>
                   <span className={styles.date}>{item.createdAt}</span>
                 </div>
                 <Link href={`/blog/getblogbyid?id=${item._id}`}>
