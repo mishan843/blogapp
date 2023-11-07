@@ -59,14 +59,11 @@ const Comments = ({ singleBlog, setSingleBlog }) => {
   return (
     <div className={styles.container}>
       <h1 className={styles.title}>Comments</h1>
-      {status ? (
-        <div className={styles.write}>
-          <textarea value={text} onChange={(e) => setText(e.target.value)} placeholder="Write a comment..." className={styles.input} />
-          <button onClick={handleComment} className={styles.button}>Send</button>
-        </div>
-      ) : (
-        <Link href="/login">Login to write a comment</Link>
-      )}
+      <div className={styles.write}>
+        <textarea value={text} onChange={(e) => setText(e.target.value)} placeholder="Write a comment..." className={styles.input} />
+        <button onClick={status ? handleComment : () => { window.location.href = '/login'; }} className={styles.button}>
+          Send
+        </button>      </div>
       {currentComments.map((item, index) => {
         if (item.name) {
           return (
@@ -89,12 +86,9 @@ const Comments = ({ singleBlog, setSingleBlog }) => {
           );
         }
       })}
-      {/* Pagination */}
       <div className={styles.pagination}>
         {
           Array.from({ length: Math.ceil(singleBlog[0]?.userComment.length / commentsPerPage) }, (_, i) => {
-            console.log("currentPage", currentPage)
-            console.log("i + 1", i)
 
             return (<button className={i + 1 == currentPage ? styles.active_page : styles.pagination_button} key={i} onClick={() => handlePageChange(i + 1)}>
               {i + 1}

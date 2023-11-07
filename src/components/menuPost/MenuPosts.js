@@ -35,7 +35,7 @@ const MenuPosts = ({ withImage }) => {
             </div>
           )}
           <div className={styles.textContainer}>
-            <span className={`${styles.category} ${styles.travel}`}>{obj.category}</span>
+            <span className={`${styles.category} ${styles[obj.category[0].toLowerCase()]}`}>{obj.category[0]}</span>
             <h3 className={styles.posttitle}>{obj.title}</h3>
             <div className={styles.detail}>
               <span className={styles.date}>{obj.createdAt}</span>
@@ -43,7 +43,7 @@ const MenuPosts = ({ withImage }) => {
           </div>
         </Link>)
       })}
-    </div>
+    </div >
   );
 };
 

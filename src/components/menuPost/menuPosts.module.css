@@ -46,10 +46,10 @@
   padding: 5px 12px;
   border-radius: 15px;
   font-size: 14px;
-  /* color: #fff; */
   text-transform: uppercase;
-  font-weight: bold;
   width: max-content;
+  font-weight: 500;
+  color: white;
 }
 
 .category.style {
@@ -59,7 +59,7 @@
   background-color: #ff7887;
 }
 .category.food {
-  background-color: #7fb881;
+  background-color: #6da06f;
 }
 /* Add a hover effect for post titles */
 .category.travel {
@@ -86,10 +86,6 @@
 .detail {
   font-size: 14px;
   color: #666;
-}
-
-.date {
-  /* color: #999; */
 }
 
 /* Add a subtle animation to items */
