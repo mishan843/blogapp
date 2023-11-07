@@ -1,11 +1,38 @@
 .container {
-  margin-bottom: 50px;
+  margin: 20px;
+  background-color: #f8f8f8;
   display: flex;
   align-items: center;
-  gap: 50px;
+  gap: 20px;
   padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s;
+}
+
+.container:hover {
+  transform: translateY(-5px);
+}
+
+.container h1 {
+  font-size: 24px;
+  font-weight: 500;
+  color: #333;
+}
+
+.container p {
+  font-size: 16px;
+  color: #555;
+}
+
+.container a {
+  text-decoration: none;
+  color: #007bff;
+  font-weight: 500;
+}
+
+.container a:hover {
+  color: #0056b3;
 }
 
 .imageContainer {
@@ -24,7 +51,7 @@
 
 .image {
   width: 100%;
-  height: 350px;
+  height: 250px;
   object-fit: cover;
   border-radius: 10px;
 }

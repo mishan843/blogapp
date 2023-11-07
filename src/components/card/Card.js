@@ -19,10 +19,10 @@ const Card = () => {
       case 'Travel':
         return styles.travel
         break;
-        case 'Food':
+      case 'Food':
         return styles.food
         break;
-        case 'Fashion':
+      case 'Fashion':
         return styles.fashion
         break;
       default:
@@ -70,7 +70,7 @@ const Card = () => {
 
 
       {search ? blogByCat.map((item) => {
-        const categoryColor = getColors(item.category[0]); 
+        const categoryColor = getColors(item.category[0]);
 
         return (
           <div key={item.id} className={styles.container}>
@@ -97,7 +97,7 @@ const Card = () => {
         );
       }) :
         blogs.map((item) => {
-        const categoryColor = getColors(item.category[0]); 
+          const categoryColor = getColors(item.category[0]);
 
           return (
             <div key={item.id} className={styles.container}>
