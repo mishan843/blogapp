@@ -42,7 +42,7 @@ const Comments = ({ singleBlog, setSingleBlog }) => {
         body: JSON.stringify({
           text,
           blogId: search,
-          userId: userData._id,
+          userId: userData.data._id,
         }),
       });
 
