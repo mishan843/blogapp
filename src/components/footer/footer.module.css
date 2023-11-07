@@ -1,65 +1,79 @@
-.container{
-    margin-top: 50px;
-    padding: 20px 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    color: var(--softTextColor);
+.container {
+  margin-top: 50px;
+  padding: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #050000; /* White text color */
+  padding: 20px;
 }
-.info{
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
+
+.info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
 }
-.logo{
-    display: flex;
-    align-items: center;
-    gap: 10px;
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
-.logoText{
-    font-size: 24px;
+
+.logoText {
+  font-size: 24px;
+  font-weight: bold; /* Make the logo text bold */
 }
-.desc{
-    font-weight: 300;
+
+.desc {
+  font-weight: 300;
 }
-.icons{
-    margin-top: 10px;
-    display: flex;
-    gap: 10px;
+
+.icons {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
 }
-.links{
-    flex: 1;
-    display: flex;
-    justify-content: flex-end;
-    gap: 100px;
+
+.links {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  gap: 50px; /* Reduce the gap between links */
 }
-.list{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    font-weight: 300;
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-weight: 300;
 }
-.listTitle{
-    font-weight: bold;
+
+.listTitle {
+  font-weight: bold;
 }
+
 @media screen and (max-width: 1024px) {
-        .links{
-            gap: 50px;
-        }
+  .links {
+    gap: 30px; /* Adjust the gap for smaller screens */
+  }
 }
+
 @media screen and (max-width: 768px) {
-    .container{
-        flex-direction: column;
-        gap: 50px;
-    }
-    .links{
-        width: 100%;
-        justify-content: space-between;
-    }
+  .container {
+    flex-direction: column;
+    gap: 30px; /* Adjust the gap for smaller screens */
+    text-align: center; /* Center-align text for smaller screens */
+  }
+  .links {
+    width: 100%;
+    justify-content: space-between;
+  }
 }
+
 @media screen and (max-width: 640px) {
-    .links{
-        font-size: 14px;
-    }
+  .links {
+    font-size: 14px;
+  }
 }
