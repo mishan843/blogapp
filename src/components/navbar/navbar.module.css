@@ -5,6 +5,8 @@
   justify-content: space-between;
   padding: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 
 .social {
@@ -71,7 +73,7 @@
 .links a {
   text-decoration: none;
   transition: color 0.2s ease-in-out;
-  color: #333;
+  color: var(--textColor);
 }
 
 .links a:hover {
