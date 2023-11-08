@@ -55,12 +55,11 @@
 }
 
 .comment {
-  margin-bottom: 20px;
   border: 1px solid #ccc;
   border-radius: 10px;
-  padding: 15px;
+  padding: 7px;
   background-color: #f9f9f9;
-
+  margin: 7px;
   @media (min-width: 768px) {
     padding: 20px;
   }

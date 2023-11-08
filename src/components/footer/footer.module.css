@@ -7,7 +7,7 @@
   background-color: #f8f8f8; /* Light gray background that looks good with white */
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Slightly reduced box shadow */
   color: #333; /* Dark text color on the light background */
-  font-family: "Poppins", sans-serif;
+  font-family: emoji;
 }
 
 .info {
@@ -60,6 +60,10 @@
 .linkwrap {
   display: flex;
   flex: 1;
+}
+.desc {
+  font-family: cursive;
+  font-size: 12px;
 }
 @media screen and (max-width: 768px) {
   .container {
