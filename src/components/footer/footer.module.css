@@ -7,7 +7,7 @@
   background-color: #f8f8f8; /* Light gray background that looks good with white */
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Slightly reduced box shadow */
   color: #333; /* Dark text color on the light background */
-  font-family: emoji;
+  font-family: "Times New Roman", Times, serif;
 }
 
 .info {
@@ -61,10 +61,7 @@
   display: flex;
   flex: 1;
 }
-.desc {
-  font-family: cursive;
-  font-size: 12px;
-}
+
 @media screen and (max-width: 768px) {
   .container {
     padding: 10px; /* Reduce padding */
@@ -82,7 +79,10 @@
   .list {
     font-size: 10px; /* Decrease font size for the list items */
   }
-
+  .desc {
+    font-family: cursive;
+    font-size: 12px;
+  }
   .listTitle {
     font-size: 12px; /* Decrease font size for the list titles */
   }
