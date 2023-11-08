@@ -58,7 +58,7 @@ const Page = () => {
       <div className={styles.content}>
         <div className={styles.post}>
           <div className={styles.description}>
-            <p className={styles.blog_content} dangerouslySetInnerHTML={{ __html: singleBlog[0]?.content }}></p>
+            <p className={styles.blog_content} dangerouslySetInnerHTML={{ __html: singleBlog.content }}></p>
             <div>
               <Comments singleBlog={singleBlog} setSingleBlog={setSingleBlog} />
             </div>

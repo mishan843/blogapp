@@ -1,20 +1,20 @@
 .container {
   margin-top: 50px;
-  padding: 20px 0;
+  padding: 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px;
-  box-shadow: 0 2px 4px black;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+  background-color: #f8f8f8; /* Light gray background that looks good with white */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Slightly reduced box shadow */
+  color: #333; /* Dark text color on the light background */
+  font-family: "Poppins", sans-serif;
 }
 
 .info {
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 20px;
 }
 
 .logo {
@@ -24,75 +24,84 @@
 }
 
 .logoText {
-  font-size: 24px;
-  font-weight: bold;
-  /* Make the logo text bold */
+  font-size: 36px;
+  font-weight: 900;
+  color: #ff5733;
+  text-transform: uppercase;
 }
 
 .desc {
-  font-weight: 300;
+  font-weight: 400;
+  font-size: 16px;
+  color: #333;
 }
 
 .icons {
-  margin-top: 10px;
   display: flex;
-  gap: 10px;
+  gap: 20px;
+  transition: transform 0.3s ease;
+}
+
+.icons img {
+  filter: grayscale(100%);
+}
+
+.icons img:hover {
+  transform: scale(1.1);
+  filter: grayscale(0);
 }
 
 .links {
   flex: 1;
   display: flex;
   justify-content: flex-end;
-  gap: 50px;
-  /* Reduce the gap between links */
+  gap: 40px;
 }
 
 .list {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  font-weight: 300;
+  gap: 15px;
+  font-weight: 600;
+  color: #333;
+  font-size: 18px;
 }
 
 .listTitle {
-  font-weight: bold;
+  font-weight: 900;
+  color: #ff5733;
+  font-size: 24px;
+  text-transform: uppercase;
 }
 
 .linkwrap {
   display: flex;
   flex: 1;
 }
-
-@media screen and (max-width: 1024px) {
-  .links {
-    gap: 30px;
-  }
-}
-
 @media screen and (max-width: 768px) {
   .container {
-    flex-direction: column;
-    gap: 30px;
-    /* Adjust the gap for smaller screens */
-    text-align: center;
-    /* Center-align text for smaller screens */
+    padding: 10px; /* Reduce padding */
   }
-  .linkwrap{
-    gap: 50px;
+  .logoSubTitle {
+    font-size: 10px; /* Decrease font size for the logo text */
+  }
+  .logoText {
+    font-size: 20px; /* Decrease font size for the logo text */
   }
 
-  .links {
-    width: 100%;
-    justify-content: space-between;
+  .desc {
+    font-size: 9px; /* Decrease font size for the description */
   }
-}
 
-@media screen and (max-width: 640px) {
-  .linkwrap{
-    gap: 50px;
-    flex-wrap: wrap;
+  .icons {
+    gap: 10px; /* Decrease gap between icons */
   }
-  .links {
-    font-size: 14px;
+
+  .list {
+    font-size: 10px; /* Decrease font size for the list items */
+  }
+
+  .listTitle {
+    font-size: 12px; /* Decrease font size for the list titles */
   }
 }
