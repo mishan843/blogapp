@@ -23,7 +23,8 @@
 
 .logoText {
   font-size: 24px;
-  font-weight: bold; /* Make the logo text bold */
+  font-weight: bold;
+  /* Make the logo text bold */
 }
 
 .desc {
@@ -40,7 +41,8 @@
   flex: 1;
   display: flex;
   justify-content: flex-end;
-  gap: 50px; /* Reduce the gap between links */
+  gap: 50px;
+  /* Reduce the gap between links */
 }
 
 .list {
@@ -54,6 +56,11 @@
   font-weight: bold;
 }
 
+.linkwrap {
+  display: flex;
+  flex: 1;
+}
+
 @media screen and (max-width: 1024px) {
   .links {
     gap: 30px;
@@ -63,9 +70,15 @@
 @media screen and (max-width: 768px) {
   .container {
     flex-direction: column;
-    gap: 30px; /* Adjust the gap for smaller screens */
-    text-align: center; /* Center-align text for smaller screens */
+    gap: 30px;
+    /* Adjust the gap for smaller screens */
+    text-align: center;
+    /* Center-align text for smaller screens */
   }
+  .linkwrap{
+    gap: 50px;
+  }
+
   .links {
     width: 100%;
     justify-content: space-between;
@@ -73,6 +86,10 @@
 }
 
 @media screen and (max-width: 640px) {
+  .linkwrap{
+    gap: 50px;
+    flex-wrap: wrap;
+  }
   .links {
     font-size: 14px;
   }

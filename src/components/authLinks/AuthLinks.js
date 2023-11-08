@@ -24,8 +24,8 @@ const AuthLinks = () => {
           Logout
         </button>
       ) : (
-        <Link href="/login" setIsLoggedIn={localStorage.getItem("user")}>
-          Login
+        <Link href="/signup" setIsLoggedIn={localStorage.getItem("user")}>
+          Signup
         </Link>
       )}
 
@@ -44,7 +44,7 @@ const AuthLinks = () => {
               Logout
             </button>
           ) : (
-            <Link href="/login">Login</Link>
+            <Link href="/signup">Signup</Link>
           )}
         </div>
       )}

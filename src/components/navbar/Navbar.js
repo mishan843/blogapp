@@ -12,6 +12,8 @@ const Navbar = () => {
         <img src="/github.png" alt="github" width={24} height={24} />
         <img src="/facebook.png" alt="facebook" width={24} height={24} />
         <img src="/youtube.png" alt="youtube" width={24} height={24} />
+        <img src="/linkedin.png" alt="linkedin  " width={24} height={24} />
+
       </div>
       <div className={styles.logo}>
         <h2>{process.env.APP_NAME}</h2>

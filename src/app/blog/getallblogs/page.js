@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useState } from 'react'
+import React from 'react'
 import styles from './blogPage.module.css'
 import CardList from '@/components/cardList/CardList'
 import Menu from '@/components/menu/Menu'
@@ -9,8 +9,6 @@ import { useSearchParams } from 'next/navigation'
 const Page = () => {
   const searchParams = useSearchParams()
   const search = `${searchParams.get('categoryFilter')}`
-  const cat = search
-  console.log(cat);
   const getColors = (name) => {
     switch (name) {
       case 'Finance':
@@ -33,11 +31,7 @@ const Page = () => {
         break;
     }
   }
-  const categoryColor = getColors(`${search}`); 
-  console.log(categoryColor);
-  
-  
- 
+  const categoryColor = getColors(`${search}`);  
   return (
     <div className={styles.container}>
         <h1 className={`${styles.title} ${categoryColor}`}>{search} Blog</h1>

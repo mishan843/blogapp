@@ -53,10 +53,10 @@ const Card = () => {
 
         if (search) {
           setBlogByCat(blogsData);
-          setBlogs([]); // Clear blogs state when searching by category
+          setBlogs([]); 
         } else {
           setBlogs(blogsData);
-          setBlogByCat([]); // Clear blogByCat state when not searching by category
+          setBlogByCat([]);
         }
       } catch (error) {
         console.error("Error fetching data:", error);
