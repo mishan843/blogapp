@@ -42,7 +42,7 @@ const Card = () => {
       try {
         let endpoint;
         if (search) {
-          endpoint = `${process.env.NEXT_PUBLIC_API_URL}/blog/getAllBlogs?categoryFilter=${search}&searchFilter=blog&page=1&limit=10`;
+          endpoint = `${process.env.NEXT_PUBLIC_API_URL}/blog/getAllBlogs?categoryFilter=${search}&page=1&limit=10`;
         } else {
           endpoint = `${process.env.NEXT_PUBLIC_API_URL}/blog/getAllBlogs?page=1&limit=10`;
         }
@@ -79,14 +79,14 @@ const Card = () => {
             </div>
             <div className={styles.textContainer}>
               <div className={styles.detail}>
-                <span className={styles.date}>{item.createdAt} - </span>
+                <span className={styles.date}>{item.createdAt}</span>
                 <span className={`${categoryColor} ${styles.category} `}>{item.category}</span>
               </div>
               <Link href={`/blog/getblogbyid?id=${item._id}`}>
                 <h1>{item.title}</h1>
               </Link>
               <p className={styles.desc}>
-                {item.content}
+                {item.description}
               </p>
               <Link href={`/blog/getblogbyid?id=${item._id}`} className={`${styles.link} ${categoryColor}`}>
                 Read More
