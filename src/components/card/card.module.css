@@ -13,6 +13,7 @@
 }
 
 .imageContainer {
+  height: 285px;
   position: relative;
   overflow: hidden;
   border-radius: 10px 10px 0 0;
@@ -39,7 +40,7 @@
 }
 
 .container h1 {
-  font-size: 28px;
+  font-size: 20px;
   font-weight: 700;
   color: #333;
   margin: 0;
@@ -110,6 +111,7 @@
   color: #007bff;
   font-weight: 600;
   transition: color 0.2s;
+  font-size: 15px;
 }
 
 .link:hover {
@@ -117,8 +119,12 @@
 }
 
 @media screen and (max-width: 768px) {
+  .imageContainer {
+    height: 285px;
+  }
   .container {
     margin-top: 30px;
+    gap: 0px;
     background-color: #f9f9f9;
     border-radius: 10px;
     overflow: hidden;
@@ -130,6 +136,8 @@
   }
 
   .textContainer {
+    width: 90%;
+    margin: 0 5%;
     padding: 10px;
   }
 
@@ -140,18 +148,19 @@
   }
 
   .container h1 {
-    font-size: 24px;
+    font-size: 20px;
   }
 
   .container p {
-    font-size: 14px;
+    font-size: 12px;
   }
 
   .desc {
     font-size: 16px;
   }
   .image {
-    width: 100%;
+    width: 90%;
     height: auto;
+    margin: 0 5%;
   }
 }
