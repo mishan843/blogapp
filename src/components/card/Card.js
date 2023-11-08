@@ -53,7 +53,7 @@ const Card = () => {
 
         if (search) {
           setBlogByCat(blogsData);
-          setBlogs([]); 
+          setBlogs([]);
         } else {
           setBlogs(blogsData);
           setBlogByCat([]);
@@ -113,7 +113,7 @@ const Card = () => {
                   <h1>{item.title}</h1>
                 </Link>
                 <p className={styles.desc}>
-                  {item.content}
+                  {item.description}
                 </p>
                 <Link href={`/blog/getblogbyid?id=${item._id}`} className={styles.link}>
                   Read More

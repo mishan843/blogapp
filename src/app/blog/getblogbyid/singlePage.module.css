@@ -64,52 +64,96 @@
 }
 
 .blog_content {
-  font-family: "Helvetica Neue", sans-serif;
   padding: 10px;
-  border-radius: 5px;
+  font-family: "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+  margin: 10px 0;
+}
+
+.blog_content h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.blog_content p {
   font-size: 18px;
   line-height: 1.6;
-  /* color: #333; */
-  /* background-color: #f5f5f5; */
-  text-align: left;
-  letter-spacing: 0.02em;
-  word-spacing: 0.1em;
+  margin-bottom: 15px;
 }
-.blog_content h1,
-.blog_content h2,
-.blog_content h3,
-.blog_content h4,
-.blog_content h5,
-.blog_content h6 {
-  font-family: "Georgia", serif; /* Use a serif font for headings for a classic look */
-  color: #444; /* Slightly darker text color for headings */
-  font-weight: bold; /* Bold headings for emphasis */
-  margin: 10px 0; /* Adjust heading margins for better spacing */
+
+.blog_content ul {
+  list-style: none;
+  padding-left: 0;
 }
+
+.blog_content li {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+/* Add some style to links within the content */
 .blog_content a {
-  color: #007a6e; /* A contrasting color for links */
-  text-decoration: underline; /* Underline links for better visibility */
-  transition: color 0.3s; /* Smooth color transition on hover */
+  color: #0074b8;
+  text-decoration: underline;
+  transition: color 0.3s;
 }
 
 .blog_content a:hover {
-  color: #005550; /* Darker link color on hover for emphasis */
+  color: #005a93;
 }
 
-/* Blockquote styles */
+/* Style blockquotes */
 .blog_content blockquote {
-  font-style: italic; /* Italicize blockquotes for distinction */
-  border-left: 4px solid #007a6e; /* Add a colored border to blockquotes */
-  padding: 10px; /* Add padding for spacing within blockquotes */
-  margin: 20px 0; /* Adjust margins for blockquotes */
-  background-color: #f7f7f7; /* Light background for blockquotes */
+  background-color: #f9f9f9;
+  border-left: 4px solid #0074b8;
+  margin: 0;
+  padding: 10px 20px;
+  color: #555;
 }
 
-/* List styles */
-.blog_content ul,
-.blog_content ol {
-  margin: 0 0 20px 20px; /* Adjust list margins for spacing */
+/* Add some spacing for images */
+.blog_content img {
+  max-width: 100%;
+  height: auto;
+  margin: 15px 0;
 }
+
+/* Style code snippets */
+.blog_content code {
+  font-family: "Courier New", Courier, monospace;
+  background-color: #f4f4f4;
+  padding: 2px 4px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Add some space between sections */
+.blog_content .section {
+  margin-top: 30px;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .blog_content h2 {
+    font-size: 22px;
+    margin-bottom: 15px;
+  }
+
+  .blog_content p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+  }
+
+  .blog_content li {
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+}
+
 @media screen and (max-width: 1024px) {
   .infoContainer {
     display: flex;
