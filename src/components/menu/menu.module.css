@@ -28,7 +28,7 @@
 .title:before {
   width: 28px;
   height: 5px;
-  display: block;
+  display: none;
   content: "";
   position: absolute;
   bottom: 3px;
