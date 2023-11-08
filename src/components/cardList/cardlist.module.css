@@ -9,6 +9,32 @@
   text-transform: uppercase;
   padding-bottom: 5px;
 }
+.loading {
+  text-align: center;
+  font-size: 24px;
+  color: #0074b8; /* You can change the color to match your design */
+}
+
+.loading::before {
+  content: "";
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  border-top: 4px solid #0074b8; /* Match the color to your design */
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-top: 50%;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 .title:after {
   width: 200px;
   height: 1px;

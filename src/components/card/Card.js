@@ -2,12 +2,12 @@
 
 import styles from "./card.module.css";
 import Link from "next/link";
-import { useEffect, useState } from "react";
-import { useSearchParams } from 'next/navigation'
 
 
 
-const Card = () => {
+
+const Card = (body) => {
+  let { blogs, blogByCat, search } = body
   const getColors = (name) => {
     switch (name) {
       case 'Finance':
@@ -31,44 +31,9 @@ const Card = () => {
     }
   }
 
-  const searchParams = useSearchParams()
-  const search = searchParams.get('categoryFilter')
 
-  const [blogByCat, setBlogByCat] = useState([]);
-  const [blogs, setBlogs] = useState([])
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        let endpoint;
-        if (search) {
-          endpoint = `${process.env.NEXT_PUBLIC_API_URL}/blog/getAllBlogs?categoryFilter=${search}&page=1&limit=10`;
-        } else {
-          endpoint = `${process.env.NEXT_PUBLIC_API_URL}/blog/getAllBlogs?page=1&limit=10`;
-        }
-
-        let response = await fetch(endpoint);
-        let data = await response.json();
-        let blogsData = data.data;
-
-        if (search) {
-          setBlogByCat(blogsData);
-          setBlogs([]);
-        } else {
-          setBlogs(blogsData);
-          setBlogByCat([]);
-        }
-      } catch (error) {
-        console.error("Error fetching data:", error);
-      }
-    };
-
-    fetchData();
-  }, [search]);
   return (
     <>
-
-
       {search ? blogByCat.map((item) => {
         const categoryColor = getColors(item.category[0]);
 
