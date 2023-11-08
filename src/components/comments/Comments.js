@@ -4,7 +4,6 @@ import { useState, useEffect } from "react";
 import { useSearchParams } from "next/navigation";
 
 const Comments = ({ singleBlog, setSingleBlog }) => {
-  console.log(singleBlog)
   const status = localStorage.getItem("user");
   const userData = JSON.parse(status);
   const searchParams = useSearchParams();
@@ -12,8 +11,7 @@ const Comments = ({ singleBlog, setSingleBlog }) => {
   const [text, setText] = useState('');
   const [currentPage, setCurrentPage] = useState(1);
   const commentsPerPage = 5;
-  const allcomment = [...singleBlog.userComment || []]
-  console.log("allcomment", allcomment)
+  const allcomment = [...singleBlog[0]?.userComment || []]
 
   // Calculate the index range for comments to display on the current page
   const indexOfLastComment = currentPage * commentsPerPage;
@@ -28,7 +26,7 @@ const Comments = ({ singleBlog, setSingleBlog }) => {
       setText('');
       setCurrentPage(1)
       console.log("userData", userData)
-      singleBlog?.userComment.push({
+      singleBlog[0]?.userComment.push({
         name: userData.name,
         text: text,
         userId: userData._id
@@ -43,7 +41,7 @@ const Comments = ({ singleBlog, setSingleBlog }) => {
         body: JSON.stringify({
           text,
           blogId: search,
-          userId: userData._id,
+          userId: userData.data._id,
         }),
       });
 
@@ -60,7 +58,6 @@ const Comments = ({ singleBlog, setSingleBlog }) => {
   const handlePageChange = (newPage) => {
     setCurrentPage(newPage);
   };
-
   return (
     <div className={styles.container}>
       <h1 className={styles.title}>Comments</h1>
@@ -71,6 +68,7 @@ const Comments = ({ singleBlog, setSingleBlog }) => {
         </button>      </div>
       {currentComments.map((item, index) => {
         item.name = "User"
+
         if (item.name) {
           return (
             <div className={styles.comment} key={index}>
@@ -94,7 +92,7 @@ const Comments = ({ singleBlog, setSingleBlog }) => {
       })}
       <div className={styles.pagination}>
         {
-          Array.from({ length: Math.ceil(singleBlog?.userComment.length / commentsPerPage) }, (_, i) => {
+          Array.from({ length: Math.ceil(singleBlog[0]?.userComment.length / commentsPerPage) }, (_, i) => {
 
             return (<button className={i + 1 == currentPage ? styles.active_page : styles.pagination_button} key={i} onClick={() => handlePageChange(i + 1)}>
               {i + 1}
