@@ -15,10 +15,10 @@ const Footer = () => {
           Discover a world of inspiration, explore creativity, and connect with like-minded individuals. Unleash your passions with our versatile blogging platform. Join our community today.
         </p>
         <div className={styles.icons}>
-          <img src="/github.png" alt="github" width={18} height={18} />
-          <img src="/facebook.png" alt="facebook" width={18} height={18} />
-          <img src="/youtube.png" alt="youtube" width={18} height={18} />
-          <img src="/linkedin.png" alt="linkedin  " width={18} height={18} />
+          <img src="/github.png" alt="github" width={24} height={24} />
+          <img src="/facebook.png" alt="facebook" width={24} height={24} />
+          <img src="/youtube.png" alt="youtube" width={24} height={24} />
+          <img src="/linkedin.png" alt="linkedin" width={24} height={24} />
         </div>
       </div>
       <div className={styles.linkwrap}>
