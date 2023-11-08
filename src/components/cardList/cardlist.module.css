@@ -23,7 +23,7 @@
 .title:before {
   width: 28px;
   height: 5px;
-  display: block;
+  display: none;
   content: "";
   position: absolute;
   bottom: 3px;
@@ -98,23 +98,6 @@
   font-weight: 300;
 }
 
-@media screen and (max-width: 768px) {
-  .categories {
-    gap: 10px;
-    flex-direction: row;
-  }
-
-  .category {
-    width: 47%;
-    /* Display two categories in one row on mobile */
-    height: 80px;
-    font-size: 16px;
-    /* Reduce font size for mobile */
-  }
-  .title {
-    font-size: 20px;
-  }
-}
 @media screen and (max-width: 640px) {
   .category {
     width: 47%;
