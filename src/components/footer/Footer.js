@@ -6,10 +6,8 @@ const Footer = () => {
   return (
     <div className={styles.container}>
       <div className={styles.info}>
-        <div className={styles.logo}>
-          <img src="/logo.png" alt="" width={50} height={50} />
-          <h1 className={styles.logoText}>{process.env.APP_NAME}</h1>
-          <p className={styles.logoSubTitle}>Learn From Blog</p>
+        <div >
+          <img className={styles.logo} src="/logo.png" alt="" />
         </div>
         <p className={styles.desc}>
           Discover a world of inspiration, explore creativity, and connect with like-minded individuals. Unleash your passions with our versatile blogging platform. Join our community today.

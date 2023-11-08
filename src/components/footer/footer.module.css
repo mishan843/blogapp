@@ -16,26 +16,9 @@
   flex-direction: column;
   gap: 20px;
 }
-
 .logo {
-  display: flex;
-  align-items: center;
-  gap: 10px;
+  width: 300px;
 }
-
-.logoText {
-  font-size: 36px;
-  font-weight: 900;
-  color: #ff5733;
-  text-transform: uppercase;
-}
-
-.desc {
-  font-weight: 400;
-  font-size: 16px;
-  color: #333;
-}
-
 .icons {
   display: flex;
   gap: 20px;
@@ -85,14 +68,9 @@
   .logoSubTitle {
     font-size: 10px; /* Decrease font size for the logo text */
   }
-  .logoText {
-    font-size: 20px; /* Decrease font size for the logo text */
+  .logo {
+    width: 250px;
   }
-
-  .desc {
-    font-size: 9px; /* Decrease font size for the description */
-  }
-
   .icons {
     gap: 10px; /* Decrease gap between icons */
   }

@@ -1,45 +1,48 @@
-.container{
-    margin-left: 200px;
-    margin-right: 200px;
+.container {
+  margin-left: 400px;
+  margin-right: 400px;
 }
 
 .title {
-    color: white;
-    padding: 5px 10px;
-    text-align: center;
-    border-radius: 5px;
-    margin-top: 20px;
+  color: white;
+  padding: 5px 10px;
+  text-align: center;
+  border-radius: 5px;
+  margin-top: 20px;
 }
 
 .content {
-    display: flex;
-    gap: 50px;
+  display: flex;
+  gap: 50px;
 }
-
 
 .finance {
-    background-color: #57c4ff9b !important;
+  background-color: #57c4ff9b !important;
 }
 
-
 .style {
-    background-color: #ffb04f81;
+  background-color: #ffb04f81;
 }
 
 .fashion {
-    background-color: #da85c891;
+  background-color: #da85c891;
 }
 
-
 .food {
-    background-color: #7fb8818d;
+  background-color: #7fb8818d;
 }
 
 .travel {
-    background-color: #ff795788;
+  background-color: #ff795788;
 }
 
-
 .coding {
-    background-color: #5e4fff84;
+  background-color: #5e4fff84;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
 }

@@ -1,24 +1,27 @@
 /* Container styles */
-.container{
-  margin-left: 200px;
-  margin-right: 200px;
+.container {
+  margin-left: 400px;
+  margin-right: 400px;
 }
 .infoContainer {
   display: flex;
   align-items: center;
+  justify-content: center; /* Center the content horizontally and vertically */
+  flex-direction: column; /* Stack items vertically for small screens */
   gap: 50px;
   padding: 20px;
   border-radius: 10px;
 }
 
 .textContainer {
-  flex: 1;
+  width: 100%;
 }
 
 .title {
   font-size: 36px; /* Choose a more readable font size */
   margin-bottom: 20px; /* Adjust spacing */
   /* color: #333;  */
+  text-align: center;
 }
 
 .user {
@@ -39,7 +42,6 @@
   display: flex;
   flex-direction: column;
   gap: 5px;
-  /* color: #888;  */
 }
 
 .username {
@@ -48,12 +50,20 @@
 }
 
 .imageContainer {
-  flex: 1;
+  display: flex;
+  justify-content: center; /* Center the image horizontally */
+  align-items: center; /* Center the image vertically */
+  width: 100%;
+  max-width: 900px; /* Set the maximum width for the image */
+  margin-top: 50px;
 }
 
 .image {
-  width: 100%;
+  max-width: 100%; /* Ensure the image stays within the container */
   height: auto; /* Maintain aspect ratio */
+  width: 900px; /* Set the image width to 900px */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add a subtle shadow to the image for a better appearance */
+  border-radius: 10px; /* Add rounded corners for a more beautiful look */
 }
 
 .content {
@@ -144,7 +154,10 @@
     font-size: 22px;
     margin-bottom: 15px;
   }
-
+  .container {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
   .blog_content p {
     font-size: 16px;
     line-height: 1.5;
@@ -166,6 +179,10 @@
   .textContainer {
     width: 100%;
   }
+  .container {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
   .title {
     text-align: center;
   }
@@ -180,7 +197,10 @@
   .title {
     font-size: 24px; /* Adjust font size for smaller screens */
   }
-
+  .container {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
   .description p {
     font-size: 14px; /* Adjust font size for smaller screens */
   }
@@ -191,6 +211,10 @@
 }
 
 @media screen and (max-width: 768px) {
+  .container {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
   .blog_content {
     font-size: 16px; /* Adjust font size for smaller screens */
   }

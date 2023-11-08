@@ -1,9 +1,15 @@
-.container{
-    margin-left: 200px;
-    margin-right: 200px;
+.container {
+  margin-left: 400px;
+  margin-right: 400px;
 }
 
-.content{
-    display: flex;
-    gap: 50px;
+.content {
+  display: flex;
+  gap: 50px;
+}
+@media screen and (max-width: 768px) {
+  .container {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
 }

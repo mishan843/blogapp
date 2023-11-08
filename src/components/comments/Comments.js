@@ -74,7 +74,7 @@ const Comments = ({ singleBlog, setSingleBlog }) => {
             <div className={styles.comment} key={index}>
               <div className={styles.user}>
                 <img
-                  src="/p1.jpeg"
+                  src="/profile_logo.jpg"
                   alt=""
                   width={50}
                   height={50}
