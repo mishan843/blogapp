@@ -1,12 +1,35 @@
 /* Container styles */
 .container {
-  margin-top: 50px;
+  padding: 10px;
+  width: 100%;
 }
 
-/* Title styles */
 .title {
-  /* color: var(--softTextColor); */
-  margin-bottom: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  padding-bottom: 5px;
+}
+.title:after {
+  width: 200px;
+  height: 1px;
+  display: block;
+  content: "";
+  position: relative;
+  margin-top: 10px;
+  left: 50%;
+  margin-left: -100px;
+  background-color: #b80000;
+}
+.title:before {
+  width: 28px;
+  height: 5px;
+  display: block;
+  content: "";
+  position: absolute;
+  bottom: 3px;
+  left: 50%;
+  margin-left: -14px;
+  background-color: #b80000;
 }
 
 /* Comment input styles */

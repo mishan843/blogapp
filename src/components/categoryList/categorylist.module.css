@@ -1,109 +1,132 @@
 .container {
-    text-align: center;
+  padding: 10px;
 }
 
 .title {
-    margin: 50px 0;
-    font-size: 28px;
-    font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  padding-bottom: 5px;
+}
+.title:after {
+  width: 200px;
+  height: 1px;
+  display: block;
+  content: "";
+  position: relative;
+  margin-top: 10px;
+  left: 50%;
+  margin-left: -100px;
+  background-color: #b80000;
+}
+.title:before {
+  width: 28px;
+  height: 5px;
+  display: block;
+  content: "";
+  position: absolute;
+  bottom: 3px;
+  left: 50%;
+  margin-left: -14px;
+  background-color: #b80000;
 }
 
 .categories {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 10px;
 }
 
 .category {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    text-transform: capitalize;
-    width: 15%;
-    height: 60px;
-    justify-content: center;
-    border-radius: 10px;
-    background-color: #57c4ff31;
-    font-weight: bold;
-    transition: background-color 0.3s, color 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-transform: capitalize;
+  width: 15%;
+  height: 60px;
+  justify-content: center;
+  border-radius: 10px;
+  background-color: #57c4ff31;
+  font-weight: bold;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 .category.finance {
-    background-color: #57c4ff31;
+  background-color: #57c4ff31;
 }
 
 .category.finance:hover {
-    background-color: #57c4ff9b;
+  background-color: #57c4ff9b;
 }
 
 .category.style {
-    background-color: #ffb04f45;
+  background-color: #ffb04f45;
 }
 
 .category.style:hover {
-    background-color: #ffb04f81;
+  background-color: #ffb04f81;
 }
 
 .category.fashion {
-    background-color: #da85c731;
+  background-color: #da85c731;
 }
 
 .category.fashion:hover {
-    background-color: #da85c891;
+  background-color: #da85c891;
 }
 
 .category.food {
-    background-color: #7fb88133;
+  background-color: #7fb88133;
 }
 
 .category.food:hover {
-    background-color: #7fb8818d;
+  background-color: #7fb8818d;
 }
 
 .category.travel {
-    background-color: #ff795736;
+  background-color: #ff795736;
 }
 
 .category.travel:hover {
-    background-color: #ff795788;
+  background-color: #ff795788;
 }
 
 .category.coding {
-    background-color: #5e4fff31;
+  background-color: #5e4fff31;
 }
 
 .category.coding:hover {
-    background-color: #5e4fff84;
+  background-color: #5e4fff84;
 }
 
 .category:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .image {
-    border-radius: 50%;
+  border-radius: 50%;
 }
 
 @media screen and (max-width: 768px) {
-    .categories {
-        gap: 10px;
-        /* Reduce gap for mobile devices */
-        flex-direction: row;
-        /* Display categories in a row on mobile */
-    }
+  .categories {
+    gap: 10px;
+    /* Reduce gap for mobile devices */
+    flex-direction: row;
+    /* Display categories in a row on mobile */
+  }
 
-    .category {
-        width: 47%;
-        /* Display two categories in one row on mobile */
-        height: 80px;
-        font-size: 16px;
-        /* Reduce font size for mobile */
-    }
+  .category {
+    width: 47%;
+    /* Display two categories in one row on mobile */
+    height: 80px;
+    font-size: 16px;
+    /* Reduce font size for mobile */
+  }
 }
 
 @media screen and (max-width: 640px) {
-    .category {
-        width: 47%;
-    }
+  .category {
+    width: 47%;
+  }
 }
