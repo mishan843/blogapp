@@ -1,3 +1,8 @@
+.container{
+    margin-left: 200px;
+    margin-right: 200px;
+}
+
 .title {
     color: white;
     padding: 5px 10px;

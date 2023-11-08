@@ -1,9 +1,12 @@
 /* Container styles */
+.container{
+  margin-left: 200px;
+  margin-right: 200px;
+}
 .infoContainer {
   display: flex;
   align-items: center;
   gap: 50px;
-  /* background-color: #f5f5f5; */
   padding: 20px;
   border-radius: 10px;
 }
