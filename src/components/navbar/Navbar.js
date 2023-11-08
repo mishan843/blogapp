@@ -16,7 +16,7 @@ const Navbar = () => {
     <div className={`${styles.container} ${menuOpen ? styles.mobileMenuOpen : ""}`}>
 
       <div className={styles.logo}>
-        <h2>LFB</h2>
+        <img src="/logo.png" alt="" fill className={styles.avatar} />
       </div>
       <div className={styles.mobileMenuButton} onClick={toggleMenu}>
         <div className={`${styles.bar} ${menuOpen ? styles.close : ""}`}></div>
