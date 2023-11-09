@@ -6,24 +6,15 @@ import ThemeToggle from "../themeToggle/ThemeToggle";
 import AuthLinks from "../authLinks/AuthLinks";
 
 const Navbar = () => {
-  const [menuOpen, setMenuOpen] = useState(false);
-
-  const toggleMenu = () => {
-    setMenuOpen(!menuOpen);
-  };
-
   return (
-    <div className={`${styles.container} ${menuOpen ? styles.mobileMenuOpen : ""}`}>
+    <div className={`${styles.container} `}>
 
       <div className={styles.logo}>
         <Link href="/">
           <img src="/logo.png" alt="" fill className={styles.avatar} />
         </Link>
       </div>
-      <div className={styles.mobileMenuButton} onClick={toggleMenu}>
-        <div className={`${styles.bar} ${menuOpen ? styles.close : ""}`}></div>
-      </div>
-      <div className={`${styles.links} ${menuOpen ? styles.mobileLinks : ""}`}>
+      <div className={`${styles.links} `}>
         <ThemeToggle />
         <Link href="/" className={styles.link}>
           Home
