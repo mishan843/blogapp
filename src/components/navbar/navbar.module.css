@@ -98,13 +98,22 @@
   .logo {
     text-align: left;
   }
+  .logo img {
+    width: 200px;
+  }
 }
 @media screen and (max-width: 768px) {
   .logo {
     font-size: 24px;
   }
+  .logo img {
+    width: 200px;
+  }
 }
 @media screen and (max-width: 640px) {
+  .logo img {
+    width: 200px;
+  }
   .links {
     justify-content: flex-end;
   }
