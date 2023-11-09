@@ -80,7 +80,6 @@
   align-items: center; /* Center the image vertically */
   width: 100%;
   margin: 10px;
-  max-width: 900px; /* Set the maximum width for the image */
 }
 
 .image {
@@ -92,7 +91,6 @@
 }
 
 .content {
-  display: flex;
   gap: 20px; /* Adjust spacing */
 }
 
@@ -162,7 +160,7 @@
 .blog_content img {
   max-width: 80%;
   height: auto;
-  margin: 15px;
+  margin: 0 10%;
 }
 
 /* Style code snippets */
