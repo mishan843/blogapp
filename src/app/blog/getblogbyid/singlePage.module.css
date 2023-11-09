@@ -1,14 +1,13 @@
 /* Container styles */
 .container {
-  margin-left: 400px;
-  margin-right: 400px;
+  margin-left: 300px;
+  margin-right: 300px;
 }
 .infoContainer {
   display: flex;
-  align-items: center;
+  align-items: start;
   justify-content: center; /* Center the content horizontally and vertically */
   flex-direction: column; /* Stack items vertically for small screens */
-  gap: 50px;
   padding: 20px;
   border-radius: 10px;
 }
@@ -24,10 +23,36 @@
   text-align: center;
 }
 
+.title:after {
+  width: 500px;
+  height: 1px;
+  display: block;
+  content: "";
+  position: relative;
+  margin-top: 10px;
+  left: 33%;
+  margin-left: -100px;
+  background-color: #b80000;
+}
+.title:before {
+  width: 100px;
+  height: 5px;
+  display: none;
+  content: "";
+  position: absolute;
+  bottom: 3px;
+  left: 50%;
+  margin-left: -14px;
+  background-color: #b80000;
+}
+
 .user {
   display: flex;
   align-items: center;
   gap: 20px;
+  justify-content: start;
+  text-align: start;
+  margin-top: 20px;
 }
 
 .avatar {
@@ -55,7 +80,6 @@
   align-items: center; /* Center the image vertically */
   width: 100%;
   max-width: 900px; /* Set the maximum width for the image */
-  margin-top: 50px;
 }
 
 .image {

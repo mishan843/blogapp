@@ -23,15 +23,17 @@ a {
 
 .dark {
   --bg: #0f172a;
-  --textColor: #ddd;
-  --softBg: #1f273a;
+  --textColor: #A0BFE0;
+  --textColortwo: #0f172a;
+  --softBg: #A0BFE0;
   --softTextColor: #a6a6a6;
 }
 
 .light {
-  --bg: white;
-  --textColor: black;
-  --softBg: #f0f0f0;
+  --bg: #c5dff872;
+  --textColor: #0f172a;
+  --textColortwo: #0f172a;
+  --softBg: #A0BFE0;
   --softTextColor: #626262;
 }
 
