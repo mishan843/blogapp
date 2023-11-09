@@ -106,8 +106,8 @@
   .logo {
     font-size: 24px;
   }
-  .logo img {
-    width: 200px;
+  .link {
+    display: none;
   }
 }
 @media screen and (max-width: 640px) {

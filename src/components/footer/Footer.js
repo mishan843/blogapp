@@ -5,7 +5,6 @@ import Link from "next/link";
 const Footer = () => {
   return (
     <div className={styles.container}>
-      <div className={styles.innerContainer}>
         <div className={styles.info}>
           <div>
             <img className={styles.logo} src="/logo.png" alt="" />
@@ -67,7 +66,6 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </div>
   );
 };
 
