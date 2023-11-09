@@ -234,12 +234,6 @@
   }
 }
 
-@media screen and (max-width: 768px) {
-  .container {
-    margin-left: 0px;
-    margin-right: 0px;
-  }
-  .blog_content {
-    font-size: 16px; /* Adjust font size for smaller screens */
-  }
-}
+
+
+

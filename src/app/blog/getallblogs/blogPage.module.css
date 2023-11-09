@@ -39,7 +39,12 @@
 .coding {
   background-color: #5e4fff84;
 }
-
+@media screen and (max-width: 1300px) {
+  .container {
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+  }
+}
 @media screen and (max-width: 768px) {
   .container {
     margin-left: 0px;
