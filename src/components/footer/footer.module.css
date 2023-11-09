@@ -1,7 +1,5 @@
 .container {
-  margin: 0 100px;
   padding: 20px;
-  display: flex;
   flex-wrap: wrap;
   align-items: start;
   justify-content: space-between;
@@ -12,7 +10,10 @@
   color: var(--textColortwo);
   font-family: "Times New Roman", Times, serif;
 }
-
+.innerContainer {
+  display: flex;
+  margin: 0 300px;
+}
 .link_contaner {
   display: flex;
   flex: 1;
@@ -20,7 +21,6 @@
   align-items: start;
   gap: 100px;
 }
-
 
 .info {
   flex: 1;
@@ -48,8 +48,6 @@
   filter: grayscale(0);
 }
 
-
-
 .list {
   display: flex;
   flex-direction: column;
@@ -67,9 +65,15 @@
   text-transform: uppercase;
 }
 
-@media screen and (max-width : 1024px) {
-  .link_contaner{
+@media screen and (max-width: 1024px) {
+  .innerContainer {
+    margin: 0 0;
     flex-wrap: wrap;
+    display: block;
+  }
+  .link_contaner {
+    flex-wrap: wrap;
+    margin-top: 20px;
   }
   .list {
     font-size: 10px;
@@ -86,8 +90,10 @@
 }
 
 @media screen and (max-width: 768px) {
-  .container{
+  .innerContainer {
+    margin: 0 0;
     flex-wrap: wrap;
+    display: block;
   }
   .logoSubTitle {
     font-size: 10px;
@@ -114,11 +120,17 @@
     font-size: 12px;
   }
 }
-@media screen and (max-width : 640px) {
+@media screen and (max-width: 640px) {
   .list {
     font-size: 10px;
   }
-
+  .container {
+    margin: 0 0;
+    display: block;
+  }
+  .innerContainer {
+    margin: 0 0;
+  }
   .desc {
     font-family: cursive;
     font-size: 12px;
