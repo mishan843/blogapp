@@ -42,18 +42,19 @@ const Page = () => {
         <div className={styles.textContainer}>
           <h1 className={styles.title}>{singleBlog.title}</h1>
         </div>
+        <div className={styles.user}>
+          <div className={styles.userImageContainer}>
+            <img src="/profile_logo.jpg" alt="" fill className={styles.avatar} />
+          </div>
+          <div className={styles.userTextContainer}>
+            <b><span className={styles.username}>Blogger Ground</span></b>
+            <span className={styles.date}>written by</span>
+          </div>
+        </div>
         <div className={styles.imageContainer}>
           <img src={singleBlog.coverImage} alt="" fill className={styles.image} />
         </div>
-        <div className={styles.user}>
-            <div className={styles.userImageContainer}>
-              <img src="/profile_logo.jpg" alt="" fill className={styles.avatar} />
-            </div>
-            <div className={styles.userTextContainer}>
-              <b><span className={styles.username}>Blogger Ground</span></b>
-              <span className={styles.date}>written by</span>
-            </div>
-          </div>
+
       </div>
       <div className={styles.content}>
         <div className={styles.post}>

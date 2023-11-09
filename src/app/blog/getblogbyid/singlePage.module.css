@@ -79,6 +79,7 @@
   justify-content: center; /* Center the image horizontally */
   align-items: center; /* Center the image vertically */
   width: 100%;
+  margin: 10px;
   max-width: 900px; /* Set the maximum width for the image */
 }
 
@@ -233,7 +234,3 @@
     font-size: 14px; /* Adjust font size for smaller screens */
   }
 }
-
-
-
-
