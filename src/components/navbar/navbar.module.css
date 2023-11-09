@@ -30,6 +30,7 @@
   gap: 20px;
   flex: 1;
   font-family: serif;
+  justify-content: center;
 }
 
 .mobileMenuButton {
@@ -104,7 +105,7 @@
   }
 }
 @media screen and (max-width: 640px) {
-  .links{
+  .links {
     justify-content: flex-end;
   }
   .link {

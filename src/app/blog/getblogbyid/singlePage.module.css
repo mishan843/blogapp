@@ -98,7 +98,6 @@
 
 .post {
   flex: 5;
-  margin-top: 50px;
 }
 
 .blog_content {
@@ -117,7 +116,7 @@
 }
 
 .blog_content p {
-  font-size: 18px;
+  font-size: 25px;
   line-height: 1.6;
   margin-bottom: 15px;
 }
@@ -154,9 +153,9 @@
 
 /* Add some spacing for images */
 .blog_content img {
-  max-width: 100%;
+  max-width: 80%;
   height: auto;
-  margin: 15px 0;
+  margin: 15px;
 }
 
 /* Style code snippets */
@@ -219,6 +218,13 @@
 }
 
 @media screen and (max-width: 640px) {
+  .imageContainer {
+    margin: 0px;
+  }
+  .blog_content img {
+    max-width: 100%;
+    margin: 0px;
+  }
   .title {
     font-size: 24px; /* Adjust font size for smaller screens */
   }
