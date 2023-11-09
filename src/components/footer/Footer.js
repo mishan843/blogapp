@@ -20,34 +20,38 @@ const Footer = () => {
         </div>
       </div>
       <div className={styles.linkwrap}>
-        <div className={styles.links}>
-          <div className={styles.list}>
-            <span className={styles.listTitle}>Links</span>
-            <Link href="/">Home</Link>
-            <Link href="/">Blog</Link>
-            <Link href="/">About</Link>
-            <Link href="/">Contact</Link>
+        <div className={styles.link_contaner}>
+
+          <div className={styles.links}>
+            <div className={styles.list}>
+              <span className={styles.listTitle}>Links</span>
+              <Link href="/">Home</Link>
+              <Link href="/">Blog</Link>
+              <Link href="/">About</Link>
+              <Link href="/">Contact</Link>
+            </div>
           </div>
-        </div>
-        <div className={styles.links}>
-          <div className={styles.list}>
-            <span className={styles.listTitle}>Tags</span>
-            <Link href="/">Style</Link>
-            <Link href="/">Fashion</Link>
-            <Link href="/">Coding</Link>
-            <Link href="/">Travel</Link>
+          <div className={styles.links}>
+            <div className={styles.list}>
+              <span className={styles.listTitle}>Tags</span>
+              <Link href="/">Style</Link>
+              <Link href="/">Fashion</Link>
+              <Link href="/">Coding</Link>
+              <Link href="/">Travel</Link>
+            </div>
           </div>
-        </div>
-        <div className={styles.links}>
-          <div className={styles.list}>
-            <span className={styles.listTitle}>Social</span>
-            <Link href="/">Facebook</Link>
-            <Link href="/">Github</Link>
-            <Link href="/">Linkedin</Link>
-            <Link href="/">Youtube</Link>
+          <div className={styles.links}>
+            <div className={styles.list}>
+              <span className={styles.listTitle}>Social</span>
+              <Link href="/">Facebook</Link>
+              <Link href="/">Github</Link>
+              <Link href="/">Linkedin</Link>
+              <Link href="/">Youtube</Link>
+            </div>
           </div>
         </div>
       </div>
+
     </div>
   );
 };

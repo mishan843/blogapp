@@ -8,7 +8,7 @@ const AuthLinks = () => {
   const [open, setOpen] = useState(false);
   const userData = localStorage.getItem("user");
   const router = useRouter();
-  const [isLoggedIn, setIsLoggedIn] = useState(localStorage.getItem('user')) 
+  const [isLoggedIn, setIsLoggedIn] = useState(localStorage.getItem('user'))
 
   const handleLogout = (e) => {
     e.preventDefault();
@@ -20,9 +20,9 @@ const AuthLinks = () => {
   return (
     <>
       {isLoggedIn ? (
-        <button className={styles.link} onClick={handleLogout}>
+        <Link href="/" className={styles.link} onClick={handleLogout}>
           Logout
-        </button>
+        </Link>
       ) : (
         <Link href="/signup" setIsLoggedIn={localStorage.getItem("user")}>
           Signup

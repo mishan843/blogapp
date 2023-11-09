@@ -51,6 +51,8 @@
   background-color: #57c4ff31;
   font-weight: bold;
   transition: background-color 0.3s, color 0.3s;
+  font-family: serif;
+  font-size: 20px;
 }
 
 .category.finance {

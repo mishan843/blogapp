@@ -1,17 +1,23 @@
 .container {
-  margin-top: 50px;
+  margin: 50px 10%;
   padding: 20px;
+  width: 80%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: var(--softBg); /* Light gray background that looks good with white */
+  background-color: var(
+    --softBg
+  ); /* Light gray background that looks good with white */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
-  color: var(--textColortwo); 
+  color: var(--textColortwo);
   font-family: "Times New Roman", Times, serif;
 }
-
+.link_contaner {
+  margin: 0px 5%;
+  display: flex;
+}
 .info {
   flex: 1;
   display: flex;
@@ -37,10 +43,10 @@
 }
 
 .links {
-  flex: 1;
   display: flex;
   justify-content: flex-end;
   gap: 40px;
+  margin: 40px;
 }
 
 .list {
@@ -65,16 +71,17 @@
   gap: 30px;
   flex-wrap: wrap;
   margin-top: 20px;
-  flex: 1;
 }
 
 @media screen and (max-width: 768px) {
   .container {
+    margin: 50px 0px;
+    width: 100%;
     padding: 10px; /* Reduce padding */
     flex-direction: column;
   }
-  .linkwrap{
-    /* flex-wrap: wrap; */
+  .linkwrap {
+    flex-wrap: wrap;
   }
   .logoSubTitle {
     font-size: 10px; /* Decrease font size for the logo text */
