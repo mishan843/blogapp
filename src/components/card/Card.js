@@ -36,7 +36,7 @@ const Card = (body) => {
     <>
       {search ? blogByCat.map((item) => {
         const categoryColor = getColors(item.category[0]);
-
+        const title = item.title.toLowerCase().replace(/\s+/g, "-")
         return (
           <div key={item.id} className={styles.container}>
             <div key={item.id} clFinanceassName={styles.imageContainer}>
@@ -47,7 +47,7 @@ const Card = (body) => {
                 <span className={styles.date}>{item.createdAt}</span>
                 <span className={`${categoryColor} ${styles.category} `}>{item.category}</span>
               </div>
-              <Link href={`/blog/getblogbyid?id=${item._id}`}>
+              <Link href={`/blog/${title}/getblogbyid?id=${item._id}`}>
                 <h1>{item.title}</h1>
               </Link>
               <p className={styles.desc}>
@@ -74,7 +74,7 @@ const Card = (body) => {
                   <span className={`${categoryColor} ${styles.category}`}>{item.category}</span>
                   <span className={styles.date}>{item.createdAt}</span>
                 </div>
-                <Link href={`/blog/getblogbyid?id=${item._id}`}>
+                <Link href={`/blog/${item.title.toLowerCase().replace(/\s+/g, "-")}/getblogbyid?id=${item._id}`}>
                   <h1>{item.title}</h1>
                 </Link>
                 <p className={styles.desc}>

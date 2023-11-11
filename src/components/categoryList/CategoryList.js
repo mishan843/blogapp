@@ -15,7 +15,7 @@ const CategoryList = () => {
           className={`${styles.category} ${styles.finance}`}
         >
           <img
-            src="/style.png"
+            src="/finance.jpg"
             width={32}
             height={32}
             alt=""
@@ -28,7 +28,7 @@ const CategoryList = () => {
           className={`${styles.category} ${styles.coding}`}
         >
           <img
-            src="/coding.png"
+            src="/coding.jpg"
             width={32}
             height={32}
             alt=""
@@ -41,7 +41,7 @@ const CategoryList = () => {
           className={`${styles.category} ${styles.travel}`}
         >
           <img
-            src="/travel.png"
+            src="/travel.jpeg"
             width={32}
             height={32}
             alt=""
@@ -54,7 +54,7 @@ const CategoryList = () => {
           className={`${styles.category} ${styles.food}`}
         >
           <img
-            src="/food.png"
+            src="/food.jpg"
             width={32}
             height={32}
             alt=""
@@ -67,7 +67,7 @@ const CategoryList = () => {
           className={`${styles.category} ${styles.fashion}`}
         >
           <img
-            src="/fashion.png"
+            src="/fashion.jpg"
             width={32}
             height={32}
             alt=""
@@ -80,7 +80,7 @@ const CategoryList = () => {
           className={`${styles.category} ${styles.style}`}
         >
           <img
-            src="/fashion.png"
+            src="/style.jpg"
             width={32}
             height={32}
             alt=""
