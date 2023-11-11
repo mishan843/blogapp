@@ -67,6 +67,7 @@
   display: flex;
   flex-direction: column;
   gap: 5px;
+  font-family: serif;
 }
 
 .username {
@@ -81,8 +82,11 @@
   width: 100%;
   margin: 10px;
 }
-
+.avtar_logo {
+  width: 175px;
+}
 .image {
+  margin-top: 25px;
   max-width: 100%; /* Ensure the image stays within the container */
   height: auto; /* Maintain aspect ratio */
   width: 900px; /* Set the image width to 900px */
@@ -99,82 +103,84 @@
   margin: 20px auto;
   padding: 20px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background-color: white;
 }
 
 .blog_content {
-  padding: 10px;
-  font-family: serif;
-  font-size: 16px;
-  line-height: 1.6;
+  padding: 20px;
+  font-family: "Times New Roman", Times, serif; /* Change to a classic serif font */
+  font-size: 20px;
+  line-height: 1.8;
   color: #333;
-  margin: 10px 0;
+  margin: 20px 0;
 }
 
 .blog_content h2 {
-  margin-bottom: 15px;
-  line-height: 1.8;
+  margin-bottom: 20px;
+  font-size: 32px;
+  line-height: 1.6;
+  color: #1a1a1a; /* Darker heading color */
 }
 
 .blog_content p {
-  font-size: 25px;
-  line-height: 1.6;
   margin-bottom: 15px;
+  font-size: 20px;
+  line-height: 1.6;
+  color: #4d4d4d; /* Slightly darker text color */
 }
 
 .blog_content ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  margin-top: 15px;
+  list-style: disc;
+  padding-left: 20px;
+  margin: 15px 0;
 }
 
 .blog_content li {
   margin-bottom: 10px;
-  background-color: #f8f8f8;
-  padding: 8px;
-  border-radius: 5px;
+  background-color: #f9f9f9; /* Lighter background */
+  padding: 15px;
+  border-radius: 10px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-/* Add some style to links within the content */
 .blog_content a {
-  color: #0074b8;
-  text-decoration: underline;
-  transition: color 0.3s;
+  color: #0066cc;
+  text-decoration: none;
+  border-bottom: 1px solid #0066cc;
+  transition: color 0.3s, border-bottom 0.3s;
 }
 
 .blog_content a:hover {
-  color: #005a93;
+  color: #004080;
+  border-bottom: 1px solid #004080;
 }
 
-/* Style blockquotes */
 .blog_content blockquote {
-  background-color: #f9f9f9;
-  border-left: 4px solid #0074b8;
+  background-color: #f7f7f7;
+  border-left: 4px solid #0066cc;
   margin: 0;
-  padding: 10px 20px;
+  padding: 20px;
   color: #555;
 }
 
-/* Add some spacing for images */
 .blog_content img {
-  max-width: 80%;
+  max-width: 100%;
   height: auto;
-  margin: 0 10%;
+  margin: 20px 0;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow to images */
 }
 
-/* Style code snippets */
 .blog_content code {
   font-family: "Courier New", Courier, monospace;
-  background-color: #f4f4f4;
+  background-color: #f0f0f0;
   padding: 2px 4px;
-  border: 1px solid #ccc;
+  border: 1px solid #ddd;
   border-radius: 4px;
 }
 
-/* Add some space between sections */
 .blog_content .section {
-  margin-top: 30px;
+  margin-top: 40px;
 }
 
 /* Responsive design for smaller screens */
