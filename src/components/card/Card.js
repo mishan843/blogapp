@@ -53,7 +53,7 @@ const Card = (body) => {
               <p className={styles.desc}>
                 {item.description}
               </p>
-              <Link href={`/blog/getblogbyid?id=${item._id}`} className={`${styles.link} ${categoryColor}`}>
+              <Link href={`/blog/${title}/getblogbyid?id=${item._id}`} className={`${styles.link} ${categoryColor}`}>
                 Read More
               </Link>
             </div>
@@ -63,6 +63,7 @@ const Card = (body) => {
       }) :
         blogs.map((item) => {
           const categoryColor = getColors(item.category[0]);
+          const title = item.title.toLowerCase().replace(/\s+/g, "-")
 
           return (
             <div key={item.id} className={styles.container}>
@@ -74,13 +75,13 @@ const Card = (body) => {
                   <span className={`${categoryColor} ${styles.category}`}>{item.category}</span>
                   <span className={styles.date}>{item.createdAt}</span>
                 </div>
-                <Link href={`/blog/${item.title.toLowerCase().replace(/\s+/g, "-")}/getblogbyid?id=${item._id}`}>
+                <Link href={`/blog/${title}/getblogbyid?id=${item._id}`}>
                   <h1>{item.title}</h1>
                 </Link>
                 <p className={styles.desc}>
                   {item.description}
                 </p>
-                <Link href={`/blog/getblogbyid?id=${item._id}`} className={styles.link}>
+                <Link href={`/blog/${title}/getblogbyid?id=${item._id}`} className={styles.link}>
                   Read More
                 </Link>
               </div>
