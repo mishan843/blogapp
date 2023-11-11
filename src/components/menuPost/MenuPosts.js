@@ -20,10 +20,10 @@ const MenuPosts = ({ withImage }) => {
       case 'Travel':
         return styles.travel
         break;
-        case 'Food':
+      case 'Food':
         return styles.food
         break;
-        case 'Fashion':
+      case 'Fashion':
         return styles.fashion
         break;
       default:
@@ -34,7 +34,7 @@ const MenuPosts = ({ withImage }) => {
 
   useEffect(() => {
     // Fetch data from the API
-    fetch(`${process.env.NEXT_PUBLIC_API_URL}/blog/getallblogs?ispopularpost=true&page=1&limit=5`)
+    fetch(`${process.env.NEXT_PUBLIC_API_URL}/blog/getallblogs?isPopularpost=true&page=1&limit=5`)
       .then((response) => response.json())
       .then((data) => {
         setData(data.data);
@@ -49,7 +49,7 @@ const MenuPosts = ({ withImage }) => {
   return (
     <div className={styles.items}>
       {data.map((obj) => {
-        const categoryColor = getColors(obj.category[0]); 
+        const categoryColor = getColors(obj.category[0]);
 
         return (<Link key={obj._id} href={`/blog/getblogbyid?id=${obj._id}`} className={styles.item}>
           {withImage && (
