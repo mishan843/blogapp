@@ -239,6 +239,7 @@
   }
   .description p {
     font-size: 14px; /* Adjust font size for smaller screens */
+    line-height: 25px;
   }
 
   .username {
