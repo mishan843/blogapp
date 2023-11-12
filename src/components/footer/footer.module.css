@@ -78,7 +78,7 @@
   }
 
   .desc {
-    font-family: cursive;
+    font-family: serif;
     font-size: 12px;
   }
 
@@ -109,15 +109,10 @@
     font-size: 10px;
   }
 
-  .desc {
-    font-family: cursive;
-    font-size: 12px;
-  }
-
   .listTitle {
     font-size: 12px;
   }
-  .link_contaner{
+  .link_contaner {
     gap: 40px;
   }
 }
@@ -132,15 +127,11 @@
   .innerContainer {
     margin: 0 0;
   }
-  .desc {
-    font-family: cursive;
-    font-size: 12px;
-  }
 
   .listTitle {
     font-size: 12px;
   }
-  .link_contaner{
+  .link_contaner {
     gap: 40px;
   }
 }
