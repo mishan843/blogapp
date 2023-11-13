@@ -1,6 +1,7 @@
-import Link from "next/link";
+"use client"
+
 import styles from "./comments.module.css";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useSearchParams } from "next/navigation";
 
 const Comments = ({ singleBlog, setSingleBlog }) => {
