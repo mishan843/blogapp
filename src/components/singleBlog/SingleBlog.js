@@ -14,6 +14,7 @@ const SingleBlog = () => {
   const router = useRouter();
 
   const [singleBlog, setSingleBlog] = useState([]);
+  localStorage.setItem("blog", JSON.stringify(singleBlog))
   
   useEffect(() => {
     const fetchData = async () => {

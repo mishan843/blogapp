@@ -19,7 +19,6 @@ const Comments = ({ singleBlog, setSingleBlog }) => {
   const indexOfFirstComment = indexOfLastComment - commentsPerPage;
   allcomment.reverse()
   const currentComments = allcomment.slice(indexOfFirstComment, indexOfLastComment) || [];
-  console.log("currentComments", currentComments)
 
   const handleComment = async (e) => {
     e.preventDefault();

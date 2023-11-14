@@ -2,12 +2,19 @@
 import MainPage from '@/components/mainPage/MainPage'
 import React from 'react'
 
-const Page = () => {
+export default function Page (){
   return (
    <div>
-    <MainPage/>
+    <MainPage />                                                
    </div>
   )
 }
 
-export default Page
+ Page
+
+export function generateMetadata(){
+  return {
+    title: "single blog page",
+    description:"single blog page description"
+  }
+}
