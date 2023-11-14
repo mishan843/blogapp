@@ -4,9 +4,26 @@ import CardList from "@/components/cardList/CardList";
 import Menu from "@/components/menu/Menu";
 
 export const metadata = {
-  title: "bloggerGround - A Platform for Bloggers | bloggerGround",
+  title: {
+    default: "bloggersGround",
+    template: "%s - bloggersGround",
+  },
   description:
-    "Join bloggerGround, a platform designed specifically for bloggers. Connect with us, access helpful services, and grow your blog.",
+    "Bloggers Ground - A platform designed specifically for bloggers. Connect with us, access helpful services, and grow your blog",
+  openGraph: {
+    title: "bloggersGround",
+    description:
+      "Bloggers Ground - A platform designed specifically for bloggers. Connect with us, access helpful services, and grow your blog",
+    url: "bloggersground.com",
+    siteName: "bloggersGround",
+    images: [
+      {
+        url: "https://drive.google.com/uc?id=1ctCe5W1DBcxfsRrSdjUp6avfwCZ6lUBd",
+        width: 1200,
+        height: 600,
+      },
+    ],
+  },
 };
 export default function Home() {
   return (
