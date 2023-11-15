@@ -31,6 +31,20 @@ export const generateMetadata = ({ searchParams, params }) => {
               },
             ],
           },
+          openGraph: {
+            title: `${result.title}`,
+            description: `${result.description.slice(0, 60)}`,
+            url: `https://www.bloggersground.com/blog/${result.title
+              .toLowerCase()
+              .replace(/\s+/g, "-")}/${result._id}`, // Uncomment this line
+            siteName: "bloggersGround",
+            images: [
+              {
+                url: `${result.coverImage}`
+              },
+            ],
+          },
+
         };
       } else {
         console.error("Error fetching data:", response.statusText);
