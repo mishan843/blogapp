@@ -27,8 +27,8 @@ const PrivacyPage = () => {
       <p>For the purposes of this Privacy Policy:</p>
       <ul>
         <li>
-          <span>Company</span> (referred to as either "the Company", "We", "Us"
-          or "Our" in this Agreement) refers to bloggers ground.
+          <span>Company</span> (referred to as either &apos;the Company&apos;, &apos;We&apos;, &apos;Us&apos;
+          or &apos;Our&apos; in this Agreement) refers to bloggers ground.
         </li>
         <li>
           <span>Device</span> means any device that can access the Service such
@@ -101,7 +101,7 @@ const PrivacyPage = () => {
         <li>
           <span>To contact You:</span> To contact You by email, telephone calls,
           SMS, or other equivalent forms of electronic communication, such as a
-          mobile application's push notifications regarding updates or
+          mobile application&apos;s push notifications regarding updates or
           informative communications related to the functionalities, products or
           contracted services, including the security updates, when necessary or
           reasonable for their implementation.
@@ -180,7 +180,7 @@ const PrivacyPage = () => {
       </p>
       <h3>Transfer of Your Personal Data</h3>
       <p>
-        Your information, including Personal Data, is processed at the Company's
+        Your information, including Personal Data, is processed at the Company&apos;s
         operating offices and in any other places where the parties involved in
         the processing are located. It means that this information may be
         transferred to — and maintained on — computers located outside of Your
@@ -230,7 +230,7 @@ const PrivacyPage = () => {
       <p>
         Our Service may contain links to other websites that are not operated by
         Us. If You click on a third party link, You will be directed to that
-        third party's site. We strongly advise You to review the Privacy Policy
+        third party&apos;s site. We strongly advise You to review the Privacy Policy
         of every site You visit. We have no control over and assume no
         responsibility for the content, privacy policies or practices of any
         third party sites or services.
