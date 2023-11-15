@@ -28,7 +28,8 @@ export const generateMetadata = ({ searchParams, params }) => {
             images: [
               {
                 url: `${result.coverImage}`,
-
+                width: 800,
+                height: 600,
               },
             ],
           },
@@ -36,7 +37,6 @@ export const generateMetadata = ({ searchParams, params }) => {
             card: 'summary_large_image',
             title: `${result.title}`,
             description: `${result.description.slice(0, 60)}`,
-            siteId: '1467726470533754880',
             creator: 'bloggersGround',
             creatorId: '1467726470533754880',
             images: [`${result.coverImage}`],
