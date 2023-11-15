@@ -26,23 +26,18 @@ export const generateMetadata = ({ searchParams, params }) => {
             images: [
               {
                 url: `${result.coverImage}`,
-                width: 1200,
-                height: 1200
+
               },
             ],
           },
-          openGraph: {
-            title: `${result.title}`,
-            description: `${result.description.slice(0, 60)}`,
-            url: `https://www.bloggersground.com/blog/${result.title
-              .toLowerCase()
-              .replace(/\s+/g, "-")}/${result._id}`, // Uncomment this line
-            siteName: "bloggersGround",
-            images: [
-              {
-                url: `${result.coverImage}`
-              },
-            ],
+          twitter: {
+            card: 'summary_large_image',
+            title: 'Next.js',
+            description: 'The React Framework for the Web',
+            siteId: '1467726470533754880',
+            creator: '@nextjs',
+            creatorId: '1467726470533754880',
+            images: ['https://nextjs.org/og.png'],
           },
 
         };
