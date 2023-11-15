@@ -16,6 +16,8 @@ export const generateMetadata = ({ searchParams, params }) => {
         return {
           title: `${result.title}`,
           description: `${result.description.slice(0, 60)}`,
+          category: 'technology',
+
           openGraph: {
             title: `${result.title}`,
             description: `${result.description.slice(0, 60)}`,
@@ -32,12 +34,12 @@ export const generateMetadata = ({ searchParams, params }) => {
           },
           twitter: {
             card: 'summary_large_image',
-            title: 'Next.js',
-            description: 'The React Framework for the Web',
+            title: `${result.title}`,
+            description: `${result.description.slice(0, 60)}`,
             siteId: '1467726470533754880',
-            creator: '@nextjs',
+            creator: 'bloggersGround',
             creatorId: '1467726470533754880',
-            images: ['https://nextjs.org/og.png'],
+            images: [`${result.coverImage}`],
           },
 
         };
