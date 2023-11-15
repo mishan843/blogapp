@@ -13,25 +13,25 @@ export const generateMetadata = ({ searchParams, params }) => {
       if (response.ok) {
 
         let result = await response.json();
-         return {
-           title: `${result.title}`,
-           description: `${result.description.slice(0, 60)}`,
-           openGraph: {
-             title: `${result.title}`,
-             description: `${result.description.slice(0, 60)}`,
-             url: `https://www.bloggersground.com/blog/${result.title
-               .toLowerCase()
-               .replace(/\s+/g, "-")}/${result._id}`, // Uncomment this line
-             siteName: "bloggersGround",
-             images: [
-               {
-                 url: `${result.coverImage}`,
-                 width: 1200,
-                 height: 600,
-               },
-             ],
-           },
-         };
+        return {
+          title: `${result.title}`,
+          description: `${result.description.slice(0, 60)}`,
+          openGraph: {
+            title: `${result.title}`,
+            description: `${result.description.slice(0, 60)}`,
+            url: `https://www.bloggersground.com/blog/${result.title
+              .toLowerCase()
+              .replace(/\s+/g, "-")}/${result._id}`, // Uncomment this line
+            siteName: "bloggersGround",
+            images: [
+              {
+                url: `${result.coverImage}`,
+                width: 1200,
+                height: 1200
+              },
+            ],
+          },
+        };
       } else {
         console.error("Error fetching data:", response.statusText);
       }
@@ -39,7 +39,7 @@ export const generateMetadata = ({ searchParams, params }) => {
       console.error("Error fetching data:", error);
     }
   };
- return fetchData();
+  return fetchData();
 
 };
 
