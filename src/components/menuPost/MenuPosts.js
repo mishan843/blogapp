@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from 'react';
 import styles from './menuPosts.module.css';
 import Link from 'next/link';
-import { useRouter, useSearchParams } from 'next/navigation';
+import { useRouter } from 'next/navigation';
 
 const MenuPosts = ({ withImage }) => {
   const [data, setData] = useState([]);

@@ -1,7 +1,6 @@
 import SingleBlog from "@/components/singleBlog/SingleBlog";
 
 
-
 export const generateMetadata = ({ searchParams, params }) => {
 
   const fetchData = async () => {
