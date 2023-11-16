@@ -15,8 +15,8 @@ export const generateMetadata = ({ searchParams, params }) => {
         return {
           title: `${result.title}`,
           description: `${result.description.slice(0, 60)}`,
-          category: 'technology',
-
+          category: result.category,
+          keywords: result.keywords,
           openGraph: {
             title: `${result.title}`,
             description: `${result.description.slice(0, 60)}`,
