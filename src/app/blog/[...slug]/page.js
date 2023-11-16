@@ -28,8 +28,23 @@ export const generateMetadata = ({ searchParams, params }) => {
             images: [
               {
                 url: `${result.coverImage}`,
-                width: 800,
-                height: 600,
+                width: 1200,
+                height: 630, // Facebook share image size
+              },
+              {
+                url: `${result.coverImage}`,
+                width: 1080,
+                height: 1080, // Instagram square image size
+              },
+              {
+                url: `${result.coverImage}`,
+                width: 600,
+                height: 315, // Twitter share image size
+              },
+              {
+                url: `${result.coverImage}`,
+                width: 540,
+                height: 540, // WhatsApp share image size
               },
             ],
           },
