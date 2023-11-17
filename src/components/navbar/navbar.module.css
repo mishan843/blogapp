@@ -20,8 +20,9 @@
   flex: 1;
   text-align: center;
 }
+
 .logo img {
-  width: 300px;
+  width: 200px;
 }
 .links {
   display: flex;

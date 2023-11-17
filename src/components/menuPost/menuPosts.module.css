@@ -1,5 +1,5 @@
 .items {
-  margin-top: 28px;
+  margin-top: 42px;
   margin-bottom: 60px;
   display: flex;
   flex-direction: column;
@@ -7,6 +7,8 @@
   padding: 20px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
   border-radius: 15px;
+  border: 1px solid var(--textColor);
+  background-color: var(--bg);
   transition: transform 0.2s ease-in-out;
 }
 
@@ -49,6 +51,13 @@
   color: white;
 }
 
+.posttitle {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--textColor);
+  transition: color 0.2s ease-in-out;
+}
+
 .finance {
   background-color: #57c4ff9b;
 }
@@ -72,27 +81,19 @@
   background-color: #5e4fff84;
 }
 
-.posttitle {
-  font-size: 20px;
-  font-weight: 600;
-  color: var(--softTextColor);
-  transition: color 0.2s ease-in-out;
-}
 
-.posttitle:hover {
+
+/* .posttitle:hover {
   color: #ff6b6b;
-}
+} */
 
 .detail {
   font-size: 14px;
   color: #666;
 }
 
-.items {
-  transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
-}
 
-.items:hover {
+/* .items:hover {
   transform: translateY(-5px);
   background-color: var(--textColor);
-}
+} */

@@ -1,5 +1,5 @@
 "use client"
-import React, { useState } from "react";
+import React from "react";
 import styles from "./navbar.module.css";
 import Link from "next/link";
 import ThemeToggle from "../themeToggle/ThemeToggle";
@@ -11,7 +11,7 @@ const Navbar = () => {
 
       <div className={styles.logo}>
         <Link href="/">
-          <img src="/logo.png" alt="" fill className={styles.avatar} />
+          <img src="/logo2.png" alt="" fill  />
         </Link>
       </div>
       <div className={`${styles.links} `}>

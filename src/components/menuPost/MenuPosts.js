@@ -50,7 +50,6 @@ const MenuPosts = ({ withImage }) => {
     <div className={styles.items}>
       {data.map((obj) => {
         const categoryColor = getColors(obj.category[0]);
-
         return (<Link key={obj._id} href={`/blog/getblogbyid?id=${obj._id}`} className={styles.item}>
           {withImage && (
             <div className={styles.imageContainer}>

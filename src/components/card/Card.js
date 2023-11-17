@@ -31,6 +31,43 @@ const Card = (body) => {
     }
   }
 
+  const getBlogByCat = (name) => {
+    switch (name) {
+      case 'Finance':
+        return (
+          <h2>finance</h2>
+        )
+        break;
+      case 'Coding':
+        return (
+          <h2>coding</h2>
+        )
+        break;
+      case 'Travel':
+        return (
+          <h2>travel</h2>
+        )
+        break;
+      case 'Food':
+        return (
+          <h2>food</h2>
+        )
+        break;
+      case 'Fashion':
+        return (
+          <h2>fashion</h2>
+        )
+        break;
+      default:
+        return (
+          <h2>style</h2>
+        )
+        break;
+    }
+  }
+
+  const blogCategory = getBlogByCat(search);
+
 
   return (
     <>
@@ -89,6 +126,9 @@ const Card = (body) => {
           );
         })
       }
+      {search ? <div>
+      {blogCategory}
+      </div> : ""}
     </>
   );
 };

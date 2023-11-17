@@ -13,7 +13,6 @@
 .title {
   text-align: center;
   text-transform: uppercase;
-  padding-bottom: 5px;
 }
 .title:after {
   width: 200px;

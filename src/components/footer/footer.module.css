@@ -27,8 +27,15 @@
   gap: 20px;
 }
 
+.imageContainer {
+  width: 200px;
+  height: 100px;
+  margin-bottom: 30px;
+  margin-top: -50px;
+}
+
 .logo {
-  width: 300px;
+  width: 200px;
 }
 
 .icons {
@@ -69,10 +76,12 @@
     flex-wrap: wrap;
     display: block;
   }
+
   .link_contaner {
     /* flex-wrap: wrap; */
     margin-top: 20px;
   }
+
   .list {
     font-size: 10px;
   }
@@ -93,6 +102,7 @@
     flex-wrap: wrap;
     display: block;
   }
+
   .logoSubTitle {
     font-size: 10px;
   }
@@ -112,18 +122,22 @@
   .listTitle {
     font-size: 12px;
   }
+
   .link_contaner {
     gap: 40px;
   }
 }
+
 @media screen and (max-width: 640px) {
   .list {
     font-size: 10px;
   }
+
   .container {
     margin: 0 0;
     display: block;
   }
+
   .innerContainer {
     margin: 0 0;
   }
@@ -131,6 +145,7 @@
   .listTitle {
     font-size: 12px;
   }
+
   .link_contaner {
     gap: 40px;
   }
