@@ -12,22 +12,24 @@
   position: absolute;
   top: 85px;
   background-color: var(--softBg);
-  height: 105px;
+  height: 150px;
   width: 100px;
   border-radius: 5px;
-  display: flex;
   gap: 5px;
   justify-content: center;
+  align-items: center;
   font-size: 16px;
   z-index: 999;
-  opacity: 0.8;
+  color: black 1 !important;
 }
 
 .responsiveLink{
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: start;
   justify-content: center;
+  margin: 25px 20px;
+  gap: 20px;
 }
 
 @media screen and (max-width: 768px) {

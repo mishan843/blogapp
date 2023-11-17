@@ -15,14 +15,16 @@
 
 .imageContainer {
   position: relative;
-  border-radius: 10px 10px 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .image {
-  width: 250px;
+  width: 275px;
   height: auto;
   object-fit: cover;
-  border-radius: 10px 10px 0 0;
+  border-radius: 10px 10px 10px 10px;
   transition: transform 0.3s;
 }
 
