@@ -55,7 +55,11 @@ export const generateMetadata = ({ searchParams, params }) => {
             creatorId: '1467726470533754880',
             images: [`${result.coverImage}`],
           },
-
+          alternates: {
+            canonical: `${process.env.DOMAIN}blog/${result.title
+              .toLowerCase()
+              .replace(/\s+/g, "-")}/${result._id}`,
+          },
         };
       } else {
         console.error("Error fetching data:", response.statusText);
