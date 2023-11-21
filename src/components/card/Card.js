@@ -8,6 +8,7 @@ import Link from "next/link";
 
 const Card = (body) => {
   let { blogs, blogByCat, search } = body
+
   const getColors = (name) => {
     switch (name) {
       case 'Finance':
