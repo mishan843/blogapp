@@ -28,7 +28,7 @@ export const generateMetadata = ({ searchParams, params }) => {
               {
                 url: `${result.coverImage}`,
                 width: 1200,
-                height: 630, // Facebook share image size
+                height: 628, // Facebook share image size
               },
               {
                 url: `${result.coverImage}`,
@@ -42,9 +42,10 @@ export const generateMetadata = ({ searchParams, params }) => {
               },
               {
                 url: `${result.coverImage}`,
-                width: 540,
-                height: 540, // WhatsApp share image size
+                width: 800,
+                height: 800, // WhatsApp share image size
               },
+
             ],
           },
           twitter: {
