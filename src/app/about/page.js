@@ -48,7 +48,7 @@ const AboutPage = () => {
       <h3>Meet the Expert Team</h3>
       <h4>Jenish Kavathiya - Founder and Chief Editor</h4>
       <p>
-        Greetings! I'm Jenish Kavathiya, the founder and chief editor of
+        Greetings! I&apos;m Jenish Kavathiya, the founder and chief editor of
         &apos;BloggersGround.com&apos;. My journey in make this Blogging website
         began when I realized that what i faced when i was in this middle of
         journy that should not face this problem, So I make this amazing website
@@ -68,7 +68,7 @@ const AboutPage = () => {
       <p>
         Your feedback is invaluable. If you have questions, seek advice, or want
         to share your experiences, feel free to reach out to us at
-        bloggersground@gmail.com. We're here to connect and engage with you.
+        bloggersground@gmail.com. We&apos;re here to connect and engage with you.
       </p>
       <h3>Connect With Us</h3>
       <p>
