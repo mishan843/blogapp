@@ -2,7 +2,7 @@
 import MainPage from '@/components/mainPage/MainPage'
 import React from 'react'
 
-export const generateMetadata = ({ searchParams, params }) => {
+export const generateMetadata = ({ searchParams }) => {
   const fetchData = async () => {
     try {
       const response = await fetch(
