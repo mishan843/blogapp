@@ -76,8 +76,8 @@ const CategoryList = () => {
           Fashion
         </Link>
         <Link
-          href="/blog/getallblogs?categoryFilter=Style&searchFilter=blog"
-          className={`${styles.category} ${styles.style}`}
+          href="/blog/getallblogs?categoryFilter=Technology&searchFilter=blog"
+          className={`${styles.category} ${styles.technology}`}
         >
           <img
             src="/style.jpg"
@@ -86,7 +86,7 @@ const CategoryList = () => {
             alt=""
             className={styles.image}
           />
-          Style
+          Technology
         </Link>
       </div>
     </div>
