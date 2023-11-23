@@ -27,7 +27,7 @@ const MenuPosts = ({ withImage }) => {
         return styles.technology
         break;
       default:
-        return styles.style
+        return styles.fashion
         break;
     }
   }

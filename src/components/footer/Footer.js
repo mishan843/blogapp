@@ -15,8 +15,8 @@ const Footer = () => {
             blogging platform. Join our community today.
           </p>
           <div className={styles.icons}>
-            <img src="/github.png" alt="github" width={24} height={24} />
-            <img src="/facebook.png" alt="facebook" width={24} height={24} />
+            <Link href="https://x.com/Bloggers_Ground?t=-nndOfYb4HzPvHxBi-YJwg&s=09"><img src="/twitter2.png" alt="github" width={24} height={24} /></Link>
+            <Link href="https://instagram.com/bloggers_ground?igshid=MmVlMjlkMTBhMg=="><img src="/instagram.png" alt="facebook" width={24} height={24} /></Link>
             <img src="/youtube.png" alt="youtube" width={24} height={24} />
             <img src="/linkedin.png" alt="linkedin" width={24} height={24} />
           </div>
@@ -35,8 +35,8 @@ const Footer = () => {
           <div className={styles.links}>
             <div className={styles.list}>
               <span className={styles.listTitle}>Tags</span>
-              <Link href="/blog/getallblogs?categoryFilter=Style&searchFilter=blog">
-                Style
+              <Link href="/blog/getallblogs?categoryFilter=Technology&searchFilter=blog">
+              Technology
               </Link>
               <Link href="/blog/getallblogs?categoryFilter=Fashion&searchFilter=blog">
                 Fashion
@@ -58,8 +58,8 @@ const Footer = () => {
           <div className={styles.links}>
             <div className={styles.list}>
               <span className={styles.listTitle}>Social</span>
-              <Link href="/">Facebook</Link>
-              <Link href="/">Github</Link>
+              <Link href="https://instagram.com/bloggers_ground?igshid=MmVlMjlkMTBhMg==">Instagram</Link>
+              <Link href="https://x.com/Bloggers_Ground?t=-nndOfYb4HzPvHxBi-YJwg&s=09">Twitter</Link>
               <Link href="/">Linkedin</Link>
               <Link href="/">Youtube</Link>
             </div>
