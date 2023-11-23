@@ -6,10 +6,10 @@ const MenuCategories = () => {
   return (
     <div className={styles.categoryList}>
       <Link
-        href="/blog/getallblogs?categoryFilter=Style&searchFilter=blog"
-        className={`${styles.categoryItem} ${styles.style}`}
+        href="/blog/getallblogs?categoryFilter=Technology&searchFilter=blog"
+        className={`${styles.categoryItem} ${styles.technology}`}
       >
-        Style
+        Technology
       </Link>
       <Link
         href="/blog/getallblogs?categoryFilter=Fashion&searchFilter=blog"

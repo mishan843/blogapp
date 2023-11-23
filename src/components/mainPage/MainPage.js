@@ -27,7 +27,7 @@ const MainPage = () => {
         return styles.fashion
         break;
       default:
-        return styles.style
+        return styles.technology
         break;
     }
   }

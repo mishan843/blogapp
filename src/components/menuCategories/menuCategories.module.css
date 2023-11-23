@@ -15,7 +15,7 @@
   font-size: 14px;
 }
 
-.categoryItem.style {
+.categoryItem.technology {
   background-color: #ffb04f45;
 }
 .categoryItem.fashion {
@@ -38,7 +38,7 @@
   background-color: #57c4ff9b !important;
 }
 
-.categoryItem.style:hover {
+.categoryItem.technology:hover {
   background-color: #ffb04f81;
 }
 

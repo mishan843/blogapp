@@ -23,8 +23,8 @@ const MenuPosts = ({ withImage }) => {
       case 'Food':
         return styles.food
         break;
-      case 'Fashion':
-        return styles.fashion
+      case 'Technology':
+        return styles.technology
         break;
       default:
         return styles.style

@@ -23,8 +23,8 @@ const Card = (body) => {
       case 'Food':
         return styles.food
         break;
-      case 'Fashion':
-        return styles.fashion
+      case 'Technology':
+        return styles.technology
         break;
       default:
         return styles.style
@@ -61,7 +61,7 @@ const Card = (body) => {
   //       break;
   //     default:
   //       return (
-  //         <h2>style</h2>
+  //         <h2>Technology</h2>
   //       )
   //       break;
   //   }
