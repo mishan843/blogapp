@@ -1,33 +1,35 @@
 "use client";
 
-import React from 'react'
-import styles from './cardlist.module.css'
-import Pagination from '../pagination/Pagination'
-import Card from '../card/Card'
-import { useEffect, useState } from "react";
-import { useSearchParams } from 'next/navigation'
-
+import React, { useEffect, useState } from 'react';
+import styles from './cardlist.module.css';
+import Pagination from '../pagination/Pagination';
+import Card from '../card/Card';
+import { useSearchParams } from 'next/navigation';
 
 const CardList = () => {
-  const searchParams = useSearchParams()
+  const searchParams = useSearchParams();
   const search = searchParams.get('categoryFilter');
   const [blogByCat, setBlogByCat] = useState([]);
   const [blogs, setBlogs] = useState([]);
-  let [isLoading, setIsLoading] = useState(true); // Introduce loading state
+  const [currentPage, setCurrentPage] = useState(1);
+  const [totalPages, setTotalPages] = useState(1);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
         let endpoint;
         if (search) {
-          endpoint = `${process.env.NEXT_PUBLIC_API_URL}/blog/getAllBlogs?categoryFilter=${search}&page=1&limit=10`;
+          endpoint = `${process.env.NEXT_PUBLIC_API_URL}/blog/getAllBlogs?categoryFilter=${search}&page=${currentPage}&limit=10`;
         } else {
-          endpoint = `${process.env.NEXT_PUBLIC_API_URL}/blog/getAllBlogs?page=1&limit=10`;
+          endpoint = `${process.env.NEXT_PUBLIC_API_URL}/blog/getAllBlogs?page=${currentPage}&limit=10`;
         }
-
+        setIsLoading(true);
+        window.scrollTo({ top: 0 });
         let response = await fetch(endpoint);
         let data = await response.json();
         let blogsData = data.data;
+        let totalPageCount = data.totalPages
 
         if (search) {
           setBlogByCat(blogsData);
@@ -37,18 +39,27 @@ const CardList = () => {
           setBlogByCat([]);
         }
 
-        setIsLoading(false); // Set loading state to false when data is successfully fetched
+        setTotalPages(totalPageCount);
+        setIsLoading(false);
+
       } catch (error) {
         console.error("Error fetching data:", error);
       }
     };
 
     fetchData();
-  }, [search]);
+  }, [search, currentPage]);
+
+  const handlePageChange = (newPage) => {
+    if (newPage >= 1 && newPage <= totalPages) {
+      setCurrentPage(newPage);
+    }
+  };
+
   return (
     <div className={styles.container}>
       <h1 className={styles.title}>Recent Posts</h1>
-      {isLoading ? ( // Conditional rendering for loading animation
+      {isLoading ? (
         <div className={styles.loadingContainer}>
           <div className={styles.loading}>
             <div className={styles.spinner}></div>
@@ -60,11 +71,15 @@ const CardList = () => {
           <div className={styles.posts}>
             <Card blogs={blogs} blogByCat={blogByCat} search={search} />
           </div>
-          <Pagination />
+          <Pagination
+            onPageChange={handlePageChange}
+            currentPage={currentPage}
+            totalPages={totalPages}
+          />
         </>
       )}
     </div>
   );
-}
+};
 
 export default CardList;

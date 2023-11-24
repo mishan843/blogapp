@@ -1,22 +1,33 @@
 .container {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin-top: 20px;
 }
 
 .button {
-  width: 100px;
+  padding: 10px;
   border: none;
-  padding: 16px;
-  background-color: crimson;
+  background-color: #a1a0e0; /* Blue color */
   color: white;
   cursor: pointer;
-  border-radius: 5px;
+  border-radius: 50%;
   font-size: 16px;
-  transition: background-color 0.2s, transform 0.2s;
+  transition: background-color 0.3s, transform 0.3s;
+  margin: 0 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .button:hover {
-  background-color: #ff6b6b; /* Lighter red on hover */
-  transform: scale(1.05); /* Slight scale on hover */
+  background-color: red; /* Slightly darker blue on hover */
+  transform: scale(1.1);
+}
+
+.pageInfo {
+  font-size: 16px;
+  font-family: serif;
+  margin: 0 16px;
+  color: #333;
 }
