@@ -18,11 +18,17 @@ const XmlPage = () => {
             <title>FetchRSS</title>
           </image>
           <item>
-            <title>Feed does not exist</title>
+            <title>First atrical</title>
             <link>https://fetchrss.com</link>
             <dc:creator>FetchRSS</dc:creator>
             <guid isPermaLink="false">https://fetchrss.com</guid>
           </item>
+          <item>
+          <title>Second atrical</title>
+          <link>https://fetchrss.com</link>
+          <dc:creator>FetchRSS</dc:creator>
+          <guid isPermaLink="false">https://fetchrss.com</guid>
+        </item>
         </channel>
       </rss>`;
 
