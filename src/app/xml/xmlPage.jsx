@@ -1,34 +1,51 @@
 "use client";
-import React, { useEffect, useState } from "react";
-// import xmlJs from "xml-js";
-const XMLDisplay = () => {
-  const articles = [
-    {
-      title: "First",
-      description: "description",
-      pubDate: "pubDate",
-      link: "link",
-    },
-  ];
-  return `
-  <rss version="2.0">
-    <channel>
-      <title>Google Publisher RSS Feed</title>
-      <description>A feed of articles from Google Publisher</description>
-      <link>https://publisher.google.com</link>
-      ${articles.map((article) => {
-        return `
+import React from "react";
+
+const XmlPage = () => {
+  const generateXmlContent = () => {
+    const xmlData = `<?xml version="1.0" encoding="UTF-8"?>
+      <rss xmlns:media="http://search.yahoo.com/mrss/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+        <channel>
+          <title>FetchRSS</title>
+          <description>FetchRSS</description>
+          <pubDate>Fri, 24 Nov 2023 07:09:04 +0000</pubDate>
+          <link>https://fetchrss.com</link>
+          <atom:link href="http://fetchrss.com/rss/652fcccae02f7d0c95397913652fc665e02f7d0c95397912.xml" rel="self" type="application/rss+xml"/>
+          <generator>https://fetchrss.com</generator>
+          <image>
+            <link>https://fetchrss.com</link>
+            <url>https://www.google.com/s2/favicons?domain=https://fetchrss.com</url>
+            <title>FetchRSS</title>
+          </image>
           <item>
-            <title>${article.title}</title>
-            <description>${article.description}</description>
-            <pubDate>${article.pubDate}</pubDate>
-            <link>${article.link}</link>
+            <title>Feed does not exist</title>
+            <link>https://fetchrss.com</link>
+            <dc:creator>FetchRSS</dc:creator>
+            <guid isPermaLink="false">https://fetchrss.com</guid>
           </item>
-        `;
-      })}
-    </channel>
-  </rss>
-`;
+        </channel>
+      </rss>`;
+
+    return xmlData;
+  };
+
+  return (
+    <div>
+      <pre>{generateXmlContent()}</pre>
+      <style jsx global>{`
+        body {
+          margin: 0;
+          padding: 0;
+        }
+      `}</style>
+      <style jsx>{`
+        pre {
+          font-family: "Courier New", monospace;
+          white-space: pre-wrap;
+        }
+      `}</style>
+    </div>
+  );
 };
 
-export default XMLDisplay;
+export default XmlPage;
