@@ -37,7 +37,7 @@ async function createNewSiteMap() {
 
         let blogData = await fetchData(apiUrlBlog)
         console.log(blogData)
-        const blogLinks = blogData.map(obj => `https://www.bloggersground.com/blog/${obj.title.toLowerCase().replace(/\s+/g, "-")}/${obj._id}`);
+        const blogLinks = blogData.map(obj => `https://www.bloggersground.com/blog/${obj.title.toLowerCase().replace(/\s+/g, "-")}?id=${obj._id}`);
 
         sitemap.push(...blogLinks);
 
