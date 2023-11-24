@@ -17,8 +17,7 @@ const Footer = () => {
           <div className={styles.icons}>
             <Link href="https://x.com/Bloggers_Ground?t=-nndOfYb4HzPvHxBi-YJwg&s=09"><img src="/twitter2.png" alt="github" width={24} height={24} /></Link>
             <Link href="https://instagram.com/bloggers_ground?igshid=MmVlMjlkMTBhMg=="><img src="/instagram.png" alt="facebook" width={24} height={24} /></Link>
-            <img src="/youtube.png" alt="youtube" width={24} height={24} />
-            <img src="/linkedin.png" alt="linkedin" width={24} height={24} />
+            <Link href="https://www.facebook.com/profile.php?id=61553443388186&mibextid=ZbWKwL"><img src="/facebook.png" alt="facebook" width={24} height={24} /></Link>
           </div>
         </div>
         <div className={styles.link_contaner}>
@@ -60,8 +59,7 @@ const Footer = () => {
               <span className={styles.listTitle}>Social</span>
               <Link href="https://instagram.com/bloggers_ground?igshid=MmVlMjlkMTBhMg==">Instagram</Link>
               <Link href="https://x.com/Bloggers_Ground?t=-nndOfYb4HzPvHxBi-YJwg&s=09">Twitter</Link>
-              <Link href="/">Linkedin</Link>
-              <Link href="/">Youtube</Link>
+              <Link href="https://www.facebook.com/profile.php?id=61553443388186&mibextid=ZbWKwL">Facebook</Link>
             </div>
           </div>
         </div>
