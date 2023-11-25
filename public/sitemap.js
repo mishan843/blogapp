@@ -6,6 +6,7 @@ const apiUrlBlog = 'https://blogapp-q8b0.onrender.com/blog/getAllBlogs'
 
 const sitemap = [
     'https://www.bloggersground.com',
+    'https://www.bloggersground.com/about',
 ];
 
 async function fetchData(apiUrl) {
