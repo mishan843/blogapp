@@ -74,7 +74,7 @@ const Card = (body) => {
     <>
       {search ? blogByCat.map((item) => {
         const categoryColor = getColors(item.category[0]);
-        const title = item.title.toLowerCase().replace(/\s+/g, "-")
+        const title = item.title.toLowerCase().replace(/[\s?]+/g, "-")
         return (
           <div key={item.id} className={styles.container}>
             <div key={item.id} clFinanceassName={styles.imageContainer}>
@@ -85,13 +85,13 @@ const Card = (body) => {
                 <span className={styles.date}>{item.createdAt}</span>
                 <span className={`${categoryColor} ${styles.category} `}>{item.category}</span>
               </div>
-              <Link href={`/blog/${item.title.toLowerCase().replace(/\s+/g, "-")}?id=${item._id}`}>
+              <Link href={`/blog/${item.title.toLowerCase().replace(/[\s?]+/g, "-")}?id=${item._id}`}>
                 <h1>{item.title}</h1>
               </Link>
               <p className={styles.desc}>
                 {item.description}
               </p>
-              <Link href={`/blog/${item.title.toLowerCase().replace(/\s+/g, "-")}?id=${item._id}`} className={`${styles.link} ${categoryColor}`}>
+              <Link href={`/blog/${item.title.toLowerCase().replace(/[\s?]+/g, "-")}?id=${item._id}`} className={`${styles.link} ${categoryColor}`}>
                 Read More
               </Link>
             </div>
@@ -101,7 +101,7 @@ const Card = (body) => {
       }) :
         blogs.map((item) => {
           const categoryColor = getColors(item.category[0]);
-          const title = item.title.toLowerCase().replace(/\s+/g, "-")
+          const title = item.title.toLowerCase().replace(/[\s?]+/g, "-")
 
           return (
             <div key={item.id} className={styles.container}>
@@ -113,13 +113,13 @@ const Card = (body) => {
                   <span className={`${categoryColor} ${styles.category}`}>{item.category}</span>
                   <span className={styles.date}>{item.createdAt}</span>
                 </div>
-                <Link href={`/blog/${item.title.toLowerCase().replace(/\s+/g, "-")}?id=${item._id}`}>
+                <Link href={`/blog/${item.title.toLowerCase().replace(/[\s?]+/g, "-")}?id=${item._id}`}>
                   <h1>{item.title}</h1>
                 </Link>
                 <p className={styles.desc}>
                   {item.description}
                 </p>
-                <Link href={`/blog/${item.title.toLowerCase().replace(/\s+/g, "-")}?id=${item._id}`} className={styles.link}>
+                <Link href={`/blog/${item.title.toLowerCase().replace(/[\s?]+/g, "-")}?id=${item._id}`} className={styles.link}>
                   Read More
                 </Link>
               </div>
