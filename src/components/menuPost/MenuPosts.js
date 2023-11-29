@@ -3,11 +3,12 @@
 import React, { useEffect, useState } from 'react';
 import styles from './menuPosts.module.css';
 import Link from 'next/link';
-import { useRouter } from 'next/navigation';
+import { useRouter, useSearchParams } from 'next/navigation';
 
 const MenuPosts = ({ withImage }) => {
   const [data, setData] = useState([]);
-  const router = useRouter()
+  const searchParams = useSearchParams()
+
 
   const getColors = (name) => {
     switch (name) {
@@ -33,16 +34,30 @@ const MenuPosts = ({ withImage }) => {
   }
 
   useEffect(() => {
-    // Fetch data from the API
-    fetch(`${process.env.NEXT_PUBLIC_API_URL}/blog/getallblogs?isPopularpost=true&page=1&limit=5`)
-      .then((response) => response.json())
-      .then((data) => {
-        setData(data.data);
-      })
-      .catch((error) => {
-        console.error('Error fetching data:', error);
-      });
-  }, [router.query]);
+    const categoryFilter = searchParams.get('categoryFilter');
+    if (categoryFilter) {
+      let apiUrl = `${process.env.NEXT_PUBLIC_API_URL}/blog/getallblogs?isPopularpost=true&page=1&limit=5&categoryFilter=${categoryFilter}`;
+  
+      fetch(apiUrl)
+        .then((response) => response.json())
+        .then((data) => {
+          setData(data.data);
+        })
+        .catch((error) => {
+          console.error('Error fetching data:', error);
+        });
+    }else {
+      let apiUrl = `${process.env.NEXT_PUBLIC_API_URL}/blog/getallblogs?isPopularpost=true&page=1&limit=5`;
+      fetch(apiUrl)
+        .then((response) => response.json())
+        .then((data) => {
+          setData(data.data);
+        })
+        .catch((error) => {
+          console.error('Error fetching data:', error);
+        });
+    }
+  }, [searchParams]);
 
 
 
