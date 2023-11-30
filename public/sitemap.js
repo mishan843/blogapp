@@ -5,8 +5,8 @@ const filePath = 'public/sitemap.txt';
 const apiUrlBlog = 'https://blogapp-q8b0.onrender.com/blog/getAllBlogs'
 
 const sitemap = [
-    'https://www.bloggersground.com',
-    'https://www.bloggersground.com/about',
+    'https://bloggersground.com',
+    'https://bloggersground.com/about',
 ];
 
 async function fetchData(apiUrl) {
@@ -38,7 +38,7 @@ async function createNewSiteMap() {
 
         let blogData = await fetchData(apiUrlBlog)
         console.log(blogData)
-        const blogLinks = blogData.map(obj => `https://www.bloggersground.com/blog/${obj.title.toLowerCase().replace(/[\s?]+/g, "-")}?id=${obj._id}`);
+        const blogLinks = blogData.map(obj => `https://bloggersground.com/blog/${obj.title.toLowerCase().replace(/[\s?]+/g, "-")}?id=${obj._id}`);
 
         sitemap.push(...blogLinks);
 

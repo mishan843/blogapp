@@ -20,7 +20,7 @@ export const generateMetadata = ({ searchParams, params }) => {
           openGraph: {
             title: `${result.title}`,
             description: `${result.description}`,
-            url: `https://www.bloggersground.com/blog/${result.title
+            url: `https://bloggersground.com/blog/${result.title
               .toLowerCase()
               .replace(/[\s?]+/g, "-")}?id=${result._id}`, // Uncomment this line
             siteName: "bloggersGround",
