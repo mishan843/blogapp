@@ -5,16 +5,18 @@ import Menu from "@/components/menu/Menu";
 
 export const metadata = {
   title: {
-    default: "bloggersGround",
+    default:
+      "bloggersGround - Your Finance, Fashion, Coding, Technology and Travel Companion",
     template: "%s - bloggersGround",
   },
   description:
-    "Navigate the dynamic world of finance, embrace the latest trends in style and fashion, master the art of coding, explore the wonders of technology, and embark on captivating adventures around the globe – our blog is your one-stop destination for knowledge, inspiration, and endless possibilities. Whether you're a finance enthusiast seeking expert insights, a fashionista seeking style inspiration, a tech-savvy individual eager to learn new coding techniques, or an adventurous traveler yearning to explore new horizons, our blog is your ideal companion.",
+    "Get expert insights on finance, style inspiration, coding techniques, technology and travel tips from bloggersGround. Explore endless possibilities with us.",
   keywords: ["Fashion blogs", "travel blogs", "finance blog", "blogging"],
   openGraph: {
-    title: "bloggersGround",
+    title:
+      "bloggersGround - Your Finance, Fashion, Coding, Technology and Travel Companion",
     description:
-      "Navigate the dynamic world of finance, embrace the latest trends in style and fashion, master the art of coding, explore the wonders of technology, and embark on captivating adventures around the globe – our blog is your one-stop destination for knowledge, inspiration, and endless possibilities. Whether you're a finance enthusiast seeking expert insights, a fashionista seeking style inspiration, a tech-savvy individual eager to learn new coding techniques, or an adventurous traveler yearning to explore new horizons, our blog is your ideal companion.",
+      "Get expert insights on finance, style inspiration, coding techniques, technology and travel tips from bloggersGround. Explore endless possibilities with us.",
     url: process.env.DOMAIN,
     siteName: "bloggersGround",
     images: [
@@ -42,8 +44,8 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: `bloggersGround`,
-    description: `bloggersGround`,
+    title: `bloggersGround - Your Finance, Fashion, Coding, Technology and Travel Companion `,
+    description: `Get expert insights on finance, style inspiration, coding techniques, technology and travel tips from bloggersGround. Explore endless possibilities with us.`,
     creator: "bloggersGround",
     images: [
       `https://drive.google.com/uc?id=1mFTAHt1IRc4OSqKRMbqIsRzO93kYJ5LB`,
