@@ -11,7 +11,7 @@ const CategoryList = () => {
       <h1 className={styles.title}>Popular Categories</h1>
       <div className={styles.categories}>
         <Link
-          href="/blog/getallblogs?categoryFilter=Finance&searchFilter=blog"
+          href="/blog/getallblogs?categoryFilter=Finance"
           className={`${styles.category} ${styles.finance}`}
         >
           <img
@@ -24,7 +24,7 @@ const CategoryList = () => {
           Finance
         </Link>
         <Link
-          href="/blog/getallblogs?categoryFilter=Coding&searchFilter=blog"
+          href="/blog/getallblogs?categoryFilter=Coding"
           className={`${styles.category} ${styles.coding}`}
         >
           <img
@@ -37,7 +37,7 @@ const CategoryList = () => {
           Coding
         </Link>
         <Link
-          href="/blog/getallblogs?categoryFilter=Travel&searchFilter=blog"
+          href="/blog/getallblogs?categoryFilter=Travel"
           className={`${styles.category} ${styles.travel}`}
         >
           <img
@@ -50,7 +50,7 @@ const CategoryList = () => {
           Travel
         </Link>
         <Link
-          href="/blog/getallblogs?categoryFilter=Food&searchFilter=blog"
+          href="/blog/getallblogs?categoryFilter=Food"
           className={`${styles.category} ${styles.food}`}
         >
           <img
@@ -63,7 +63,7 @@ const CategoryList = () => {
           Food
         </Link>
         <Link
-          href="/blog/getallblogs?categoryFilter=Fashion&searchFilter=blog"
+          href="/blog/getallblogs?categoryFilter=Fashion"
           className={`${styles.category} ${styles.fashion}`}
         >
           <img
@@ -76,7 +76,7 @@ const CategoryList = () => {
           Fashion
         </Link>
         <Link
-          href="/blog/getallblogs?categoryFilter=Technology&searchFilter=blog"
+          href="/blog/getallblogs?categoryFilter=Technology"
           className={`${styles.category} ${styles.technology}`}
         >
           <img

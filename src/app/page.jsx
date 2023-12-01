@@ -19,6 +19,7 @@ export const metadata = {
       "Get expert insights on finance, style inspiration, coding techniques, technology and travel tips from bloggersGround. Explore endless possibilities with us.",
     url: process.env.DOMAIN,
     siteName: "bloggersGround",
+    locale: "en_US",
     images: [
       {
         url: "https://drive.google.com/uc?id=1mFTAHt1IRc4OSqKRMbqIsRzO93kYJ5LB",

@@ -7,6 +7,12 @@ const apiUrlBlog = 'https://blogapp-q8b0.onrender.com/blog/getAllBlogs'
 const sitemap = [
     'https://bloggersground.com',
     'https://bloggersground.com/about',
+    'https://bloggersground.com/blog/getallblogs?categoryFilter=Finance',
+    'https://bloggersground.com/blog/getallblogs?categoryFilter=Coding',
+    'https://bloggersground.com/blog/getallblogs?categoryFilter=Travel',
+    'https://bloggersground.com/blog/getallblogs?categoryFilter=Food',
+    'https://bloggersground.com/blog/getallblogs?categoryFilter=Fashion',
+    'https://bloggersground.com/blog/getallblogs?categoryFilter=Technology',
 ];
 
 async function fetchData(apiUrl) {

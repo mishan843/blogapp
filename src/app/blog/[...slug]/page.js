@@ -24,6 +24,7 @@ export const generateMetadata = ({ searchParams, params }) => {
               .toLowerCase()
               .replace(/[\s?]+/g, "-")}?id=${result._id}`, // Uncomment this line
             siteName: "bloggersGround",
+            locale: "en_US",
             images: [
               {
                 url: `${result.coverImage}`,

@@ -6,37 +6,37 @@ const MenuCategories = () => {
   return (
     <div className={styles.categoryList}>
       <Link
-        href="/blog/getallblogs?categoryFilter=Technology&searchFilter=blog"
+        href="/blog/getallblogs?categoryFilter=Technology"
         className={`${styles.categoryItem} ${styles.technology}`}
       >
         Technology
       </Link>
       <Link
-        href="/blog/getallblogs?categoryFilter=Fashion&searchFilter=blog"
+        href="/blog/getallblogs?categoryFilter=Fashion"
         className={`${styles.categoryItem} ${styles.fashion}`}
       >
         Fashion
       </Link>
       <Link
-        href="/blog/getallblogs?categoryFilter=Food&searchFilter=blog"
+        href="/blog/getallblogs?categoryFilter=Food"
         className={`${styles.categoryItem} ${styles.food}`}
       >
         Food
       </Link>
       <Link
-        href="/blog/getallblogs?categoryFilter=Travel&searchFilter=blog"
+        href="/blog/getallblogs?categoryFilter=Travel"
         className={`${styles.categoryItem} ${styles.travel}`}
       >
         Travel
       </Link>
       <Link
-        href="/blog/getallblogs?categoryFilter=Finance&searchFilter=blog"
+        href="/blog/getallblogs?categoryFilter=Finance"
         className={`${styles.categoryItem} ${styles.finance}`}
       >
         Finance
       </Link>
       <Link
-        href="/blog/getallblogs?categoryFilter=Coding&searchFilter=blog"
+        href="/blog/getallblogs?categoryFilter=Coding"
         className={`${styles.categoryItem} ${styles.coding}`}
       >
         Coding
