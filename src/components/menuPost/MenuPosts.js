@@ -37,7 +37,7 @@ const MenuPosts = ({ withImage }) => {
     const categoryFilter = searchParams.get('categoryFilter');
     if (categoryFilter) {
       let apiUrl = `${process.env.NEXT_PUBLIC_API_URL}/blog/getallblogs?isPopularpost=true&page=1&limit=5&categoryFilter=${categoryFilter}`;
-  
+
       fetch(apiUrl)
         .then((response) => response.json())
         .then((data) => {
@@ -46,7 +46,7 @@ const MenuPosts = ({ withImage }) => {
         .catch((error) => {
           console.error('Error fetching data:', error);
         });
-    }else {
+    } else {
       let apiUrl = `${process.env.NEXT_PUBLIC_API_URL}/blog/getallblogs?isPopularpost=true&page=1&limit=5`;
       fetch(apiUrl)
         .then((response) => response.json())
@@ -68,7 +68,7 @@ const MenuPosts = ({ withImage }) => {
         return (<Link key={obj._id} href={`/blog/getblogbyid?id=${obj._id}`} className={styles.item}>
           {withImage && (
             <div className={styles.imageContainer}>
-              <img src={obj.coverImage} alt="" fill className={styles.image} />
+              <img src={obj.coverImage} alt={obj.title} fill className={styles.image} />
             </div>
           )}
           <div className={styles.textContainer}>

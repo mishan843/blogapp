@@ -78,7 +78,7 @@ const Card = (body) => {
         return (
           <div key={item.id} className={styles.container}>
             <div key={item.id} clFinanceassName={styles.imageContainer}>
-              <img src={item.coverImage} alt="" fill className={styles.image} />
+              <img src={item.coverImage} alt={item.title} fill className={styles.image} />
             </div>
             <div className={styles.textContainer}>
               <div className={styles.detail}>
@@ -106,7 +106,7 @@ const Card = (body) => {
           return (
             <div key={item.id} className={styles.container}>
               <div key={item.id} className={styles.imageContainer}>
-                <img src={item.coverImage} alt="" fill className={styles.image} />
+                <img src={item.coverImage} alt={item.title} fill className={styles.image} />
               </div>
               <div className={styles.textContainer}>
                 <div className={styles.detail}>

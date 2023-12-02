@@ -60,7 +60,7 @@ const Comments = ({ singleBlog, setSingleBlog }) => {
   };
   return (
     <div className={styles.container}>
-      <h1 className={styles.title}>Comments</h1>
+      <h2 className={styles.title}>Comments</h2>
       <div className={styles.write}>
         <textarea value={text} onChange={(e) => setText(e.target.value)} placeholder="Write a comment..." className={styles.input} />
         <button onClick={status ? handleComment : () => { window.location.href = '/login'; }} className={styles.button}>
@@ -75,7 +75,7 @@ const Comments = ({ singleBlog, setSingleBlog }) => {
               <div className={styles.user}>
                 <img
                   src="/profile_logo.jpg"
-                  alt=""
+                  alt="BloggersGround logo"
                   width={50}
                   height={50}
                   className={styles.image}

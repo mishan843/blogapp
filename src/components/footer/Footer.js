@@ -7,7 +7,7 @@ const Footer = () => {
     <div className={styles.container}>
       <div className={styles.info}>
         <div className={styles.imageContainer}>
-          <img className={styles.logo} src="/logo2.png" alt="" />
+          <img className={styles.logo} src="/bloggersGround.png" alt="bloggersGround" />
         </div>
         <p className={styles.desc}>
           Discover a world of inspiration, explore creativity, and connect with

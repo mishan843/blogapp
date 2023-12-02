@@ -5,21 +5,20 @@ import Menu from "@/components/menu/Menu";
 
 export const metadata = {
   title: {
-    default:
-      "bloggersGround - Your Finance, Fashion, Coding, Technology and Travel Companion",
+    default: "BloggersGround: Finance, Fashion, Coding, Tech, Travel Guide",
     template: "%s - bloggersGround",
   },
   description:
     "Get expert insights on finance, style inspiration, coding techniques, technology and travel tips from bloggersGround. Explore endless possibilities with us.",
   keywords: ["Fashion blogs", "travel blogs", "finance blog", "blogging"],
   openGraph: {
-    title:
-      "bloggersGround - Your Finance, Fashion, Coding, Technology and Travel Companion",
+    title: "BloggersGround: Finance, Fashion, Coding, Tech, Travel Guide",
     description:
       "Get expert insights on finance, style inspiration, coding techniques, technology and travel tips from bloggersGround. Explore endless possibilities with us.",
     url: process.env.DOMAIN,
     siteName: "bloggersGround",
     locale: "en_US",
+    type: "website",
     images: [
       {
         url: "https://drive.google.com/uc?id=1mFTAHt1IRc4OSqKRMbqIsRzO93kYJ5LB",
@@ -45,7 +44,7 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: `bloggersGround - Your Finance, Fashion, Coding, Technology and Travel Companion `,
+    title: `BloggersGround: Finance, Fashion, Coding, Tech, Travel Guide `,
     description: `Get expert insights on finance, style inspiration, coding techniques, technology and travel tips from bloggersGround. Explore endless possibilities with us.`,
     creator: "bloggersGround",
     images: [

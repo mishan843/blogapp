@@ -15,7 +15,7 @@ const SingleBlog = () => {
 
   const [singleBlog, setSingleBlog] = useState([]);
   localStorage.setItem("blog", JSON.stringify(singleBlog))
-  
+
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -46,7 +46,7 @@ const SingleBlog = () => {
         </div>
         <div className={styles.user}>
           <div className={styles.userImageContainer}>
-            <img src="/profile_logo2.png" alt="" fill className={styles.avatar} />
+            <img src="/bloggersGroundLogo.png" alt="bloggersGround logo" fill className={styles.avatar} />
           </div>
           <div className={styles.userTextContainer}>
             <b><span className={styles.username}>Blogger Ground</span></b>
@@ -54,7 +54,7 @@ const SingleBlog = () => {
           </div>
         </div>
         <div className={styles.imageContainer}>
-          <img src={singleBlog.coverImage} alt="" fill className={styles.image} />
+          <img src={singleBlog.coverImage} alt={singleBlog.title} fill className={styles.image} />
         </div>
 
       </div>

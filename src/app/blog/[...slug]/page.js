@@ -25,6 +25,7 @@ export const generateMetadata = ({ searchParams, params }) => {
               .replace(/[\s?]+/g, "-")}?id=${result._id}`, // Uncomment this line
             siteName: "bloggersGround",
             locale: "en_US",
+            type: "website",
             images: [
               {
                 url: `${result.coverImage}`,
@@ -60,7 +61,7 @@ export const generateMetadata = ({ searchParams, params }) => {
           alternates: {
             canonical: `${process.env.DOMAIN}blog/${result.title
               .toLowerCase()
-              .replace(/[\s?]+/g, "-")}/${result._id}`,
+              .replace(/[\s?]+/g, "-")}?id=${result._id}`,
           },
         };
       } else {

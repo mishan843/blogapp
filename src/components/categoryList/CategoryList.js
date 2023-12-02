@@ -18,7 +18,7 @@ const CategoryList = () => {
             src="/finance.jpg"
             width={32}
             height={32}
-            alt=""
+            alt="finance"
             className={styles.image}
           />
           Finance
@@ -31,7 +31,7 @@ const CategoryList = () => {
             src="/coding.jpg"
             width={32}
             height={32}
-            alt=""
+            alt="coding logo"
             className={styles.image}
           />
           Coding
@@ -44,7 +44,7 @@ const CategoryList = () => {
             src="/travel.jpeg"
             width={32}
             height={32}
-            alt=""
+            alt="travel logo"
             className={styles.image}
           />
           Travel
@@ -57,7 +57,7 @@ const CategoryList = () => {
             src="/food.jpg"
             width={32}
             height={32}
-            alt=""
+            alt="food logo"
             className={styles.image}
           />
           Food
@@ -70,7 +70,7 @@ const CategoryList = () => {
             src="/fashion.jpg"
             width={32}
             height={32}
-            alt=""
+            alt="fashion logo"
             className={styles.image}
           />
           Fashion
@@ -83,7 +83,7 @@ const CategoryList = () => {
             src="/style.jpg"
             width={32}
             height={32}
-            alt=""
+            alt="technology"
             className={styles.image}
           />
           Technology

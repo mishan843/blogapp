@@ -6,11 +6,11 @@ import MenuCategories from "../menuCategories/MenuCategories";
 const Menu = () => {
   return (
     <div className={styles.container}>
-      <h1 className={styles.title}>Most Popular</h1>
+      <h2 className={styles.title}>Most Popular</h2>
       <MenuPosts withImage={true} />
-      <h1 className={styles.title}>Categories</h1>
+      <h2 className={styles.title}>Categories</h2>
       <MenuCategories />
-      <h1 className={styles.title}>Editors Pick</h1>
+      <h2 className={styles.title}>Editors Pick</h2>
       <MenuPosts withImage={true} />
     </div>
   );
