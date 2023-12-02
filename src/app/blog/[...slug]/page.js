@@ -22,7 +22,7 @@ export const generateMetadata = ({ searchParams, params }) => {
             description: `${result.description}`,
             url: `https://bloggersground.com/blog/${result.title
               .toLowerCase()
-              .replace(/[\s?]+/g, "-")}?id=${result._id}`, // Uncomment this line
+              .replace(/[^\w\s]/gi, '').replace(/\s+/g, '-')}?id=${result._id}`, // Uncomment this line
             siteName: "bloggersGround",
             locale: "en_US",
             type: "website",
@@ -61,7 +61,7 @@ export const generateMetadata = ({ searchParams, params }) => {
           alternates: {
             canonical: `${process.env.DOMAIN}blog/${result.title
               .toLowerCase()
-              .replace(/[\s?]+/g, "-")}?id=${result._id}`,
+              .replace(/[^\w\s]/gi, '').replace(/\s+/g, '-')}?id=${result._id}`,
           },
         };
       } else {
