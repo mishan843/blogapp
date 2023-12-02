@@ -1,6 +1,8 @@
 const axios = require('axios');
 const fs = require('fs');
-const filePath = 'public/sitemap.xml'; // Change file extension to .xml
+const filePathxml = 'public/sitemap.xml'; // Change file extension to .xml
+const filePathtxt = 'public/sitemap.txt'; // Change file extension to .xml
+
 
 const apiUrlBlog = 'https://blogapp-q8b0.onrender.com/blog/getAllBlogs';
 
@@ -24,8 +26,21 @@ async function fetchData(apiUrl) {
         return [];
     }
 }
-
 function writeSitemapToFile(sitemap, filePath) {
+    const fileStream = fs.createWriteStream(filePath);
+    sitemap.forEach(url => {
+        fileStream.write(url + '\n');
+    });
+    fileStream.end();
+    fileStream.on('finish', () => {
+        console.log('Sitemap data has been written to sitemap.txt');
+    });
+    fileStream.on('error', (err) => {
+        console.error('Error writing sitemap data:', err);
+    });
+}
+
+function writeSitemapToFilexml(sitemap, filePath) {
     const fileStream = fs.createWriteStream(filePath);
     fileStream.write('<?xml version="1.0" encoding="UTF-8"?>\n');
     fileStream.write('<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n');
@@ -53,10 +68,11 @@ async function createNewSiteMap() {
         let blogData = await fetchData(apiUrlBlog);
         console.log(blogData);
         const blogLinks = blogData.map(obj => `https://bloggersground.com/blog/${obj.title.toLowerCase().replace(/[^\w\s]/gi, '').replace(/\s+/g, '-')}?id=${obj._id}`);
-
+        console.log("blogLinks", blogLinks)
         sitemap.push(...blogLinks);
 
-        writeSitemapToFile(sitemap, filePath);
+        writeSitemapToFilexml(sitemap, filePathxml);
+        writeSitemapToFile(sitemap, filePathtxt)
     } catch (error) {
         console.log("error>>", error);
     }
