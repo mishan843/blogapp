@@ -13,8 +13,9 @@ export const metadata = {
     title: "About Us - bloggersGround",
     description:
       "Join us on a journey of discovery as we unveil the stories behind bloggersGround, the passion that fuels our creativity, and the values that guide our every step. Delve into our mission to empower individuals with knowledge, inspiration, and endless possibilities. Meet the team behind the scenes, explore our unique approach to content creation, and understand how we strive to make a positive impact on the world.",
-    url: process.env.DOMAIN + `/about`,
+    url: process.env.DOMAIN + `about`,
     siteName: "bloggersGround",
+    type: "website",
     images: [
       {
         url: "https://drive.google.com/uc?id=1mFTAHt1IRc4OSqKRMbqIsRzO93kYJ5LB",
@@ -48,14 +49,14 @@ export const metadata = {
     ],
   },
   alternates: {
-    canonical: `${process.env.DOMAIN}/about`,
+    canonical: `${process.env.DOMAIN}about`,
   },
 };
 const AboutPage = () => {
   return (
     <div className={styles.container}>
       <section>
-        <h1>About Us</h1>
+        <h1>About Us - BloggersGround</h1>
         <h3><strong>Welcome to Bloggers Ground</strong></h3>
         <h3 ><strong>Bloggers Ground: Your Gateway to a World of Knowledge and Inspiration</strong></h3>
         <p><span>Bloggеrs Ground is your onе-stop shop for intеrеsting and variеd information in thе

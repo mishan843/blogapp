@@ -15,6 +15,7 @@ const CategoryList = () => {
           className={`${styles.category} ${styles.finance}`}
         >
           <img
+            loading="lazy"
             src="/finance.jpg"
             width={32}
             height={32}
@@ -29,6 +30,7 @@ const CategoryList = () => {
           className={`${styles.category} ${styles.coding}`}
         >
           <img
+            loading="lazy"
             title="coding"
             src="/coding.jpg"
             width={32}
@@ -43,6 +45,7 @@ const CategoryList = () => {
           className={`${styles.category} ${styles.travel}`}
         >
           <img
+            loading="lazy"
             title="travel"
             src="/travel.jpeg"
             width={32}
@@ -57,6 +60,7 @@ const CategoryList = () => {
           className={`${styles.category} ${styles.food}`}
         >
           <img
+            loading="lazy"
             title="food"
             src="/food.jpg"
             width={32}
@@ -71,6 +75,7 @@ const CategoryList = () => {
           className={`${styles.category} ${styles.fashion}`}
         >
           <img
+            loading="lazy"
             title="fashion"
             src="/fashion.jpg"
             width={32}
@@ -85,6 +90,7 @@ const CategoryList = () => {
           className={`${styles.category} ${styles.technology}`}
         >
           <img
+            loading="lazy"
             title="technology"
             src="/style.jpg"
             width={32}
