@@ -46,7 +46,7 @@ const SingleBlog = () => {
         </div>
         <div className={styles.user}>
           <div className={styles.userImageContainer}>
-            <img src="/bloggersGroundLogo.png" alt="bloggersGround logo" fill className={styles.avatar} />
+            <img title="bloggersGround logo" src="/bloggersGroundLogo.png" alt="bloggersGround logo" fill className={styles.avatar} />
           </div>
           <div className={styles.userTextContainer}>
             <b><span className={styles.username}>Blogger Ground</span></b>
@@ -54,7 +54,7 @@ const SingleBlog = () => {
           </div>
         </div>
         <div className={styles.imageContainer}>
-          <img src={singleBlog.coverImage} alt={singleBlog.title} fill className={styles.image} />
+          <img title={singleBlog.title} src={singleBlog.coverImage} alt={singleBlog.title} fill className={styles.image} />
         </div>
 
       </div>

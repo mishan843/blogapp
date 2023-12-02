@@ -74,6 +74,7 @@ const Comments = ({ singleBlog, setSingleBlog }) => {
             <div className={styles.comment} key={index}>
               <div className={styles.user}>
                 <img
+                  title="BloggersGround logo"
                   src="/profile_logo.jpg"
                   alt="BloggersGround logo"
                   width={50}

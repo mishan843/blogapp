@@ -68,7 +68,7 @@ const MenuPosts = ({ withImage }) => {
         return (<Link key={obj._id} href={`/blog/getblogbyid?id=${obj._id}`} className={styles.item}>
           {withImage && (
             <div className={styles.imageContainer}>
-              <img src={obj.coverImage} alt={obj.title} fill className={styles.image} />
+              <img title={obj.title} src={obj.coverImage} alt={obj.title} fill className={styles.image} />
             </div>
           )}
           <div className={styles.textContainer}>

@@ -19,6 +19,7 @@ const CategoryList = () => {
             width={32}
             height={32}
             alt="finance"
+            title="finance"
             className={styles.image}
           />
           Finance
@@ -28,6 +29,7 @@ const CategoryList = () => {
           className={`${styles.category} ${styles.coding}`}
         >
           <img
+            title="coding"
             src="/coding.jpg"
             width={32}
             height={32}
@@ -41,6 +43,7 @@ const CategoryList = () => {
           className={`${styles.category} ${styles.travel}`}
         >
           <img
+            title="travel"
             src="/travel.jpeg"
             width={32}
             height={32}
@@ -54,6 +57,7 @@ const CategoryList = () => {
           className={`${styles.category} ${styles.food}`}
         >
           <img
+            title="food"
             src="/food.jpg"
             width={32}
             height={32}
@@ -67,6 +71,7 @@ const CategoryList = () => {
           className={`${styles.category} ${styles.fashion}`}
         >
           <img
+            title="fashion"
             src="/fashion.jpg"
             width={32}
             height={32}
@@ -80,6 +85,7 @@ const CategoryList = () => {
           className={`${styles.category} ${styles.technology}`}
         >
           <img
+            title="technology"
             src="/style.jpg"
             width={32}
             height={32}

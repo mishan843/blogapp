@@ -7,7 +7,7 @@ const Footer = () => {
     <div className={styles.container}>
       <div className={styles.info}>
         <div className={styles.imageContainer}>
-          <img className={styles.logo} src="/bloggersGround.png" alt="bloggersGround" />
+          <img title="bloggersGround" className={styles.logo} src="/bloggersGround.png" alt="bloggersGround" />
         </div>
         <p className={styles.desc}>
           Discover a world of inspiration, explore creativity, and connect with
@@ -15,9 +15,9 @@ const Footer = () => {
           blogging platform. Join our community today.
         </p>
         <div className={styles.icons}>
-          <Link href="https://x.com/Bloggers_Ground?t=-nndOfYb4HzPvHxBi-YJwg&s=09"><img src="/twitter2.png" alt="github" width={24} height={24} /></Link>
-          <Link href="https://instagram.com/bloggers_ground?igshid=MmVlMjlkMTBhMg=="><img src="/instagram.png" alt="facebook" width={24} height={24} /></Link>
-          <Link href="https://www.facebook.com/profile.php?id=61553443388186&mibextid=ZbWKwL"><img src="/facebook.png" alt="facebook" width={24} height={24} /></Link>
+          <Link href="https://x.com/Bloggers_Ground?t=-nndOfYb4HzPvHxBi-YJwg&s=09"><img title="github" src="/twitter2.png" alt="github" width={24} height={24} /></Link>
+          <Link href="https://instagram.com/bloggers_ground?igshid=MmVlMjlkMTBhMg=="><img title="instagram" src="/instagram.png" alt="instagram" width={24} height={24} /></Link>
+          <Link href="https://www.facebook.com/profile.php?id=61553443388186&mibextid=ZbWKwL"><img title="facebook" src="/facebook.png" alt="facebook" width={24} height={24} /></Link>
         </div>
       </div>
       <div className={styles.link_contaner}>
