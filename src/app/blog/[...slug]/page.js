@@ -10,16 +10,16 @@ export const generateMetadata = ({ searchParams, params }) => {
       );
 
       if (response.ok) {
-
         let result = await response.json();
+        console.log(result)
         return {
           title: `${result.title}`,
-          description: `${result.description}`,
+          description: `${result.metaDescription ? result.metaDescription : result.description}`,
           category: result.category,
           keywords: result.keywords,
           openGraph: {
             title: `${result.title}`,
-            description: `${result.description}`,
+            description: `${result.metaDescription ? result.metaDescription : result.description}`,
             url: `https://bloggersground.com/blog/${result.title
               .toLowerCase()
               .replace(/[^\w\s]/gi, '').replace(/\s+/g, '-')}?id=${result._id}`, // Uncomment this line
@@ -53,7 +53,7 @@ export const generateMetadata = ({ searchParams, params }) => {
           twitter: {
             card: 'summary_large_image',
             title: `${result.title}`,
-            description: `${result.description}`,
+            description: `${result.metaDescription ? result.metaDescription : result.description}`,
             creator: 'bloggersGround',
             creatorId: '1467726470533754880',
             images: [`${result.coverImage}`],
