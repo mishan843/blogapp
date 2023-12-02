@@ -58,7 +58,7 @@ const CardList = () => {
 
   return (
     <div className={styles.container}>
-      <h1 className={styles.title}>Recent Posts</h1>
+      <h2 className={styles.title}>Recent Posts</h2>
       {isLoading ? (
         <div className={styles.loadingContainer}>
           <div className={styles.loading}>
