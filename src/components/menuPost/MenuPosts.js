@@ -65,7 +65,9 @@ const MenuPosts = ({ withImage }) => {
     <div className={styles.items}>
       {data.map((obj) => {
         const categoryColor = getColors(obj.category[0]);
-        return (<Link key={obj._id} href={`/blog/getblogbyid?id=${obj._id}`} className={styles.item}>
+        return (<Link key={obj._id} href={`/blog/${obj.title
+          .toLowerCase()
+          .replace(/[^\w\s]/gi, '').replace(/\s+/g, '-')}?id=${obj._id}`} className={styles.item}>
           {withImage && (
             <div className={styles.imageContainer}>
               <img loading="lazy" title={obj.title} src={obj.coverImage} alt={obj.title} fill className={styles.image} />
