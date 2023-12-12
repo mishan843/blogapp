@@ -7,14 +7,14 @@ const filePathtxt = 'public/sitemap.txt'; // Change file extension to .xml
 const apiUrlBlog = 'https://blogapp-q8b0.onrender.com/blog/getAllBlogs';
 
 const sitemap = [
-    'https://bloggersground.com',
-    'https://bloggersground.com/about',
-    'https://bloggersground.com/blog/getallblogs?categoryFilter=Finance',
-    'https://bloggersground.com/blog/getallblogs?categoryFilter=Coding',
-    'https://bloggersground.com/blog/getallblogs?categoryFilter=Travel',
-    'https://bloggersground.com/blog/getallblogs?categoryFilter=Food',
-    'https://bloggersground.com/blog/getallblogs?categoryFilter=Fashion',
-    'https://bloggersground.com/blog/getallblogs?categoryFilter=Technology',
+    'https://www.bloggersground.com',
+    'https://www.bloggersground.com/about',
+    'https://www.bloggersground.com/blog/getallblogs?categoryFilter=Finance',
+    'https://www.bloggersground.com/blog/getallblogs?categoryFilter=Coding',
+    'https://www.bloggersground.com/blog/getallblogs?categoryFilter=Travel',
+    'https://www.bloggersground.com/blog/getallblogs?categoryFilter=Food',
+    'https://www.bloggersground.com/blog/getallblogs?categoryFilter=Fashion',
+    'https://www.bloggersground.com/blog/getallblogs?categoryFilter=Technology',
 ];
 
 async function fetchData(apiUrl) {
@@ -67,7 +67,7 @@ async function createNewSiteMap() {
     try {
         let blogData = await fetchData(apiUrlBlog);
         console.log(blogData);
-        const blogLinks = blogData.map(obj => `https://bloggersground.com/blog/${obj.title.toLowerCase().replace(/[^\w\s]/gi, '').replace(/\s+/g, '-')}?id=${obj._id}`);
+        const blogLinks = blogData.map(obj => `https://www.bloggersground.com/blog/${obj.title.toLowerCase().replace(/[^\w\s]/gi, '').replace(/\s+/g, '-')}?id=${obj._id}`);
         console.log("blogLinks", blogLinks)
         sitemap.push(...blogLinks);
 
