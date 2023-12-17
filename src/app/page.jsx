@@ -55,12 +55,15 @@ export const metadata = {
   alternates: {
     canonical: `${process.env.DOMAIN}`,
   },
+  appleTouchIcon: "https://www.bloggersground.com/favicon.ico",
+  appleTouchIconPrecomposed: "https://www.bloggersground.com/favicon.ico",
+  themeColor: "#ffffff", // Add the desired theme color
 };
 export default function Home() {
   return (
     <div className={styles.container}>
       <CategoryList />
-      <Search/>
+      <Search />
       <div className={styles.content}>
         <CardList />
         <Menu />
