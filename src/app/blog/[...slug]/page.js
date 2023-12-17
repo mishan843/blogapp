@@ -17,6 +17,7 @@ export const generateMetadata = ({ searchParams, params }) => {
           description: `${result.metaDescription ? result.metaDescription : result.description}`,
           category: result.category,
           keywords: result.keywords,
+          lang: "en",
           openGraph: {
             title: `${result.title}`,
             description: `${result.metaDescription ? result.metaDescription : result.description}`,
@@ -24,6 +25,7 @@ export const generateMetadata = ({ searchParams, params }) => {
               .toLowerCase()
               .replace(/[^\w\s]/gi, '').replace(/\s+/g, '-')}?id=${result._id}`, // Uncomment this line
             siteName: "bloggersGround",
+            locale: "en_US",
             locale: "en_US",
             type: "website",
             images: [
