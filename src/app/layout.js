@@ -14,6 +14,9 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head>
         <meta name="google-site-verification" content="pnYpAezLasKVKt8zLLL9_e9KkSM1Gup1Qeozx-mgO30" />
+        <link
+          rel="apple-touch-icon"
+          href="https://www.bloggersground.com/favicon.ico" />
       </head>
       <body className={inter.className}>
         <ThemeContextProvider>
