@@ -15,8 +15,8 @@ const CategoryList = () => {
           className={`${styles.category} ${styles.finance}`}
         >
           <img
-            loading="lazy"
-            src="/finance.jpg"
+            loading="eager"
+            src="/finance.webp"
             width={32}
             height={32}
             alt="finance"
@@ -30,9 +30,9 @@ const CategoryList = () => {
           className={`${styles.category} ${styles.coding}`}
         >
           <img
-            loading="lazy"
+            loading="eager"
             title="coding"
-            src="/coding.jpg"
+            src="/coding.webp"
             width={32}
             height={32}
             alt="coding logo"
@@ -45,9 +45,9 @@ const CategoryList = () => {
           className={`${styles.category} ${styles.travel}`}
         >
           <img
-            loading="lazy"
+            loading="eager"
             title="travel"
-            src="/travel.jpeg"
+            src="/travel.webp"
             width={32}
             height={32}
             alt="travel logo"
@@ -60,9 +60,9 @@ const CategoryList = () => {
           className={`${styles.category} ${styles.food}`}
         >
           <img
-            loading="lazy"
+            loading="eager"
             title="food"
-            src="/food.jpg"
+            src="/food.webp"
             width={32}
             height={32}
             alt="food logo"
@@ -75,9 +75,9 @@ const CategoryList = () => {
           className={`${styles.category} ${styles.fashion}`}
         >
           <img
-            loading="lazy"
+            loading="eager"
             title="fashion"
-            src="/fashion.jpg"
+            src="/fashion.webp"
             width={32}
             height={32}
             alt="fashion logo"
@@ -90,9 +90,9 @@ const CategoryList = () => {
           className={`${styles.category} ${styles.technology}`}
         >
           <img
-            loading="lazy"
+            loading="eager"
             title="technology"
-            src="/style.jpg"
+            src="/technology.webp"
             width={32}
             height={32}
             alt="technology"
