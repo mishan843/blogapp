@@ -67,6 +67,26 @@ const SingleBlog = () => {
             </div>
           </div>
         </div>
+        {singleBlog.relatedArticles && singleBlog.relatedArticles.length > 0 && (
+          <div className={styles.relatedBlogs}>
+            <h2>Related Blogs</h2>
+            <div className={styles.relatedBlogList}>
+              {singleBlog.relatedArticles.map((relatedBlog) => (
+                <div key={relatedBlog._id} className={styles.relatedBlogItem}>
+                  <a
+                    href={`${process.env.DOMAIN}blog/${relatedBlog.title
+                      .toLowerCase()
+                      .replace(/[^\w\s]/gi, '')
+                      .replace(/\s+/g, '-')}?id=${relatedBlog._id}`}
+                  >
+                    {" "}
+                    <h3>{relatedBlog.title}</h3>{" "}
+                  </a>{" "}
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
         <Menu />
       </div>
     </div>
