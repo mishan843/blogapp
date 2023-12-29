@@ -224,6 +224,9 @@
     font-size: 16px;
     margin-bottom: 8px;
   }
+  .post {
+    padding: 0px;
+  }
 }
 
 @media screen and (max-width: 1024px) {
@@ -250,7 +253,9 @@
   .title {
     text-align: center;
   }
-
+  .post {
+    padding: 0px;
+  }
   .image {
     width: 100% !important;
     position: unset !important;
@@ -362,5 +367,8 @@
   }
   .username {
     font-size: 14px; /* Adjust font size for smaller screens */
+  }
+  .post {
+    padding: 0px;
   }
 }
