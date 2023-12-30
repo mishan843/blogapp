@@ -44,7 +44,7 @@
   align-items: center;
   gap: 10px;
   text-transform: capitalize;
-  width: 15%;
+  width: 14%;
   height: 60px;
   justify-content: center;
   border-radius: 10px;
@@ -56,9 +56,17 @@
 }
 
 .category.finance {
-  background-color: #57c4ff31;
+  background-color: #b4ad9d31;
 }
 
+.category.more {
+  background-color: #d5d6a5;
+  width: 5%;
+}
+.category.more:hover {
+  background-color: #009aec31;
+  width: 5%;
+}
 .category.finance:hover {
   background-color: #57c4ff9b;
 }
@@ -116,7 +124,12 @@
     gap: 10px;
     flex-direction: row;
   }
-
+  .category.more {
+    background-color: #d5d6a5;
+  }
+  .category.more:hover {
+    background-color: #009aec31;
+  }
   .category {
     width: 47%;
     /* Display two categories in one row on mobile */

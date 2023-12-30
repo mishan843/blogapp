@@ -18,18 +18,15 @@ const CardList = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        let endpoint;
-        if (search) {
-          endpoint = `${process.env.NEXT_PUBLIC_API_URL}/blog/getAllBlogs?categoryFilter=${search}&page=${currentPage}&limit=10`;
-        } else {
-          endpoint = `${process.env.NEXT_PUBLIC_API_URL}/blog/getAllBlogs?page=${currentPage}&limit=10`;
-        }
         setIsLoading(true);
         window.scrollTo({ top: 0 });
-        let response = await fetch(endpoint);
-        let data = await response.json();
-        let blogsData = data.data;
-        let totalPageCount = data.totalPages
+
+        const endpoint = `${process.env.NEXT_PUBLIC_API_URL}/blog/getAllBlogs?categoryFilter=${search || ''}&page=${currentPage}&limit=10`;
+
+        const response = await fetch(endpoint);
+        const data = await response.json();
+        const blogsData = data.data;
+        const totalPageCount = data.totalPages;
 
         if (search) {
           setBlogByCat(blogsData);
@@ -41,7 +38,6 @@ const CardList = () => {
 
         setTotalPages(totalPageCount);
         setIsLoading(false);
-
       } catch (error) {
         console.error("Error fetching data:", error);
       }

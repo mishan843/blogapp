@@ -1,46 +1,47 @@
-import React from "react";
+"use client"
+import React, { useEffect, useState } from "react";
 import styles from "./menuCategories.module.css";
 import Link from "next/link";
 
 const MenuCategories = () => {
+  const [categories, setCategories] = useState([]);
+
+  useEffect(() => {
+
+    const apiUrl = `${process.env.NEXT_PUBLIC_API_URL}/blog/getBlogCategories`;
+
+    fetch(apiUrl)
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        return response.json();
+      })
+      .then((data) => {
+        console.log("data", data)
+
+
+
+
+
+        console.log("uniqueCategories", data)
+        setCategories(data.categories);
+      })
+      .catch((error) => {
+        console.error('Error fetching data:', error);
+      });
+  }, []);
   return (
     <div className={styles.categoryList}>
-      <Link
-        href="/blog/getallblogs?categoryFilter=Technology"
-        className={`${styles.categoryItem} ${styles.technology}`}
-      >
-        Technology
-      </Link>
-      <Link
-        href="/blog/getallblogs?categoryFilter=Fashion"
-        className={`${styles.categoryItem} ${styles.fashion}`}
-      >
-        Fashion
-      </Link>
-      <Link
-        href="/blog/getallblogs?categoryFilter=Food"
-        className={`${styles.categoryItem} ${styles.food}`}
-      >
-        Food
-      </Link>
-      <Link
-        href="/blog/getallblogs?categoryFilter=Travel"
-        className={`${styles.categoryItem} ${styles.travel}`}
-      >
-        Travel
-      </Link>
-      <Link
-        href="/blog/getallblogs?categoryFilter=Finance"
-        className={`${styles.categoryItem} ${styles.finance}`}
-      >
-        Finance
-      </Link>
-      <Link
-        href="/blog/getallblogs?categoryFilter=Coding"
-        className={`${styles.categoryItem} ${styles.coding}`}
-      >
-        Coding
-      </Link>
+      {categories.map((category) => (
+        <Link
+          key={category}
+          href={`/blog/getallblogs?categoryFilter=${encodeURIComponent(category)}`}
+          className={`${styles.categoryItem} ${styles[category.toLowerCase()]}`}>
+          {category}
+
+        </Link>
+      ))}
     </div>
   );
 };

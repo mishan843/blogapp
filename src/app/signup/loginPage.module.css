@@ -1,71 +1,77 @@
-.container{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 60px;
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 60px;
 }
 
-.wrapper{
-    background-color: var(--softBg);
-    padding: 150px 200px;
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-    border-radius: 10px;
+.wrapper {
+  background-color: var(--softBg);
+  padding: 150px 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  border-radius: 10px;
 }
 
-.wrapper form{
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    
+.wrapper form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
 
+.wrapper input {
+  padding: 10px;
+  border-radius: 10px;
 }
-.wrapper input{
-    padding: 10px;
-    border-radius: 10px;
+
+.registerButton,
+.socialButton {
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
 }
-.registerButton{
-    padding: 10px;
-    border-radius: 10px;
-    background-color: #111;
-    color: white;
-    border: none;
-    cursor: pointer;
+
+.registerButton {
+  background-color: #111;
+  color: white;
+  border: none;
 }
-.socialButton{
-    padding: 20px;
-    border-radius: 5px;
-    border: none;
-    color: white;
-    font-weight: bold;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+
+.socialButton {
+  border: none;
+  color: white;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.socialButton:first-child{
-    background-color: #ff5555;
+
+.socialButton:first-child {
+  background-color: #ff5555;
 }
-.socialButton:nth-child(2){
-    background-color: #111;
+
+.socialButton:nth-child(2) {
+  background-color: #111;
 }
-.socialButton:nth-child(3){
-    background-color: #087BEA;
+
+.socialButton:nth-child(3) {
+  background-color: #087bea;
 }
+
 @media screen and (max-width: 768px) {
-    .wrapper{
-        padding: 50px 100px;
-    }
+  .wrapper {
+    padding: 50px 100px;
+  }
 }
+
 @media screen and (max-width: 640px) {
-    .wrapper{
-        padding: 30px;
-    }
-    .socialButton{
-        font-weight: 400;
-        font-size: 14px;
-    }
+  .wrapper {
+    padding: 30px;
+  }
+
+  .socialButton {
+    font-weight: 400;
+    font-size: 14px;
+  }
 }
-
-

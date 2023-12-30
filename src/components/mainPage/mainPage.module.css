@@ -1,65 +1,64 @@
 .container {
-    margin-left: 200px;
-    margin-right: 200px;
+  margin-left: 200px;
+  margin-right: 200px;
+}
+
+.title {
+  color: white;
+  padding: 5px 10px;
+  text-align: center;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+.content {
+  display: flex;
+  gap: 50px;
+}
+
+.finance {
+  background-color: #57c4ff9b !important;
+  font-family: serif;
+  font-size: 25px;
+}
+
+.technology {
+  background-color: #ffb04f81;
+  font-family: serif;
+  font-size: 25px;
+}
+
+.fashion {
+  background-color: #da85c891;
+  font-family: serif;
+  font-size: 25px;
+}
+
+.food {
+  background-color: #7fb8818d;
+  font-family: serif;
+  font-size: 25px;
+}
+
+.travel {
+  background-color: #ff795788;
+  font-family: serif;
+  font-size: 25px;
+}
+
+.coding {
+  background-color: #5e4fff84;
+  font-family: serif;
+}
+@media screen and (max-width: 1300px) {
+  .container {
+    margin-left: 0px !important;
+    margin-right: 0px !important;
   }
-  
-  .title {
-    color: white;
-    padding: 5px 10px;
-    text-align: center;
-    border-radius: 5px;
-    margin-top: 20px;
+}
+@media screen and (max-width: 768px) {
+  .container {
+    margin-left: 0px;
+    margin-right: 0px;
   }
-  
-  .content {
-    display: flex;
-    gap: 50px;
-  }
-  
-  .finance {
-    background-color: #57c4ff9b !important;
-    font-family: serif;
-    font-size: 25px;
-  }
-  
-  .technology {
-    background-color: #ffb04f81;
-    font-family: serif;
-    font-size: 25px;
-  }
-  
-  .fashion {
-    background-color: #da85c891;
-    font-family: serif;
-    font-size: 25px;
-  }
-  
-  .food {
-    background-color: #7fb8818d;
-    font-family: serif;
-    font-size: 25px;
-  }
-  
-  .travel {
-    background-color: #ff795788;
-    font-family: serif;
-    font-size: 25px;
-  }
-  
-  .coding {
-    background-color: #5e4fff84;
-    font-family: serif;
-  }
-  @media screen and (max-width: 1300px) {
-    .container {
-      margin-left: 0px !important;
-      margin-right: 0px !important;
-    }
-  }
-  @media screen and (max-width: 768px) {
-    .container {
-      margin-left: 0px;
-      margin-right: 0px;
-    }
-  }
-  
+}
