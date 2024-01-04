@@ -23,15 +23,16 @@ const HomePageInfo = () => {
                 <p>
                   Stay updated on the latest trends in finance and world
                   finance. From insightful articles on Exeter Finance to
-                  discussions about financial management, we're your source for
-                  informed perspectives.
+                  discussions about financial management, we&apos;re your source
+                  for informed perspectives.
                 </p>
               </li>
               <li>
                 <p>
                   Dive into the world of fashion with Bloggers Ground. Discover
                   the latest trends, fashion nova releases, and expert advice on
-                  men's fashion. Elevate your style with our curated content.
+                  men&apos;s fashion. Elevate your style with our curated
+                  content.
                 </p>
               </li>
               <li>

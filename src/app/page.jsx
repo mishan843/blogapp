@@ -68,8 +68,8 @@ export default function Home() {
         <p>
           Explore the world of knowledge and inspiration at Bloggers Ground, a
           platform dedicated to providing valuable insights across various
-          topics. Whether you're interested in finance, fashion, coding, travel,
-          or technology, we've got you covered.
+          topics. Whether you&apos;re interested in finance, fashion, coding,
+          travel, or technology, we&apos;ve got you covered.
         </p>
       </div>
 
