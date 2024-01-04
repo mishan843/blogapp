@@ -92,7 +92,7 @@ const Card = (body) => {
                 {item.description}
               </p>
               <Link href={`/blog/${item.title.toLowerCase().replace(/[^\w\s]/gi, '').replace(/\s+/g, '-')}?id=${item._id}`} className={`${styles.link} ${categoryColor}`}>
-                MORE
+                READ FULL BLOG
               </Link>
             </div>
           </div>
@@ -120,7 +120,7 @@ const Card = (body) => {
                   {item.description}
                 </p>
                 <Link href={`/blog/${item.title.toLowerCase().replace(/[^\w\s]/gi, '').replace(/\s+/g, '-')}?id=${item._id}`} className={styles.link}>
-                  MORE
+                  READ FULL BLOG
                 </Link>
               </div>
             </div >
