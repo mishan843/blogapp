@@ -251,24 +251,22 @@ const WebStories = () => {
           poster-portrait-src="assets/cover.jpg"
         >
           {Array.isArray(stories.stories) &&
-            stories.stories.map((obj) => {
-              return (
-                <amp-story-page id="cover">
-                  <amp-story-grid-layer template="fill">
-                    <amp-img
-                      src={obj.url}
-                      width="720"
-                      height="1280"
-                      layout="responsive"
-                    ></amp-img>
-                  </amp-story-grid-layer>
-                  <amp-story-grid-layer template="vertical">
-                    <h1>{obj.storyTitle}</h1>
-                    <p>{obj.storyDescription}</p>
-                  </amp-story-grid-layer>
-                </amp-story-page>
-              );
-            })}
+            stories.stories.map((obj, index) => (
+              <amp-story-page key={index} id={`cover-${index}`}>
+                <amp-story-grid-layer template="fill">
+                  <amp-img
+                    src={obj.url}
+                    width="720"
+                    height="1280"
+                    layout="responsive"
+                  ></amp-img>
+                </amp-story-grid-layer>
+                <amp-story-grid-layer template="vertical">
+                  <h1>{obj.storyTitle}</h1>
+                  <p>{obj.storyDescription}</p>
+                </amp-story-grid-layer>
+              </amp-story-page>
+            ))}
 
           <amp-story-bookend
             src="bookend.json"
