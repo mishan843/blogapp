@@ -19,7 +19,7 @@ body {
 
 .static-info h2 {
   color: #0074b8; /* Changed color for a more vibrant look */
-  font-size: 28px;
+  font-size: 24px;
   cursor: pointer;
   margin-bottom: 10px; /* Adjusted margin for better spacing */
   display: flex;
@@ -42,7 +42,7 @@ body {
 .static-info p {
   color: #555;
   line-height: 1.6;
-  font-size: 20px;
+  font-size: 18px;
   display: none;
   margin: 10px 0;
   font-family: "Georgia", serif; /* Changed font family for a more elegant look */
@@ -69,7 +69,7 @@ body {
   }
 
   .static-info h2 {
-    font-size: 24px;
+    font-size: 20px;
   }
 
   .static-info p {

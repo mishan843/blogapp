@@ -46,7 +46,7 @@ const SingleBlog = () => {
         </div>
         <div className={styles.user}>
           <div className={styles.userImageContainer}>
-            <img loading="lazy" title="bloggersGround logo" src="/bloggersGroundLogo.png" alt="bloggersGround logo" fill className={styles.avatar} />
+            <img loading="lazy" title="bloggersGround logo" src="/bloggersGroundLogo.webp" alt="bloggersGround logo" fill className={styles.avatar} />
           </div>
           <div className={styles.userTextContainer}>
             <b><span className={styles.username}>Blogger Ground</span></b>

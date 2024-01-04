@@ -76,7 +76,7 @@ const Comments = ({ singleBlog, setSingleBlog }) => {
                 <img
                   loading="lazy"
                   title="BloggersGround logo"
-                  src="/profile_logo.jpg"
+                  src="/bloggersGroundLogo.webp"
                   alt="BloggersGround logo"
                   width={50}
                   height={50}
