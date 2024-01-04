@@ -87,7 +87,7 @@ const AuthLinks = () => {
           <motion.div className={styles.responsiveLink} >
             <Link href="/">Home</Link>
             <Link href="/about">About</Link>
-            <Link href="/">Contact</Link>
+            <Link href="/contact">Contact</Link>
             {userData ? (
               <button className={styles.link} onClick={handleLogout}>
                 Logout
