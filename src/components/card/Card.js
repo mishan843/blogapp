@@ -86,7 +86,7 @@ const Card = (body) => {
                 <span className={`${categoryColor} ${styles.category} `}>{item.category}</span>
               </div>
               <Link href={`/blog/${item.title.toLowerCase().replace(/[^\w\s]/gi, '').replace(/\s+/g, '-')}?id=${item._id}`}>
-                <h1>{item.title}</h1>
+                <h2>{item.title}</h2>
               </Link>
               <p className={styles.desc}>
                 {item.description}
@@ -114,7 +114,7 @@ const Card = (body) => {
                   <span className={styles.date}>{item.createdAt}</span>
                 </div>
                 <Link href={`/blog/${item.title.toLowerCase().replace(/[^\w\s]/gi, '').replace(/\s+/g, '-')}?id=${item._id}`}>
-                  <h1>{item.title}</h1>
+                  <h2>{item.title}</h2>
                 </Link>
                 <p className={styles.desc}>
                   {item.description}

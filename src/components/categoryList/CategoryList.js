@@ -52,8 +52,8 @@ const CategoryList = () => {
               src={`${category.toLowerCase()}.webp`}
               width={32}
               height={32}
-              alt={category.name}
-              title={category.name}
+              alt={category}
+              title={category}
               className={styles.image}
             />
             {category}

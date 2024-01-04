@@ -3,6 +3,7 @@ import CategoryList from "@/components/categoryList/CategoryList";
 import CardList from "@/components/cardList/CardList";
 import Menu from "@/components/menu/Menu";
 import Search from "@/components/search/Search";
+import HomePageInfo from "@/components/homepageInfo/page";
 
 export const metadata = {
   title: {
@@ -62,12 +63,23 @@ export const metadata = {
 export default function Home() {
   return (
     <div className={styles.container}>
+      <div className={styles["welcome-text"]}>
+        <h1>Welcome to Bloggers Ground</h1>
+        <p>
+          Explore the world of knowledge and inspiration at Bloggers Ground, a
+          platform dedicated to providing valuable insights across various
+          topics. Whether you're interested in finance, fashion, coding, travel,
+          or technology, we've got you covered.
+        </p>
+      </div>
+
       <CategoryList />
       <Search />
       <div className={styles.content}>
         <CardList />
         <Menu />
       </div>
+      <HomePageInfo />
     </div>
   );
 }

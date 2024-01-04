@@ -2,6 +2,17 @@
   margin-left: 200px;
   margin-right: 200px;
 }
+.welcome-text {
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 30px;
+  color: #333;
+  font-size: 20px;
+  line-height: 1.6;
+  font-family: "Georgia", serif;
+  letter-spacing: 0.8px;
+  position: relative;
+}
 
 .content {
   display: flex;
@@ -12,16 +23,28 @@
     margin-left: 0px;
     margin-right: 0px;
   }
+  .welcome-text {
+    font-size: 15px;
+    line-height: 1.5;
+  }
 }
 @media screen and (max-width: 1024px) {
   .container {
     margin-left: 0px;
     margin-right: 0px;
   }
+  .welcome-text {
+    font-size: 15px;
+    line-height: 1.5;
+  }
 }
 @media screen and (max-width: 768px) {
   .container {
     margin-left: 0px;
     margin-right: 0px;
+  }
+  .welcome-text {
+    font-size: 15px;
+    line-height: 1.5;
   }
 }
