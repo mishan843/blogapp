@@ -81,7 +81,9 @@
   background-color: #5e4fff84;
 }
 
-
+.sport {
+  background-color: #ff333331;
+}
 
 /* .posttitle:hover {
   color: #ff6b6b;
@@ -91,7 +93,6 @@
   font-size: 14px;
   color: #666;
 }
-
 
 /* .items:hover {
   transform: translateY(-5px);

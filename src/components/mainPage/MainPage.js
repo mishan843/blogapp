@@ -20,24 +20,26 @@ const MainPage = () => {
       case 'Travel':
         return styles.travel
         break;
-        case 'Food':
+      case 'Food':
         return styles.food
         break;
-        case 'Fashion':
+      case 'Fashion':
         return styles.fashion
         break;
+      case 'Sport':
+        return styles.sport
       default:
         return styles.technology
         break;
     }
   }
-  const categoryColor = getColors(`${search}`);  
+  const categoryColor = getColors(`${search}`);
   return (
     <div className={styles.container}>
-        <h1 className={`${styles.title} ${categoryColor}`}>{search} Blog</h1>
+      <h1 className={`${styles.title} ${categoryColor}`}>{search} Blog</h1>
       <div className={styles.content}>
-        <CardList/>
-        <Menu/>
+        <CardList />
+        <Menu />
       </div>
     </div>
   )

@@ -15,6 +15,7 @@ const MenuPosts = ({ withImage }) => {
     Travel: styles.travel,
     Food: styles.food,
     Technology: styles.technology,
+    Sport: styles.sport,
     default: styles.fashion,
   };
 

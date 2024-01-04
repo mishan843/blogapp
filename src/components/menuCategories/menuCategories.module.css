@@ -33,7 +33,9 @@
 .categoryItem.coding {
   background-color: #5e4fff31;
 }
-
+.categoryItem.sport {
+  background-color: #ff333331;
+}
 .categoryItem.finance:hover {
   background-color: #57c4ff9b !important;
 }
@@ -55,4 +57,7 @@
 }
 .categoryItem.coding:hover {
   background-color: #5e4fff84;
+}
+.categoryItem.sport:hover {
+  background-color: #ff333384;
 }
