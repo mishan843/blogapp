@@ -15,6 +15,7 @@ const MenuPosts = ({ withImage }) => {
     Travel: styles.travel,
     Food: styles.food,
     Technology: styles.technology,
+    Sport: styles.sport,
     default: styles.fashion,
   };
 
@@ -22,7 +23,7 @@ const MenuPosts = ({ withImage }) => {
 
   useEffect(() => {
     const categoryFilter = searchParams.get('categoryFilter');
-    let apiUrl = `${process.env.NEXT_PUBLIC_API_URL}/blog/getallblogs?isPopularpost=true&page=1&limit=5`;
+    let apiUrl = `${process.env.NEXT_PUBLIC_API_URL}/blog/getallblogs?isPopularpost=true&page=1&limit=10`;
 
     if (categoryFilter) {
       apiUrl += `&categoryFilter=${categoryFilter}`;
