@@ -5,8 +5,8 @@ import RootLayout from "../layout";
 
 export default function ExamplePageWithLayout() {
   return (
-    <RootLayout includeLayout={true}>
-      <WebStories/>
+    <RootLayout includeLayout={false}>
+      <WebStories />
     </RootLayout>
   );
 }

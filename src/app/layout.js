@@ -36,8 +36,28 @@ export default function RootLayout({ children, includeLayout = true }) {
         </body>
       </html>
     );
-  }else{
-    // If includeLayout is false, render only the children without the layout
-    return <>hi</>;
+  } else {
+    return (
+      <html lang="en">
+        <head>
+          <meta name="google-site-verification" content="pnYpAezLasKVKt8zLLL9_e9KkSM1Gup1Qeozx-mgO30" />
+          <link
+            rel="apple-touch-icon"
+            href="https://www.bloggersground.com/favicon.ico"
+          />
+        </head>
+        <body className={inter.className}>
+          <ThemeContextProvider>
+            <ThemeProvider>
+              <div className="container">
+                <div className="wrapper">
+                  {children}
+                </div>
+              </div>
+            </ThemeProvider>
+          </ThemeContextProvider>
+        </body>
+      </html>
+    );
   }
 }

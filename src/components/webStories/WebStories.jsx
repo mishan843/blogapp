@@ -1,14 +1,35 @@
-"use client"
+"use client";
 
-import React from "react";
-
+import React, { useState, useEffect } from "react";
 
 const WebStories = () => {
-  return (
+  const [stories, setStories] = useState([]);
+  const urlParams = new URLSearchParams(window.location.search);
+  const id = urlParams.get("id");
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const endpoint = `${process.env.NEXT_PUBLIC_API_URL}/story/getStoryById?id=${id}`;
+
+        const response = await fetch(endpoint);
+        const data = await response.json();
+
+        setStories(data);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+
+    fetchData();
+  }, []);
+  return stories &&
+    Array.isArray(stories.stories) &&
+    stories.stories.length > 0 ? (
     <>
       <head>
         <meta charset="utf-8" />
-        <title>Joy of Pets</title>
+        <title>{stories.title}</title>
         <link rel="canonical" href="pets.html" />
         <meta
           name="viewport"
@@ -28,6 +49,87 @@ const WebStories = () => {
           custom-element="amp-video"
           src="https://cdn.ampproject.org/v0/amp-video-0.1.js"
         ></script>
+
+        <meta name="title" content={stories.title} />
+        <meta
+          name="description"
+          content={
+            stories.metaDescription
+              ? stories.metaDescription
+              : stories.description
+          }
+        />
+        <meta name="category" content={stories.category} />
+        <meta name="lang" content="en" />
+
+        <meta property="og:title" content={stories.title} />
+        <meta
+          property="og:description"
+          content={
+            stories.metaDescription
+              ? stories.metaDescription
+              : stories.description
+          }
+        />
+        {/* <meta property="og:url" content="https://www.bloggersground.com/blog/{stories.title.toLowerCase().replace(/[^\w\s]/gi, "").replace(/\s+/g, "-")}?id={stories._id}"/> */}
+        <meta property="og:site_name" content="bloggersGround" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <meta property="og:genre" content="web story" />
+        <meta
+          property="og:image"
+          content={
+            Array.isArray(stories.stories) && stories.stories.length > 0
+              ? stories.stories[0].url
+              : ""
+          }
+          width="1200"
+          height="628"
+        />
+        <meta
+          property="og:image"
+          content={
+            Array.isArray(stories.stories) && stories.stories.length > 0
+              ? stories.stories[0].url
+              : ""
+          }
+          width="1080"
+          height="1080"
+        />
+        <meta
+          property="og:image"
+          content={
+            Array.isArray(stories.stories) && stories.stories.length > 0
+              ? stories.stories[0].url
+              : ""
+          }
+          width="600"
+          height="315"
+        />
+        <meta
+          property="og:image"
+          content={
+            Array.isArray(stories.stories) && stories.stories.length > 0
+              ? stories.stories[0].url
+              : ""
+          }
+          width="800"
+          height="800"
+        />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={stories.title} />
+        <meta
+          name="twitter:description"
+          content={
+            stories.metaDescription
+              ? stories.metaDescription
+              : stories.description
+          }
+        />
+        <meta name="twitter:creator" content="bloggersGround" />
+        <meta name="twitter:creator:id" content="1467726470533754880" />
+        <meta name="twitter:image" content={stories.stories[0].url} />
 
         <style jsx>{`
           body {
@@ -97,6 +199,7 @@ const WebStories = () => {
           }
           h1 {
             font-weight: bold;
+            color: white;
             font-size: 2.875em;
             line-height: 1.174;
           }
@@ -147,100 +250,26 @@ const WebStories = () => {
           publisher-logo-src="assets/AMP-Brand-White-Icon.svg"
           poster-portrait-src="assets/cover.jpg"
         >
-          <amp-story-page id="cover">
-            <amp-story-grid-layer template="fill">
-              <amp-img
-                src="assets/cover.jpg"
-                width="720"
-                height="1280"
-                layout="responsive"
-              ></amp-img>
-            </amp-story-grid-layer>
-            <amp-story-grid-layer template="vertical">
-              <h1>The Joy of Pets</h1>
-              <p>By AMP Tutorials</p>
-            </amp-story-grid-layer>
-          </amp-story-page>
+          {Array.isArray(stories.stories) &&
+            stories.stories.map((obj) => {
+              return (
+                <amp-story-page id="cover">
+                  <amp-story-grid-layer template="fill">
+                    <amp-img
+                      src={obj.url}
+                      width="720"
+                      height="1280"
+                      layout="responsive"
+                    ></amp-img>
+                  </amp-story-grid-layer>
+                  <amp-story-grid-layer template="vertical">
+                    <h1>{obj.storyTitle}</h1>
+                    <p>{obj.storyDescription}</p>
+                  </amp-story-grid-layer>
+                </amp-story-page>
+              );
+            })}
 
-          <amp-story-page id="page1">
-            <amp-story-grid-layer template="vertical">
-              <h1>Cats</h1>
-              <amp-img
-                src="assets/cat.jpg"
-                width="720"
-                height="1280"
-                layout="responsive"
-              ></amp-img>
-              <q>
-                Dogs come when they're called. Cats take a message and get back
-                to you. --Mary Bly
-              </q>
-            </amp-story-grid-layer>
-          </amp-story-page>
-
-          <amp-story-page id="page2">
-            <amp-story-grid-layer template="fill">
-              <amp-img
-                src="assets/dog.jpg"
-                width="720"
-                height="1280"
-                layout="responsive"
-              ></amp-img>
-            </amp-story-grid-layer>
-            <amp-story-grid-layer template="thirds">
-              <h1 grid-area="upper-third">Dogs</h1>
-              <p grid-area="lower-third">
-                Dogs were probably the first tame animals. They have accompanied
-                humans for some 10,000 years. Some scientists assert that all
-                dogs, domestic and wild, share a common ancestor in the small
-                South Asian wolf.
-              </p>
-            </amp-story-grid-layer>
-          </amp-story-page>
-
-          <amp-story-page id="page3" background-audio="assets/bird-singing.mp3">
-            <amp-story-grid-layer template="fill">
-              <amp-img
-                src="assets/bird.jpg"
-                width="720"
-                height="1280"
-                layout="responsive"
-              ></amp-img>
-            </amp-story-grid-layer>
-            <amp-story-grid-layer template="vertical">
-              <h1>Birds</h1>
-            </amp-story-grid-layer>
-            <amp-story-grid-layer template="vertical" class="bottom">
-              <q>
-                A bird is three things: Feathers, flight and song, And feathers
-                are the least of these.--Marjorie Allen Seiffert
-              </q>
-            </amp-story-grid-layer>
-          </amp-story-page>
-
-          <amp-story-page id="page4">
-            <amp-story-grid-layer template="fill">
-              <amp-video
-                autoplay
-                loop
-                width="720"
-                height="1280"
-                poster="assets/rabbit.jpg"
-                layout="responsive"
-              >
-                <source src="assets/rabbit.mp4" type="video/mp4" />
-              </amp-video>
-            </amp-story-grid-layer>
-            <amp-story-grid-layer template="vertical">
-              <h1>Rabbits</h1>
-            </amp-story-grid-layer>
-            <amp-story-grid-layer template="vertical" class="bottom">
-              <p>
-                Rabbits can learn to follow simple voice commands and come when
-                called by name, and are curious and playful.
-              </p>
-            </amp-story-grid-layer>
-          </amp-story-page>
           <amp-story-bookend
             src="bookend.json"
             layout="nodisplay"
@@ -248,6 +277,8 @@ const WebStories = () => {
         </amp-story>
       </body>
     </>
+  ) : (
+    <></>
   );
 };
 
