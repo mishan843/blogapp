@@ -4,17 +4,51 @@
 }
 .welcome-text {
   text-align: center;
-  margin-top: 40px;
-  margin-bottom: 30px;
-  color: #000000;
-  font-size: 20px;
-  line-height: 1.6;
-  font-family: serif;
-  letter-spacing: 0.8px;
+  margin: 20px 0;
+  color: #ffffff;
+  font-size: 28px; /* Increased font size for emphasis */
+  line-height: 1.8;
+  font-family: "Georgia", serif;
+  letter-spacing: 1.5px; /* Increased letter spacing for elegance */
   position: relative;
+  background: linear-gradient(
+    180deg,
+    #3786db,
+    #7aa9d8
+  ); /* Purple to blue gradient */
+  padding: 15px; /* Increased padding for a more spacious look */
+  border-radius: 15px; /* Rounded corners for a softer appearance */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced box shadow for depth */
+  overflow: hidden; /* Hide overflowing content */
 }
+
+.welcome-text:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    #9b59b6,
+    #2980b9
+  ); /* Purple to blue gradient overlay */
+  transform: translateX(-50%);
+  z-index: -1;
+  border-radius: 15px;
+}
+
 .welcome-text h1 {
-  font-size: 25px;
+  margin-bottom: 20px; /* Added margin for better spacing */
+  font-size: 36px; /* Larger font size for the main heading */
+  font-weight: bold; /* Bold font weight for emphasis */
+}
+
+.welcome-text p {
+  font-size: 18px; /* Slightly reduced font size for the paragraph */
+  max-width: 800px; /* Set a maximum width for better readability */
+  margin: 0 auto; /* Center the paragraph */
 }
 .content {
   display: flex;
@@ -32,6 +66,9 @@
   .welcome-text h1 {
     font-size: 20px;
   }
+  .welcome-text p {
+    font-size: 15px; /* Slightly reduced font size for the paragraph */
+  }
 }
 @media screen and (max-width: 1024px) {
   .container {
@@ -42,6 +79,9 @@
     font-size: 15px;
     line-height: 1.5;
   }
+  .welcome-text p {
+    font-size: 15px; /* Slightly reduced font size for the paragraph */
+  }
 }
 @media screen and (max-width: 768px) {
   .container {
@@ -51,5 +91,8 @@
   .welcome-text {
     font-size: 15px;
     line-height: 1.5;
+  }
+  .welcome-text p {
+    font-size: 15px; /* Slightly reduced font size for the paragraph */
   }
 }

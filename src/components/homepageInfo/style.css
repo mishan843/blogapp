@@ -3,33 +3,36 @@ body {
   font-family: "Arial", sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f5f5f5;
+  background-color: #f9f9f9; /* Light gray background */
 }
 
 /* Card Styles */
 .card {
   margin: 20px auto;
   padding: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 12px; /* Increased border-radius for a softer look */
+  border-radius: 12px;
   background-color: #ffffff;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Enhanced box shadow */
   overflow: hidden;
-  transition: height 0.3s ease;
+  transition: height 0.3s ease, background-color 0.3s ease, transform 0.3s ease; /* Added transform transition */
 }
 
+/* Header Styles */
 .static-info h2 {
-  color: #0074b8; /* Changed color for a more vibrant look */
+  color: #4a90e2; /* Medium blue */
   font-size: 24px;
   cursor: pointer;
-  margin-bottom: 10px; /* Adjusted margin for better spacing */
+  margin-bottom: 10px;
   display: flex;
   align-items: center;
+  transition: color 0.3s ease;
 }
 
 .static-info h2:hover {
-  color: #005580; /* Darkened hover color for contrast */
+  color: #1e4ca0; /* Darker blue on hover */
 }
 
+/* List Styles */
 .static-info ul {
   margin-left: 20px;
   padding: 0;
@@ -39,26 +42,29 @@ body {
   margin-bottom: 20px;
 }
 
+/* Paragraph Styles */
 .static-info p {
   color: #555;
   line-height: 1.6;
   font-size: 18px;
   display: none;
   margin: 10px 0;
-  font-family: "Georgia", serif; /* Changed font family for a more elegant look */
+  font-family: "Georgia", serif;
 }
 
+/* Expanded Card Styles */
 .card.expanded {
   height: auto;
+  background-color: #f0f8ff; /* Light blue for expanded state */
 }
 
 .card.expanded .static-info p {
   display: block;
 }
 
-/* Added styles for the down arrow icon */
+/* Arrow Icon Styles */
 .arrow-icon {
-  margin: 0px 10px;
+  margin: 0 10px;
   font-size: 20px;
 }
 
