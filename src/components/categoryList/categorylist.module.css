@@ -41,6 +41,7 @@
 
 .category {
   display: flex;
+  transition: background-color 0.3s, color 0.3s, transform 1s ease; /* Add transform transition */
   align-items: center;
   gap: 10px;
   text-transform: capitalize;
@@ -118,7 +119,28 @@
 .image {
   border-radius: 50%;
 }
+.scrollContainer {
+  overflow: hidden;
+  /* Add your styles for the scrollContainer */
+}
+.scrollArrows {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px; /* Adjust as needed */
+}
 
+.arrow {
+  cursor: pointer;
+  font-size: 24px; /* Adjust as needed */
+  color: #333; /* Adjust the color as needed */
+}
+
+/* Optional: Add transition effect for a smoother scrolling experience */
+.arrow:hover {
+  color: #555; /* Adjust the hover color as needed */
+  transition: color 0.3s ease;
+}
 @media screen and (max-width: 768px) {
   .categories {
     gap: 10px;
@@ -140,6 +162,9 @@
   }
   .title {
     font-size: 20px;
+  }
+  .scrollArrows {
+    display: none;
   }
 }
 

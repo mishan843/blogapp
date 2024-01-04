@@ -14,7 +14,7 @@ const HomePageInfo = () => {
     <div className={`card ${isDropdownOpen ? "expanded" : ""}`}>
       <div className="static-info">
         <h2 onClick={toggleDropdown}>
-          <BsChevronDown className="arrow-icon" /> Discover Topics
+          <BsChevronDown className="arrow-icon" /> Our Diverse Topics
         </h2>
         {isDropdownOpen && (
           <>

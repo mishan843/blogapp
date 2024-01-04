@@ -1,6 +1,8 @@
 import React from "react";
 import styles from "./menu.module.css";
 import MenuPosts from "../menuPost/MenuPosts";
+import RandomPost from "../menuPost/randomPost";
+
 import MenuCategories from "../menuCategories/MenuCategories";
 
 const Menu = () => {
@@ -16,7 +18,7 @@ const Menu = () => {
 
       {/* Editors Pick Section */}
       <h2 className={styles.title}>Editors Pick</h2>
-      <MenuPosts withImage={true} />
+      <RandomPost withImage={true} />
     </div>
   );
 };
