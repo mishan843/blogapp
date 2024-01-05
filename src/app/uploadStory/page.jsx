@@ -11,6 +11,7 @@ const UploadStory = () => {
   const [storyDescription, setStoryDescription] = useState("");
   const [storyUrl, setStoryUrl] = useState("");
   const [storyType, setStoryType] = useState(""); // New state for story type
+  const [swipeUpLink, setSwipeUpLink] = useState(""); // New state for swipeUpLink
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -26,6 +27,7 @@ const UploadStory = () => {
         storyDescription,
         url: storyUrl,
         type: storyType, // Include story type in the data
+        swipeUpLink, // Include swipeUpLink in the data
       },
     };
 
@@ -52,6 +54,7 @@ const UploadStory = () => {
         setStoryDescription("");
         setStoryUrl("");
         setStoryType("");
+        setSwipeUpLink(""); // Clear swipeUpLink after submission
       } else {
         console.error("Failed to submit story. Status:", response.status);
       }
@@ -133,6 +136,14 @@ const UploadStory = () => {
             <option value="image">Image</option>
             <option value="video">Video</option>
           </select>
+        </label>
+        <label>
+          Swipe Up Link:
+          <input
+            type="text"
+            value={swipeUpLink}
+            onChange={(e) => setSwipeUpLink(e.target.value)}
+          />
         </label>
         <label>
           Story URL:

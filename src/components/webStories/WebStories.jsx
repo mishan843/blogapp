@@ -257,8 +257,11 @@ const WebStories = () => {
           poster-portrait-src="assets/cover.jpg"
         >
           {Array.isArray(stories.stories) &&
-            stories.stories.map((obj, index) =>
-              obj && obj.type == "image" ? (
+            stories.stories.map((obj, index) => {
+              const isImageType = obj && obj.type === "image";
+              const showSwipeUp = obj.swipeUpLink;
+
+              return isImageType ? (
                 <amp-story-page key={index} id={`cover-${index}`}>
                   <amp-story-grid-layer template="fill">
                     <amp-img
@@ -272,6 +275,16 @@ const WebStories = () => {
                     <h1>{obj.storyTitle}</h1>
                     <p>{obj.storyDescription}</p>
                   </amp-story-grid-layer>
+                  {showSwipeUp && (
+                    <amp-story-cta-layer>
+                      <a href={obj.swipeUpLink} target="_blank">
+                        <amp-story-swipe-up
+                          layout="nodisplay"
+                          call-to-action="Read more"
+                        ></amp-story-swipe-up>
+                      </a>
+                    </amp-story-cta-layer>
+                  )}
                 </amp-story-page>
               ) : (
                 <amp-story-page id={`cover-${index}`}>
@@ -293,9 +306,19 @@ const WebStories = () => {
                   <amp-story-grid-layer template="vertical" class="bottom">
                     <p>{obj.storyDescription}</p>
                   </amp-story-grid-layer>
+                  {showSwipeUp && (
+                    <amp-story-cta-layer>
+                      <a href={obj.swipeUpLink} target="_blank">
+                        <amp-story-swipe-up
+                          layout="nodisplay"
+                          call-to-action="Read more"
+                        ></amp-story-swipe-up>
+                      </a>
+                    </amp-story-cta-layer>
+                  )}
                 </amp-story-page>
-              )
-            )}
+              );
+            })}
 
           <amp-story-bookend
             src="bookend.json"
