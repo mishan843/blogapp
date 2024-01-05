@@ -5,6 +5,8 @@ const filePathtxt = 'public/sitemap.txt'; // Change file extension to .xml
 
 
 const apiUrlBlog = 'https://blogapp-q8b0.onrender.com/blog/getAllBlogs';
+const apiUrlStories = 'https://blogapp-q8b0.onrender.com/story/getAllStories';
+
 
 const sitemap = [
     'https://www.bloggersground.com',
@@ -20,6 +22,7 @@ const sitemap = [
 async function fetchData(apiUrl) {
     try {
         const response = await axios.get(apiUrl);
+        console.log("response", response)
         return response.data.data;
     } catch (error) {
         console.error('Error fetching data:', error);
@@ -66,10 +69,14 @@ function writeSitemapToFilexml(sitemap, filePath) {
 async function createNewSiteMap() {
     try {
         let blogData = await fetchData(apiUrlBlog);
-        console.log(blogData);
+        let storiesData = await fetchData(apiUrlStories);
+
+        console.log(storiesData);
         const blogLinks = blogData.map(obj => `https://www.bloggersground.com/blog/${obj.title.toLowerCase().replace(/[^\w\s]/gi, '').replace(/\s+/g, '-')}?id=${obj._id}`);
-        console.log("blogLinks", blogLinks)
-        sitemap.push(...blogLinks);
+        const storiesLinks = storiesData.map(obj => `https://www.bloggersground.com/stories?id=${obj._id}`);
+
+
+        sitemap.push(...blogLinks, ...storiesLinks);
 
         writeSitemapToFilexml(sitemap, filePathxml);
         writeSitemapToFile(sitemap, filePathtxt)

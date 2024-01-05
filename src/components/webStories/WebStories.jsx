@@ -30,7 +30,10 @@ const WebStories = () => {
       <head>
         <meta charset="utf-8" />
         <title>{stories.title}</title>
-        <link rel="canonical" href="pets.html" />
+        <link
+          rel="canonical"
+          href={`https://www.bloggersground.com/stories?id=${stories._id}`}
+        />
         <meta
           name="viewport"
           content="width=device-width,minimum-scale=1,initial-scale=1"
@@ -71,7 +74,10 @@ const WebStories = () => {
               : stories.description
           }
         />
-        {/* <meta property="og:url" content="https://www.bloggersground.com/blog/{stories.title.toLowerCase().replace(/[^\w\s]/gi, "").replace(/\s+/g, "-")}?id={stories._id}"/> */}
+        <meta
+          property="og:url"
+          content={`https://www.bloggersground.com/stories?id=${stories._id}`}
+        />
         <meta property="og:site_name" content="bloggersGround" />
         <meta property="og:locale" content="en_US" />
         <meta property="og:type" content="website" />
@@ -251,22 +257,45 @@ const WebStories = () => {
           poster-portrait-src="assets/cover.jpg"
         >
           {Array.isArray(stories.stories) &&
-            stories.stories.map((obj, index) => (
-              <amp-story-page key={index} id={`cover-${index}`}>
-                <amp-story-grid-layer template="fill">
-                  <amp-img
-                    src={obj.url}
-                    width="720"
-                    height="1280"
-                    layout="responsive"
-                  ></amp-img>
-                </amp-story-grid-layer>
-                <amp-story-grid-layer template="vertical">
-                  <h1>{obj.storyTitle}</h1>
-                  <p>{obj.storyDescription}</p>
-                </amp-story-grid-layer>
-              </amp-story-page>
-            ))}
+            stories.stories.map((obj, index) =>
+              obj && obj.type == "image" ? (
+                <amp-story-page key={index} id={`cover-${index}`}>
+                  <amp-story-grid-layer template="fill">
+                    <amp-img
+                      src={obj.url}
+                      width="720"
+                      height="1280"
+                      layout="responsive"
+                    ></amp-img>
+                  </amp-story-grid-layer>
+                  <amp-story-grid-layer template="vertical">
+                    <h1>{obj.storyTitle}</h1>
+                    <p>{obj.storyDescription}</p>
+                  </amp-story-grid-layer>
+                </amp-story-page>
+              ) : (
+                <amp-story-page id={`cover-${index}`}>
+                  <amp-story-grid-layer template="fill">
+                    <amp-video
+                      autoplay
+                      loop
+                      width="720"
+                      height="1280"
+                      poster={obj.url}
+                      layout="responsive"
+                    >
+                      <source src={obj.url} type="video/mp4" />
+                    </amp-video>
+                  </amp-story-grid-layer>
+                  <amp-story-grid-layer template="vertical">
+                    <h1>{obj.storyTitle}</h1>
+                  </amp-story-grid-layer>
+                  <amp-story-grid-layer template="vertical" class="bottom">
+                    <p>{obj.storyDescription}</p>
+                  </amp-story-grid-layer>
+                </amp-story-page>
+              )
+            )}
 
           <amp-story-bookend
             src="bookend.json"

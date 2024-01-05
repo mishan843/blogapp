@@ -6,6 +6,7 @@ https://www.bloggersground.com/blog/getallblogs?categoryFilter=Travel
 https://www.bloggersground.com/blog/getallblogs?categoryFilter=Food
 https://www.bloggersground.com/blog/getallblogs?categoryFilter=Fashion
 https://www.bloggersground.com/blog/getallblogs?categoryFilter=Technology
+https://www.bloggersground.com/blog/india-cricket-news-schedule-your-ultimate-fan-guide?id=6596b31648d6011c7500f0bf
 https://www.bloggersground.com/blog/unlocking-the-power-of-ai-marketing-for-small-businesses?id=65955549a55f2b7e6e93aede
 https://www.bloggersground.com/blog/50-unique-and-hidden-gems-to-visit-across-america?id=6594fb7bd78f2864d6c0d65d
 https://www.bloggersground.com/blog/15-insider-tips-to-mastering-your-personal-fashion-style?id=6593e17a648785e3edc395b7
@@ -39,3 +40,4 @@ https://www.bloggersground.com/blog/best-20-tips-to-grab-the-cheapest-flight-tic
 https://www.bloggersground.com/blog/boost-your-credit-score-the-key-to-financial-freedom?id=654fd5c57bc83271f9e14bb3
 https://www.bloggersground.com/blog/10-easy-and-delicious-healthy-food-recipes?id=654e16875a59f744900a0500
 https://www.bloggersground.com/blog/10-musttry-fashion-trends-looks-of-the-season?id=654d21fd86672254092471ee
+https://www.bloggersground.com/stories?id=6597a1ebd47d6a4fe5c2bfd1

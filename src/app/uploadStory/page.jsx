@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 
 const UploadStory = () => {
-  const [id, setId] = useState(""); // New state for id
+  const [id, setId] = useState("");
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [category, setCategory] = useState("");
@@ -10,12 +10,13 @@ const UploadStory = () => {
   const [storyTitle, setStoryTitle] = useState("");
   const [storyDescription, setStoryDescription] = useState("");
   const [storyUrl, setStoryUrl] = useState("");
+  const [storyType, setStoryType] = useState(""); // New state for story type
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     const data = {
-      _id: id, // Include id in the data
+      _id: id,
       title,
       description,
       category,
@@ -24,6 +25,7 @@ const UploadStory = () => {
         storyTitle,
         storyDescription,
         url: storyUrl,
+        type: storyType, // Include story type in the data
       },
     };
 
@@ -40,7 +42,6 @@ const UploadStory = () => {
       );
 
       if (response.ok) {
-        // Handle success
         console.log("Story submitted successfully!");
         setId("");
         setTitle("");
@@ -50,8 +51,8 @@ const UploadStory = () => {
         setStoryTitle("");
         setStoryDescription("");
         setStoryUrl("");
+        setStoryType("");
       } else {
-        // Handle error
         console.error("Failed to submit story. Status:", response.status);
       }
     } catch (error) {
@@ -122,7 +123,17 @@ const UploadStory = () => {
             onChange={(e) => setStoryDescription(e.target.value)}
           />
         </label>
-
+        <label>
+          Story Type:
+          <select
+            value={storyType}
+            onChange={(e) => setStoryType(e.target.value)}
+          >
+            <option value="">Select Type</option>
+            <option value="image">Image</option>
+            <option value="video">Video</option>
+          </select>
+        </label>
         <label>
           Story URL:
           <input
