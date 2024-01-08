@@ -273,7 +273,9 @@ const WebStories = () => {
                   </amp-story-grid-layer>
                   <amp-story-grid-layer template="vertical">
                     <h1>{obj.storyTitle}</h1>
-                    <p>{obj.storyDescription}</p>
+                    <p
+                      dangerouslySetInnerHTML={{ __html: obj.storyDescription }}
+                    ></p>
                   </amp-story-grid-layer>
                   {showSwipeUp && (
                     <amp-story-cta-layer>
@@ -304,7 +306,9 @@ const WebStories = () => {
                     <h1>{obj.storyTitle}</h1>
                   </amp-story-grid-layer>
                   <amp-story-grid-layer template="vertical" class="bottom">
-                    <p>{obj.storyDescription}</p>
+                    <p
+                      dangerouslySetInnerHTML={{ __html: obj.storyDescription }}
+                    ></p>{" "}
                   </amp-story-grid-layer>
                   {showSwipeUp && (
                     <amp-story-cta-layer>
