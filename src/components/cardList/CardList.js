@@ -21,7 +21,7 @@ const CardList = () => {
         setIsLoading(true);
         window.scrollTo({ top: 0 });
 
-        const endpoint = `${process.env.NEXT_PUBLIC_API_URL}/blog/getAllBlogs?categoryFilter=${search || ''}&page=${currentPage}&limit=10`;
+        const endpoint = `${process.env.NEXT_PUBLIC_API_URL}/blog/getAllBlogs?categoryFilter=${search || ''}&page=${currentPage}&limit=13`;
 
         const response = await fetch(endpoint);
         const data = await response.json();

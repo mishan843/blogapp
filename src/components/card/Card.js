@@ -77,8 +77,10 @@ const Card = (body) => {
         const title = item.title.toLowerCase().replace(/[^\w\s]/gi, '').replace(/\s+/g, '-')
         return (
           <div key={item.id} className={styles.container}>
-            <div key={item.id} clFinanceassName={styles.imageContainer}>
-              <img loading="eager" title={item.title} src={item.coverImage} alt={item.title} fill className={styles.image} />
+            <div key={item.id} className={styles.imageContainer}>
+              <a href={`/blog/${item.title.toLowerCase().replace(/[^\w\s]/gi, '').replace(/\s+/g, '-')}?id=${item._id}`} className={`${styles.link} ${categoryColor}`}>
+                <img loading="eager" title={item.title} src={item.coverImage} alt={item.title} fill className={styles.image} />
+              </a>
             </div>
             <div className={styles.textContainer}>
               <div className={styles.detail}>
