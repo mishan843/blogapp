@@ -23,7 +23,7 @@ const MenuPosts = ({ withImage }) => {
 
   useEffect(() => {
     const categoryFilter = searchParams.get('categoryFilter');
-    let apiUrl = `${process.env.NEXT_PUBLIC_API_URL}/blog/getallblogs?isPopularpost=true&page=1&limit=10`;
+    let apiUrl = `${process.env.NEXT_PUBLIC_API_URL}/blog/getallblogs?isPopularpost=true&page=1&limit=15`;
 
     if (categoryFilter) {
       apiUrl += `&categoryFilter=${categoryFilter}`;

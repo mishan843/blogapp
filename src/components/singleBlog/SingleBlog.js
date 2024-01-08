@@ -44,20 +44,22 @@ const SingleBlog = () => {
         <div className={styles.textContainer}>
           <h1 className={styles.title}>{singleBlog.title}</h1>
         </div>
-        <div className={styles.user}>
-          <div className={styles.userImageContainer}>
-            <img loading="lazy" title="bloggersGround logo" src="/bloggersGroundLogo.webp" alt="bloggersGround logo" fill className={styles.avatar} />
+        <a href={process.env.DOMAIN}>
+          <div className={styles.user}>
+            <div className={styles.userImageContainer}>
+              <img loading="lazy" title="bloggersGround logo" src="/bloggersGroundLogo.webp" alt="bloggersGround logo" fill className={styles.avatar} />
+            </div>
+            <div className={styles.userTextContainer}>
+              <b><span className={styles.username}>Blogger Ground</span></b>
+              <span className={styles.date}>written by</span>
+            </div>
           </div>
-          <div className={styles.userTextContainer}>
-            <b><span className={styles.username}>Blogger Ground</span></b>
-            <span className={styles.date}>written by</span>
-          </div>
-        </div>
+        </a>
         <div className={styles.imageContainer}>
           <img loading="lazy" title={singleBlog.title} src={singleBlog.coverImage} alt={singleBlog.title} fill className={styles.image} />
         </div>
 
-      </div>
+      </div >
       <div className={styles.content}>
         <div className={styles.post}>
           <div className={styles.description}>
@@ -79,17 +81,30 @@ const SingleBlog = () => {
                       .replace(/[^\w\s]/gi, '')
                       .replace(/\s+/g, '-')}?id=${relatedBlog._id}`}
                   >
-                    {" "}
-                    <h3>{relatedBlog.title}</h3>{" "}
-                  </a>{" "}
+                    <img
+                      src={relatedBlog.coverImage}
+                      alt={relatedBlog.title}
+                      className={styles.thumbnail}
+                    />
+                  </a>
+                  <a
+                    href={`${process.env.DOMAIN}blog/${relatedBlog.title
+                      .toLowerCase()
+                      .replace(/[^\w\s]/gi, '')
+                      .replace(/\s+/g, '-')}?id=${relatedBlog._id}`}
+                  >
+                    <h3>{relatedBlog.title}</h3>
+                  </a>
+
                 </div>
               ))}
             </div>
           </div>
         )}
+
         <Menu />
       </div>
-    </div>
+    </div >
   );
 };
 
