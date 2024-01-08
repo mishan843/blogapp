@@ -147,14 +147,6 @@
   margin: 15px 0;
 }
 
-.blog_content li {
-  margin-bottom: 10px;
-  background-color: #f9f9f9; /* Lighter background */
-  padding: 15px;
-  border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
 .blog_content a {
   color: #0066cc;
   text-decoration: none;
@@ -220,10 +212,6 @@
     margin-bottom: 10px;
   }
 
-  .blog_content li {
-    font-size: 14px;
-    margin-bottom: 8px;
-  }
   .post {
     padding: 0px;
   }
@@ -258,10 +246,6 @@
     margin-bottom: 10px;
   }
 
-  .blog_content li {
-    font-size: 14px;
-    margin-bottom: 8px;
-  }
   .textContainer {
     width: 100%;
   }
