@@ -42,7 +42,13 @@ const SingleBlog = () => {
     <div className={styles.container}>
       <div className={styles.infoContainer}>
         <div className={styles.textContainer}>
-          <h1 className={styles.title}>{singleBlog.title}</h1>
+          <a
+            href={`${process.env.DOMAIN}blog/${singleBlog.title && singleBlog.title
+              .toLowerCase()
+              .replace(/[^\w\s]/gi, '')
+              .replace(/\s+/g, '-')}?id=${singleBlog._id}`}
+          >            <h1 className={styles.title}>{singleBlog.title}</h1>
+          </a>
         </div>
         <a href={process.env.DOMAIN}>
           <div className={styles.user}>
