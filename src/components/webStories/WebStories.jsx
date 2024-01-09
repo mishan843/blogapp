@@ -1,5 +1,3 @@
-"use client";
-
 import React, { useState, useEffect } from "react";
 
 const WebStories = () => {
@@ -251,10 +249,10 @@ const WebStories = () => {
       <body>
         <amp-story
           standalone
-          title="Joy of Pets"
-          publisher="AMP tutorials"
-          publisher-logo-src="assets/AMP-Brand-White-Icon.svg"
-          poster-portrait-src="assets/cover.jpg"
+          title={stories.title}
+          publisher="Bloggers Ground"
+          publisher-logo-src="/bloggersGroundLogo.webp"
+          poster-portrait-src={stories.stories[0].url}
         >
           {Array.isArray(stories.stories) &&
             stories.stories.map((obj, index) => {
