@@ -77,9 +77,9 @@ export default function Home() {
       <Search />
       <div className={styles.content}>
         <CardList />
-        <Menu />
       </div>
       <HomePageInfo />
+      <Menu />
     </div>
   );
 }

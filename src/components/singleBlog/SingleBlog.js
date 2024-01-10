@@ -37,6 +37,27 @@ const SingleBlog = () => {
 
     fetchData();
   }, [router.query]);
+  function copyToClipboard(elementId) {
+    const element = document.getElementById(elementId);
+    const range = document.createRange();
+    range.selectNode(element);
+    window.getSelection().removeAllRanges();
+    window.getSelection().addRange(range);
+
+    try {
+      document.execCommand('copy');
+      window.getSelection().removeAllRanges();
+
+      // Update the copy button text
+      const copyButton = element.parentElement.querySelector('.copy-button');
+      copyButton.innerText = 'Copied!';
+      setTimeout(() => {
+        copyButton.innerText = 'Copy';
+      }, 1000);
+    } catch (error) {
+      console.error('Copy to clipboard failed:', error);
+    }
+  }
 
   return (
     <div className={styles.container}>
