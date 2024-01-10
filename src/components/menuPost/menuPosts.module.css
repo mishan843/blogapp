@@ -98,3 +98,12 @@
   transform: translateY(-5px);
   background-color: var(--textColor);
 } */
+@media screen and (max-width: 768px) {
+  .category {
+    font-size: 12px;
+  }
+
+  .posttitle {
+    font-size: 16px;
+  }
+}
