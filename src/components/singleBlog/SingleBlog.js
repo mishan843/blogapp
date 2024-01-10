@@ -43,7 +43,7 @@ const SingleBlog = () => {
       <div className={styles.infoContainer}>
         <div className={styles.textContainer}>
           <a
-            href={`${process.env.DOMAIN}blog/${singleBlog.title && singleBlog.title
+            href={`${singleBlog.title && singleBlog.title
               .toLowerCase()
               .replace(/[^\w\s]/gi, '')
               .replace(/\s+/g, '-')}?id=${singleBlog._id}`}
@@ -82,7 +82,7 @@ const SingleBlog = () => {
               {singleBlog.relatedArticles.map((relatedBlog) => (
                 <div key={relatedBlog._id} className={styles.relatedBlogItem}>
                   <a
-                    href={`${process.env.DOMAIN}blog/${relatedBlog.title
+                    href={`${relatedBlog.title
                       .toLowerCase()
                       .replace(/[^\w\s]/gi, '')
                       .replace(/\s+/g, '-')}?id=${relatedBlog._id}`}
@@ -94,7 +94,7 @@ const SingleBlog = () => {
                     />
                   </a>
                   <a
-                    href={`${process.env.DOMAIN}blog/${relatedBlog.title
+                    href={`${relatedBlog.title
                       .toLowerCase()
                       .replace(/[^\w\s]/gi, '')
                       .replace(/\s+/g, '-')}?id=${relatedBlog._id}`}
