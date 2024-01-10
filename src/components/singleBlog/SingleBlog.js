@@ -1,20 +1,18 @@
 "use client";
 
+import React, { useEffect, useState, useRef } from "react";
 import styles from "./singleBlog.module.css";
 import Menu from "@/components/menu/Menu";
 import Comments from "@/components/comments/Comments";
 import { useRouter, useSearchParams } from "next/navigation";
-import { useEffect, useState } from "react";
-
 
 const SingleBlog = () => {
+  const [singleBlog, setSingleBlog] = useState({});
+  const contentRef = useRef();
 
   const searchParams = useSearchParams();
-  const search = searchParams.get("id")
+  const search = searchParams.get("id");
   const router = useRouter();
-
-  const [singleBlog, setSingleBlog] = useState([]);
-  localStorage.setItem("blog", JSON.stringify(singleBlog))
 
   useEffect(() => {
     const fetchData = async () => {
@@ -25,7 +23,6 @@ const SingleBlog = () => {
 
         if (response.ok) {
           let result = await response.json();
-
           setSingleBlog(result);
         } else {
           console.error("Error fetching data:", response.statusText);
@@ -37,27 +34,39 @@ const SingleBlog = () => {
 
     fetchData();
   }, [router.query]);
-  function copyToClipboard(elementId) {
-    const element = document.getElementById(elementId);
-    const range = document.createRange();
-    range.selectNode(element);
-    window.getSelection().removeAllRanges();
-    window.getSelection().addRange(range);
 
-    try {
-      document.execCommand('copy');
-      window.getSelection().removeAllRanges();
+  useEffect(() => {
+    let newScript = document.createElement('script');
+    newScript.text = `
+        function copyToClipboard(elementId) {
+            const element = document.getElementById(elementId);
+            const range = document.createRange();
+            range.selectNode(element);
+            window.getSelection().removeAllRanges();
+            window.getSelection().addRange(range);
 
-      // Update the copy button text
-      const copyButton = element.parentElement.querySelector('.copy-button');
-      copyButton.innerText = 'Copied!';
-      setTimeout(() => {
-        copyButton.innerText = 'Copy';
-      }, 1000);
-    } catch (error) {
-      console.error('Copy to clipboard failed:', error);
-    }
-  }
+            try {
+                document.execCommand('copy');
+                window.getSelection().removeAllRanges();
+
+                // Update the copy button text
+                const copyButton = element.parentElement.querySelector('.copy-button');
+                copyButton.innerText = 'Copied!';
+                setTimeout(() => {
+                    copyButton.innerText = 'Copy';
+                }, 1000);
+            } catch (error) {
+                console.error('Copy to clipboard failed:', error);
+            }
+        }
+    `;
+    document.head.appendChild(newScript);
+
+    return () => {
+      document.head.removeChild(newScript);
+    };
+  }, [singleBlog.content]);
+
 
   return (
     <div className={styles.container}>
