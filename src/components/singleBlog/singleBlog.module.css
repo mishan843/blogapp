@@ -175,14 +175,6 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow to images */
 }
 
-.blog_content code {
-  font-family: "Courier New", Courier, monospace;
-  background-color: #f0f0f0;
-  padding: 2px 4px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-}
-
 .blog_content .section {
   margin-top: 40px;
 }
