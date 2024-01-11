@@ -23,22 +23,22 @@ export const metadata = {
     type: "website",
     images: [
       {
-        url: "https://drive.google.com/uc?id=1mFTAHt1IRc4OSqKRMbqIsRzO93kYJ5LB",
+        url: "https://res.cloudinary.com/dcmgkwzbw/image/upload/v1704999574/fsa2ypfhdfx4lixrtnpp.jpg",
         width: 1200,
         height: 600,
       },
       {
-        url: "https://drive.google.com/uc?id=1mFTAHt1IRc4OSqKRMbqIsRzO93kYJ5LB",
+        url: "https://res.cloudinary.com/dcmgkwzbw/image/upload/v1704999574/fsa2ypfhdfx4lixrtnpp.jpg",
         width: 1080,
         height: 1080, // Instagram square image size
       },
       {
-        url: "https://drive.google.com/uc?id=1mFTAHt1IRc4OSqKRMbqIsRzO93kYJ5LB",
+        url: "https://res.cloudinary.com/dcmgkwzbw/image/upload/v1704999574/fsa2ypfhdfx4lixrtnpp.jpg",
         width: 600,
         height: 315, // Twitter share image size
       },
       {
-        url: "https://drive.google.com/uc?id=1mFTAHt1IRc4OSqKRMbqIsRzO93kYJ5LB",
+        url: "https://res.cloudinary.com/dcmgkwzbw/image/upload/v1704999574/fsa2ypfhdfx4lixrtnpp.jpg",
         width: 540,
         height: 540, // WhatsApp share image size
       },
@@ -50,7 +50,7 @@ export const metadata = {
     description: `Get expert insights on finance, style inspiration, coding techniques, technology and travel tips from bloggersGround. Explore endless possibilities with us.`,
     creator: "bloggersGround",
     images: [
-      `https://drive.google.com/uc?id=1mFTAHt1IRc4OSqKRMbqIsRzO93kYJ5LB`,
+      `https://res.cloudinary.com/dcmgkwzbw/image/upload/v1704999574/fsa2ypfhdfx4lixrtnpp.jpg`,
     ],
   },
   alternates: {
