@@ -67,7 +67,7 @@ const CategoryList = () => {
               className={`${styles.category} ${styles[`${category.toLowerCase()}`]}`}
             >
               <img
-                loading="eager"
+                loading="lazy"
                 src={`${category.toLowerCase()}.webp`}
                 width={32}
                 height={32}
