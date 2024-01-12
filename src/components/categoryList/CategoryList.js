@@ -7,7 +7,15 @@ import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 const CategoryList = () => {
   const [allCategories, setAllCategories] = useState([]);
   const [visibleCategories, setVisibleCategories] = useState([]);
-
+  const images = {
+    coding: 'https://res.cloudinary.com/dcmgkwzbw/image/upload/v1705059456/kdswyqlhb1sjs1rqy2fr.webp',
+    fashion: 'https://res.cloudinary.com/dcmgkwzbw/image/upload/v1705059651/jx6o733wboovfdb31yvn.webp',
+    travel: 'https://res.cloudinary.com/dcmgkwzbw/image/upload/v1705059705/brmah3wo9z7hurs1nar5.webp',
+    technology: 'https://res.cloudinary.com/dcmgkwzbw/image/upload/v1705059760/odglkp7priunwgevs7np.webp',
+    food: 'https://res.cloudinary.com/dcmgkwzbw/image/upload/v1705059798/qqyim4amihwb21r8hpcb.webp',
+    finance: 'https://res.cloudinary.com/dcmgkwzbw/image/upload/v1705059799/idkm7qrs1v2brhwndztc.webp',
+    sport: 'https://res.cloudinary.com/dcmgkwzbw/image/upload/v1705059879/tzc8tipplqsqfshz5lxx.webp'
+  }
   useEffect(() => {
     const fetchCategories = async () => {
       try {
@@ -56,7 +64,7 @@ const CategoryList = () => {
             >
               <img
                 loading="eager"
-                src={`${category.toLowerCase()}.webp`}
+                src={images[`${category.toLowerCase()}`]}
                 width={32}
                 height={32}
                 alt={category}

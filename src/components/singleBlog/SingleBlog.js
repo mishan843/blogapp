@@ -83,7 +83,7 @@ const SingleBlog = () => {
         <a href={process.env.DOMAIN}>
           <div className={styles.user}>
             <div className={styles.userImageContainer}>
-              <img loading="lazy" title="bloggersGround logo" src="/bloggersGroundLogo.webp" alt="bloggersGround logo" fill className={styles.avatar} />
+              <img loading="lazy" title="bloggersGround logo" src="https://res.cloudinary.com/dcmgkwzbw/image/upload/v1705059271/orunbmkvtnv7kswnh1tz.webp" alt="bloggersGround logo" fill className={styles.avatar} />
             </div>
             <div className={styles.userTextContainer}>
               <b><span className={styles.username}>Blogger Ground</span></b>

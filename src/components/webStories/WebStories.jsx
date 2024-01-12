@@ -240,7 +240,7 @@ const WebStories = () => {
             standalone
             title={stories.title}
             publisher="Bloggers Ground"
-            publisher-logo-src="/bloggersGroundLogo.webp"
+            publisher-logo-src="https://res.cloudinary.com/dcmgkwzbw/image/upload/v1705059271/orunbmkvtnv7kswnh1tz.webp"
             poster-portrait-src={stories.stories[0].url}
           >
             {Array.isArray(stories.stories) &&

@@ -75,7 +75,7 @@ const Comments = ({ singleBlog, setSingleBlog }) => {
                 <img
                   loading="lazy"
                   title="BloggersGround logo"
-                  src="/bloggersGroundLogo.webp"
+                  src="https://res.cloudinary.com/dcmgkwzbw/image/upload/v1705059271/orunbmkvtnv7kswnh1tz.webp"
                   alt="BloggersGround logo"
                   width={50}
                   height={50}
