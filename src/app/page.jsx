@@ -1,4 +1,5 @@
-import styles from "./homepage.module.css";
+import { container, content, welcomeText } from "./homepage.module.css";
+
 import CategoryList from "@/components/categoryList/CategoryList";
 import CardList from "@/components/cardList/CardList";
 import Menu from "@/components/menu/Menu";
@@ -62,8 +63,8 @@ export const metadata = {
 };
 export default function Home() {
   return (
-    <div className={styles.container}>
-      <div className={styles["welcome-text"]}>
+    <div className={container}>
+      <div className={welcomeText}>
         <h1>Welcome to Bloggers Ground</h1>
         <p>
           Explore the world of knowledge and inspiration at Bloggers Ground, a
@@ -75,7 +76,7 @@ export default function Home() {
 
       <CategoryList />
       <Search />
-      <div className={styles.content}>
+      <div className={content}>
         <CardList />
       </div>
       <HomePageInfo />

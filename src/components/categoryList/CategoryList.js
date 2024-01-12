@@ -1,5 +1,5 @@
 "use client"
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import styles from "./categorylist.module.css";
 import Link from "next/link";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
@@ -7,6 +7,7 @@ import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 const CategoryList = () => {
   const [allCategories, setAllCategories] = useState([]);
   const [visibleCategories, setVisibleCategories] = useState([]);
+  const [startIndex, setStartIndex] = useState(0);
 
   useEffect(() => {
     const fetchCategories = async () => {
@@ -23,30 +24,41 @@ const CategoryList = () => {
     fetchCategories();
   }, []);
 
-  const handleScroll = (direction) => {
-    const scrollAmount = 200;
+  const handleScroll = useCallback(
+    (direction) => {
+      const scrollAmount = 200;
 
-    if (direction === "left") {
-      setVisibleCategories((prevVisibleCategories) => {
-        const startIndex = Math.max(prevVisibleCategories.length - 6, 0);
-        return allCategories.slice(startIndex, startIndex + 6);
-      });
-    } else if (direction === "right") {
-      setVisibleCategories((prevVisibleCategories) => {
-        const endIndex = Math.min(prevVisibleCategories.length + 6, allCategories.length);
-        return allCategories.slice(endIndex - 6, endIndex);
-      });
-    }
-  };
+      if (direction === "left") {
+        setStartIndex((prevStartIndex) => Math.max(prevStartIndex - 6, 0));
+      } else if (direction === "right") {
+        setStartIndex((prevStartIndex) =>
+          Math.min(prevStartIndex + 6, allCategories.length - 6)
+        );
+      }
+    },
+    [allCategories]
+  );
+
+  const getCategoryStyles = useCallback(
+    (category) => ({
+      [styles.category]: true,
+      [styles[category.toLowerCase()]]: true,
+    }),
+    []
+  );
 
   return (
     <div className={styles.container}>
       <h2 className={styles.title}>Popular Categories</h2>
       <div className={styles.scrollContainer} id="categoryContainer">
         <div className={styles.categories}>
-          {allCategories.length > 6 ? <div className={styles.scrollArrows}>
-            <FaChevronLeft onClick={() => handleScroll("left")} className={styles.arrow} />
-          </div> : <></>}
+          {allCategories.length > 6 ? (
+            <div className={styles.scrollArrows}>
+              <FaChevronLeft onClick={() => handleScroll("left")} className={styles.arrow} />
+            </div>
+          ) : (
+            <></>
+          )}
 
           {visibleCategories.map((category, index) => (
             <Link
@@ -67,9 +79,13 @@ const CategoryList = () => {
             </Link>
           ))}
 
-          {allCategories.length > 6 ? <div className={styles.scrollArrows}>
-            <FaChevronRight onClick={() => handleScroll("right")} className={styles.arrow} />
-          </div> : <></>}
+          {allCategories.length > 6 ? (
+            <div className={styles.scrollArrows}>
+              <FaChevronRight onClick={() => handleScroll("right")} className={styles.arrow} />
+            </div>
+          ) : (
+            <></>
+          )}
         </div>
       </div>
     </div>

@@ -41,6 +41,7 @@ const MenuPosts = ({ withImage }) => {
       })
       .catch((error) => {
         console.error('Error fetching data:', error);
+        // You might want to set an error state here to handle and display a user-friendly message.
       });
   }, [searchParams]);
 
