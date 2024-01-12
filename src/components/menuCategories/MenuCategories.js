@@ -18,13 +18,11 @@ const MenuCategories = () => {
         return response.json();
       })
       .then((data) => {
-        console.log("data", data)
 
 
 
 
 
-        console.log("uniqueCategories", data)
         setCategories(data.categories);
       })
       .catch((error) => {

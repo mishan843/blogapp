@@ -44,7 +44,6 @@ const UploadStory = () => {
       );
 
       if (response.ok) {
-        console.log("Story submitted successfully!");
         setId("");
         setTitle("");
         setDescription("");

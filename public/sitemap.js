@@ -22,7 +22,6 @@ const sitemap = [
 async function fetchData(apiUrl) {
     try {
         const response = await axios.get(apiUrl);
-        console.log("response", response)
         return response.data.data;
     } catch (error) {
         console.error('Error fetching data:', error);
@@ -36,7 +35,6 @@ function writeSitemapToFile(sitemap, filePath) {
     });
     fileStream.end();
     fileStream.on('finish', () => {
-        console.log('Sitemap data has been written to sitemap.txt');
     });
     fileStream.on('error', (err) => {
         console.error('Error writing sitemap data:', err);
@@ -58,7 +56,6 @@ function writeSitemapToFilexml(sitemap, filePath) {
     fileStream.end();
 
     fileStream.on('finish', () => {
-        console.log('Sitemap data has been written to sitemap.xml');
     });
 
     fileStream.on('error', (err) => {
@@ -71,7 +68,6 @@ async function createNewSiteMap() {
         let blogData = await fetchData(apiUrlBlog);
         let storiesData = await fetchData(apiUrlStories);
 
-        console.log(storiesData);
         const blogLinks = blogData.map(obj => `https://www.bloggersground.com/blog/${obj.title.toLowerCase().replace(/[^\w\s]/gi, '').replace(/\s+/g, '-')}?id=${obj._id}`);
         const storiesLinks = storiesData.map(obj => `https://www.bloggersground.com/stories?id=${obj._id}`);
 
@@ -81,7 +77,6 @@ async function createNewSiteMap() {
         writeSitemapToFilexml(sitemap, filePathxml);
         writeSitemapToFile(sitemap, filePathtxt)
     } catch (error) {
-        console.log("error>>", error);
     }
 }
 

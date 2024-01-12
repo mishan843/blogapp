@@ -25,7 +25,6 @@ const Comments = ({ singleBlog, setSingleBlog }) => {
     try {
       setText('');
       setCurrentPage(1)
-      console.log("userData", userData)
       singleBlog[0]?.userComment.push({
         name: userData.name,
         text: text,

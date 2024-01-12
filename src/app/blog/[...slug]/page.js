@@ -11,7 +11,6 @@ export const generateMetadata = ({ searchParams, params }) => {
 
       if (response.ok) {
         let result = await response.json();
-        console.log(result)
         return {
           title: `${result.title}`,
           description: `${result.metaDescription ? result.metaDescription : result.description}`,
