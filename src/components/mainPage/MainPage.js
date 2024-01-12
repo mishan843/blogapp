@@ -39,8 +39,9 @@ const MainPage = () => {
       <h1 className={`${styles.title} ${categoryColor}`}>{search} Blog</h1>
       <div className={styles.content}>
         <CardList />
-        <Menu />
       </div>
+      <Menu />
+
     </div>
   )
 }

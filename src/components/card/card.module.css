@@ -40,7 +40,9 @@
   flex-direction: column;
   gap: 10px;
 }
-
+.textContainer h2 {
+  font-size: 25px;
+}
 .container h1 {
   font-size: 20px;
   font-weight: 700;
@@ -122,6 +124,9 @@
 @media screen and (max-width: 768px) {
   .imageContainer {
     height: auto;
+  }
+  .textContainer h2 {
+    font-size: 16px;
   }
   .container {
     margin-top: 30px;
