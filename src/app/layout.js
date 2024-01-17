@@ -20,7 +20,9 @@ export default function RootLayout({ children, includeLayout = true }) {
             rel="apple-touch-icon"
             href="https://www.bloggersground.com/favicon.ico"
           />
+          <script async src="https://www.googletagmanager.com/gtag/js?id=G-4BGK8F6LSL"></script>
         </head>
+
         <body className={inter.className}>
           <ThemeContextProvider>
             <ThemeProvider>
