@@ -11,7 +11,7 @@ const Navbar = () => {
 
       <div className={styles.logo}>
         <Link href="/">
-          <img loading="lazy" title="bloggersGround logo" src="https://res.cloudinary.com/dcmgkwzbw/image/upload/v1705059122/pwcvwwjladchhzjquqv9.webp" alt="bloggersGround logo" fill />
+          <img loading="lazy" title="bloggersGround logo" src="https://res.cloudinary.com/dcmgkwzbw/image/upload/v1705581808/dyicko2aqcdigghxianj.webp" alt="bloggersGround logo" fill />
         </Link>
       </div>
       <div className={`${styles.links} `}>

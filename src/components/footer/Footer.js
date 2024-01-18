@@ -7,7 +7,7 @@ const Footer = () => {
     <div className={styles.container}>
       <div className={styles.info}>
         <div className={styles.imageContainer}>
-          <img loading="lazy" title="bloggersGround" className={styles.logo} src="https://res.cloudinary.com/dcmgkwzbw/image/upload/v1705059122/pwcvwwjladchhzjquqv9.webp" alt="bloggersGround" />
+          <img loading="lazy" title="bloggersGround" className={styles.logo} src="https://res.cloudinary.com/dcmgkwzbw/image/upload/v1705581808/dyicko2aqcdigghxianj.webp" alt="bloggersGround" />
         </div>
         <p className={styles.desc}>
           Discover a world of inspiration, explore creativity, and connect with
