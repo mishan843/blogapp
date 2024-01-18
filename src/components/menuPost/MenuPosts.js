@@ -16,6 +16,7 @@ const MenuPosts = ({ withImage }) => {
     Food: styles.food,
     Technology: styles.technology,
     Sport: styles.sport,
+    "Digital Marketing": styles["digital-marketing"],
     default: styles.fashion,
   };
 

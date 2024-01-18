@@ -26,6 +26,9 @@ const Card = (body) => {
       case 'Technology':
         return styles.technology
         break;
+      case 'Digital Marketing':
+        return styles["digital-marketing"]
+        break;
       default:
         return styles.fashion
         break;

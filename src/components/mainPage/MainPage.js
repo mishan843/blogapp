@@ -28,6 +28,9 @@ const MainPage = () => {
         break;
       case 'Sport':
         return styles.sport
+      case 'Digital Marketing':
+        return styles["digital-marketing"]
+        break;
       default:
         return styles.technology
         break;

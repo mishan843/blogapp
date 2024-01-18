@@ -112,10 +112,15 @@
   background-color: #5e4fff84;
 }
 
+.category.digital-marketing {
+  background-color: #ffa733b2;
+}
+.category.digital-marketing:hover {
+  background-color: #5e4fff31;
+}
 .category:hover {
   cursor: pointer;
 }
-
 .image {
   border-radius: 50%;
 }
