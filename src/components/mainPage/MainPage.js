@@ -1,6 +1,5 @@
 "use client"
 
-import React from 'react'
 import styles from './mainPage.module.css'
 import CardList from '@/components/cardList/CardList'
 import Menu from '@/components/menu/Menu'

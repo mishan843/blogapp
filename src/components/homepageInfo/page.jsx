@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import { useState } from "react";
 import { BsChevronDown } from "react-icons/bs";
 import "./style.css"; // Import your CSS file
 

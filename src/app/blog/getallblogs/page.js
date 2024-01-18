@@ -1,6 +1,5 @@
 
 import MainPage from '@/components/mainPage/MainPage'
-import React from 'react'
 
 const metatagData = {
   Finance: {

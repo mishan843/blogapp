@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useState, useCallback } from 'react';
+import { useEffect, useState, useCallback } from 'react';
 import styles from './cardlist.module.css';
 import Pagination from '../pagination/Pagination';
 import Card from '../card/Card';

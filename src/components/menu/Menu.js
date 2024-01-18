@@ -1,4 +1,3 @@
-import React from "react";
 import styles from "./menu.module.css";
 import MenuPosts from "../menuPost/MenuPosts";
 import RandomPost from "../menuPost/randomPost";

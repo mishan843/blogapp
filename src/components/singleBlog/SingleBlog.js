@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useState, useRef } from "react";
+import { useEffect, useState, useRef } from "react";
 import styles from "./singleBlog.module.css";
 import Menu from "@/components/menu/Menu";
 import Comments from "@/components/comments/Comments";

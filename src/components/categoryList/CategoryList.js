@@ -1,5 +1,5 @@
 "use client"
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import styles from "./categorylist.module.css";
 import Link from "next/link";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";

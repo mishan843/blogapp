@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { parseString } from "xml2js";
 
 const FeedComponent = () => {

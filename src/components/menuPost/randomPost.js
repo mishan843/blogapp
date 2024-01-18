@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import styles from './menuPosts.module.css';
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
