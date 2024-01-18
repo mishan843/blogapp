@@ -98,8 +98,9 @@
 .category.coding {
   background-color: #5e4fff;
 }
-.category.sport {
-  background-color: #ff333331;
+.category.digital-marketing {
+  background-color: #ffa73331; /* Yellow color, replace with your preferred color */
+  /* Additional styling for digital marketing category */
 }
 
 .desc {

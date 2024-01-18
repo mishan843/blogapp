@@ -14,7 +14,8 @@ const CategoryList = () => {
     technology: 'https://res.cloudinary.com/dcmgkwzbw/image/upload/v1705059760/odglkp7priunwgevs7np.webp',
     food: 'https://res.cloudinary.com/dcmgkwzbw/image/upload/v1705059798/qqyim4amihwb21r8hpcb.webp',
     finance: 'https://res.cloudinary.com/dcmgkwzbw/image/upload/v1705059799/idkm7qrs1v2brhwndztc.webp',
-    sport: 'https://res.cloudinary.com/dcmgkwzbw/image/upload/v1705059879/tzc8tipplqsqfshz5lxx.webp'
+    sport: 'https://res.cloudinary.com/dcmgkwzbw/image/upload/v1705059879/tzc8tipplqsqfshz5lxx.webp',
+    "digital marketing": "https://res.cloudinary.com/dcmgkwzbw/image/upload/v1705559983/iebdpyuozasaf7xbuear.webp"
   }
   useEffect(() => {
     const fetchCategories = async () => {
@@ -60,7 +61,7 @@ const CategoryList = () => {
             <Link
               key={index}
               href={`/blog/getallblogs?categoryFilter=${category}`}
-              className={`${styles.category} ${styles[`${category.toLowerCase()}`]}`}
+              className={`${styles.category} ${styles[`${category.toLowerCase().replaceAll(" ", "-")}`]}`}
             >
               <img
                 loading="eager"

@@ -35,7 +35,7 @@ const MenuCategories = () => {
         <Link
           key={category}
           href={`/blog/getallblogs?categoryFilter=${encodeURIComponent(category)}`}
-          className={`${styles.categoryItem} ${styles[category.toLowerCase()]}`}>
+          className={`${styles.categoryItem} ${styles[category.toLowerCase().replaceAll(" ", "-")]}`}>
           {category}
 
         </Link>

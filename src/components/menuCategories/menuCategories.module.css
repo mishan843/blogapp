@@ -36,6 +36,10 @@
 .categoryItem.sport {
   background-color: #ff333331;
 }
+.categoryItem.digital-marketing {
+  background-color: #ffa73331; /* Yellow color, replace with your preferred color */
+  /* Additional styling for digital marketing category */
+}
 .categoryItem.finance:hover {
   background-color: #57c4ff9b !important;
 }
@@ -60,4 +64,8 @@
 }
 .categoryItem.sport:hover {
   background-color: #ff333384;
+}
+.categoryItem.digital-marketing:hover {
+  background-color: #b8ff3398; /* Yellow color, replace with your preferred color */
+  /* Additional styling for digital marketing category */
 }
