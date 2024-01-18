@@ -113,10 +113,10 @@
 }
 
 .category.digital-marketing {
-  background-color: #ffa733b2;
+  background-color: #b8ff3398;
 }
 .category.digital-marketing:hover {
-  background-color: #5e4fff31;
+  background-color: #ffa733b2;
 }
 .category:hover {
   cursor: pointer;
