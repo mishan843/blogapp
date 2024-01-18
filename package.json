@@ -6,21 +6,20 @@
     "dev": "next dev",
     "build": "node public/sitemap.js && next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "analyze": "cross-env ANALYZE=true next build",
+    "analyze:server": "cross-env BUNDLE_ANALYZE=server next build",
+    "analyze:browser": "cross-env BUNDLE_ANALYZE=browser next build"
   },
   "dependencies": {
+    "@next/bundle-analyzer": "^14.0.4",
     "axios": "^1.6.1",
+    "cross-env": "^7.0.3",
     "eslint": "8.48.0",
-    "eslint-config-next": "13.4.19",
     "framer-motion": "^10.16.4",
     "next": "13.4.19",
-    "node": "^21.1.0",
-    "nodemon": "^3.0.1",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0",
     "react-icons": "^4.11.0",
-    "react-quill": "^2.0.0",
-    "xml-js": "^1.6.11",
     "xml2js": "^0.6.2"
   }
 }
