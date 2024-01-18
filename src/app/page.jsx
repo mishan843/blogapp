@@ -61,7 +61,7 @@ export const metadata = {
   appleTouchIconPrecomposed: "https://www.bloggersground.com/favicon.ico",
   themeColor: "#ffffff", // Add the desired theme color
 };
-export default function Home() {
+export default function getServerSideProps() {
   return (
     <div className={container}>
       <div className={welcomeText}>
