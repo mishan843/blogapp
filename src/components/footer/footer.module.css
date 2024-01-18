@@ -31,7 +31,6 @@
   width: 200px;
   height: 100px;
   margin-bottom: 30px;
-  margin-top: -50px;
 }
 
 .logo {
@@ -103,7 +102,6 @@
     width: 200px;
     height: 100px;
     margin-bottom: 30px;
-    margin-top: -50px;
   }
 
   .logo {
@@ -138,5 +136,10 @@
 
   .link_container {
     gap: 40px;
+  }
+  .imageContainer {
+    width: 200px;
+    height: 100px;
+    margin-bottom: 0px;
   }
 }

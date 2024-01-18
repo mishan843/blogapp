@@ -69,3 +69,8 @@
   background-color: #ffa733b2; /* Yellow color, replace with your preferred color */
   /* Additional styling for digital marketing category */
 }
+@media screen and (max-width: 640px) {
+  .categoryList a {
+    font-size: 15px;
+  }
+}
