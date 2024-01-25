@@ -59,7 +59,8 @@ const MenuPosts = ({ withImage }) => {
             {withImage && (
               <div className={styles.imageContainer}>
                 <img
-                  loading="lazy"
+                  width={70} height={70}
+                  loading="eager"
                   title={obj.title}
                   src={obj.coverImage}
                   alt={obj.title}

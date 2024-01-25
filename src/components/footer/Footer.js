@@ -6,7 +6,7 @@ const Footer = () => {
     <div className={styles.container}>
       <div className={styles.info}>
         <div className={styles.imageContainer}>
-          <img loading="lazy" title="bloggersGround" className={styles.logo} src="https://res.cloudinary.com/dcmgkwzbw/image/upload/v1705581808/dyicko2aqcdigghxianj.webp" alt="bloggersGround" />
+          <img width={200} height="auto" loading="eager" title="bloggersGround" className={styles.logo} src="https://res.cloudinary.com/dcmgkwzbw/image/upload/v1705581808/dyicko2aqcdigghxianj.webp" alt="bloggersGround" />
         </div>
         <p className={styles.desc}>
           Discover a world of inspiration, explore creativity, and connect with
@@ -14,9 +14,9 @@ const Footer = () => {
           blogging platform. Join our community today.
         </p>
         <div className={styles.icons}>
-          <Link href="https://x.com/Bloggers_Ground?t=-nndOfYb4HzPvHxBi-YJwg&s=09"><img loading="lazy" title="github" src="/twitter.webp" alt="bloggersGround twitter" width={24} height={24} /></Link>
-          <Link href="https://instagram.com/bloggers_ground?igshid=MmVlMjlkMTBhMg=="><img loading="lazy" title="instagram" src="/instagram.webp" alt="bloggersGround instagram" width={24} height={24} /></Link>
-          <Link href="https://www.facebook.com/profile.php?id=61553443388186&mibextid=ZbWKwL"><img loading="lazy" title="facebook" src="/facebook.webp" alt="bloggersGround facebook" width={24} height={24} /></Link>
+          <Link href="https://x.com/Bloggers_Ground?t=-nndOfYb4HzPvHxBi-YJwg&s=09"><img loading="eager" title="github" src="/twitter.webp" alt="bloggersGround twitter" width={24} height={24} /></Link>
+          <Link href="https://instagram.com/bloggers_ground?igshid=MmVlMjlkMTBhMg=="><img loading="eager" title="instagram" src="/instagram.webp" alt="bloggersGround instagram" width={24} height={24} /></Link>
+          <Link href="https://www.facebook.com/profile.php?id=61553443388186&mibextid=ZbWKwL"><img loading="eager" title="facebook" src="/facebook.webp" alt="bloggersGround facebook" width={24} height={24} /></Link>
         </div>
       </div>
       <div className={styles.link_contaner}>

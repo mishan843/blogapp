@@ -73,7 +73,7 @@ const Comments = ({ singleBlog, setSingleBlog }) => {
             <div className={styles.comment} key={index}>
               <div className={styles.user}>
                 <img
-                  loading="lazy"
+                  loading="eager"
                   title="BloggersGround logo"
                   src="https://res.cloudinary.com/dcmgkwzbw/image/upload/v1705059271/orunbmkvtnv7kswnh1tz.webp"
                   alt="BloggersGround logo"

@@ -82,7 +82,7 @@ const Card = (body) => {
           <div key={item.id} className={styles.container}>
             <div key={item.id} className={styles.imageContainer}>
               <a href={`/blog/${item.title.toLowerCase().replace(/[^\w\s]/gi, '').replace(/\s+/g, '-')}?id=${item._id}`} className={`${styles.link} ${categoryColor}`}>
-                <img loading="lazy" title={item.title} src={item.coverImage} alt={item.title} fill className={styles.image} />
+                <img width={275} height={200} loading="lazy" title={item.title} src={item.coverImage} alt={item.title} fill className={styles.image} />
               </a>
             </div>
             <div className={styles.textContainer}>
@@ -111,7 +111,7 @@ const Card = (body) => {
           return (
             <div key={item.id} className={styles.container}>
               <div key={item.id} className={styles.imageContainer}>
-                <img loading="lazy" title={item.title} src={item.coverImage} alt={item.title} fill className={styles.image} />
+                <img width={275} height={200} loading="lazy" title={item.title} src={item.coverImage} alt={item.title} fill className={styles.image} />
               </div>
               <div className={styles.textContainer}>
                 <div className={styles.detail}>
