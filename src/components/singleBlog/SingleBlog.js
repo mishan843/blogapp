@@ -5,35 +5,36 @@ import styles from "./singleBlog.module.css";
 import Menu from "@/components/menu/Menu";
 import Comments from "@/components/comments/Comments";
 import { useRouter, useSearchParams } from "next/navigation";
+import Image from 'next/image';
+import useSWR from 'swr';
+
+const fetcher = async (url) => {
+  const response = await fetch(url);
+
+  if (!response.ok) {
+    throw new Error('Error fetching data');
+  }
+
+  return response.json();
+};
 
 const SingleBlog = () => {
   const [singleBlog, setSingleBlog] = useState({});
   const contentRef = useRef();
-
   const searchParams = useSearchParams();
   const search = searchParams.get("id");
   const router = useRouter();
 
+  const { data: singleBlogData, error } = useSWR(
+    `${process.env.NEXT_PUBLIC_API_URL}/blog/getblogbyid/?id=${search}`,
+    fetcher
+  );
+
   useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch(
-          `${process.env.NEXT_PUBLIC_API_URL}/blog/getblogbyid/?id=${search}`
-        );
-
-        if (response.ok) {
-          let result = await response.json();
-          setSingleBlog(result);
-        } else {
-          console.error("Error fetching data:", response.statusText);
-        }
-      } catch (error) {
-        console.error("Error fetching data:", error);
-      }
-    };
-
-    fetchData();
-  }, [router.query]);
+    if (singleBlogData) {
+      setSingleBlog(singleBlogData);
+    }
+  }, [singleBlogData]);
 
   useEffect(() => {
     let newScript = document.createElement('script');
@@ -67,6 +68,8 @@ const SingleBlog = () => {
     };
   }, [singleBlog.content]);
 
+  if (error) return <div>Error fetching data</div>;
+  if (!singleBlog) return <div>Loading...</div>;
 
   return (
     <div className={styles.container}>
@@ -77,13 +80,23 @@ const SingleBlog = () => {
               .toLowerCase()
               .replace(/[^\w\s]/gi, '')
               .replace(/\s+/g, '-')}?id=${singleBlog._id}`}
-          >            <h1 className={styles.title}>{singleBlog.title}</h1>
+          >
+            <h1 className={styles.title}>{singleBlog.title}</h1>
           </a>
         </div>
         <a href={process.env.DOMAIN}>
           <div className={styles.user}>
             <div className={styles.userImageContainer}>
-              <img width="100%" height="auto" loading="eager" title="bloggersGround logo" src="https://res.cloudinary.com/dcmgkwzbw/image/upload/v1705059271/orunbmkvtnv7kswnh1tz.webp" alt="bloggersGround logo" fill className={styles.avatar} />
+              <img
+                width="100%"
+                height="auto"
+                loading="eager"
+                title="bloggersGround logo"
+                src="https://res.cloudinary.com/dcmgkwzbw/image/upload/v1705059271/orunbmkvtnv7kswnh1tz.webp"
+                alt="bloggersGround logo"
+                fill
+                className={styles.avatar}
+              />
             </div>
             <div className={styles.userTextContainer}>
               <b><span className={styles.username}>Blogger Ground</span></b>
@@ -92,14 +105,23 @@ const SingleBlog = () => {
           </div>
         </a>
         <div className={styles.imageContainer}>
-          <img loading="eager" width="100%" height="auto" title={singleBlog.title} src={singleBlog.coverImage} alt={singleBlog.title} fill className={styles.image} />
+          <Image
+            src={singleBlog.coverImage}
+            alt={singleBlog.title}
+            width={900}
+            height={0}
+            sizes="100vw"
+            className={styles.image}
+          />
         </div>
-
-      </div >
+      </div>
       <div className={styles.content}>
         <div className={styles.post}>
           <div className={styles.description}>
-            <p className={styles.blog_content} dangerouslySetInnerHTML={{ __html: singleBlog.content }}></p>
+            <p
+              className={styles.blog_content}
+              dangerouslySetInnerHTML={{ __html: singleBlog.content }}
+            ></p>
             <div>
               <Comments singleBlog={singleBlog} setSingleBlog={setSingleBlog} />
             </div>
@@ -117,9 +139,11 @@ const SingleBlog = () => {
                       .replace(/[^\w\s]/gi, '')
                       .replace(/\s+/g, '-')}?id=${relatedBlog._id}`}
                   >
-                    <img
+                    <Image
                       src={relatedBlog.coverImage}
                       alt={relatedBlog.title}
+                      width={900}
+                      height={0}
                       className={styles.thumbnail}
                     />
                   </a>
@@ -131,16 +155,14 @@ const SingleBlog = () => {
                   >
                     <h3>{relatedBlog.title}</h3>
                   </a>
-
                 </div>
               ))}
             </div>
           </div>
         )}
-
         <Menu />
       </div>
-    </div >
+    </div>
   );
 };
 
