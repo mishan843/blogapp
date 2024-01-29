@@ -144,6 +144,7 @@ const SingleBlog = () => {
                       alt={relatedBlog.title}
                       width={900}
                       height={0}
+                      sizes="100vw"
                       className={styles.thumbnail}
                     />
                   </a>
