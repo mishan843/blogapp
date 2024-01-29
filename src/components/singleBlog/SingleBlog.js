@@ -105,14 +105,7 @@ const SingleBlog = () => {
           </div>
         </a>
         <div className={styles.imageContainer}>
-          <Image
-            src={singleBlog.coverImage}
-            alt={singleBlog.title}
-            width={900}
-            height={0}
-            sizes="100vw"
-            className={styles.image}
-          />
+          <img loading="eager" width="100%" height="auto" title={singleBlog.title} src={singleBlog.coverImage} alt={singleBlog.title} fill className={styles.image} />
         </div>
       </div>
       <div className={styles.content}>
@@ -139,12 +132,9 @@ const SingleBlog = () => {
                       .replace(/[^\w\s]/gi, '')
                       .replace(/\s+/g, '-')}?id=${relatedBlog._id}`}
                   >
-                    <Image
+                    <img
                       src={relatedBlog.coverImage}
                       alt={relatedBlog.title}
-                      width={900}
-                      height={0}
-                      sizes="100vw"
                       className={styles.thumbnail}
                     />
                   </a>
