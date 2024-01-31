@@ -30,6 +30,9 @@ const MainPage = () => {
       case 'Digital Marketing':
         return styles["digital-marketing"]
         break;
+      case 'Life Hacks':
+        return styles["life-hacks"]
+        break;
       default:
         return styles.technology
         break;

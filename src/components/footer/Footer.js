@@ -51,6 +51,12 @@ const Footer = () => {
             <Link href="/blog/getallblogs?categoryFilter=Food">
               Food
             </Link>
+            <Link href="/blog/getallblogs?categoryFilter=Digital Marketing">
+              Digital Marketing
+            </Link>
+            <Link href="/blog/getallblogs?categoryFilter=Life Hacks">
+              Life Hacks
+            </Link>
           </div>
         </div>
         <div className={styles.links}>

@@ -17,6 +17,7 @@ const RandomPost = ({ withImage }) => {
     "Digital Marketing": styles["digital-marketing"],
     Technology: styles.technology,
     Sport: styles.sport,
+    "Life Hacks": styles["life-hacks"],
     default: styles.fashion,
   };
 

@@ -17,6 +17,10 @@ const sitemap = [
     'https://www.bloggersground.com/blog/getallblogs?categoryFilter=Food',
     'https://www.bloggersground.com/blog/getallblogs?categoryFilter=Fashion',
     'https://www.bloggersground.com/blog/getallblogs?categoryFilter=Technology',
+    'https://www.bloggersground.com/blog/getallblogs?categoryFilter=Digital Marketing',
+    'https://www.bloggersground.com/blog/getallblogs?categoryFilter=Life Hacks',
+
+
 ];
 
 async function fetchData(apiUrl) {

@@ -37,8 +37,10 @@
   background-color: #ff333331;
 }
 .categoryItem.digital-marketing {
-  background-color: #b8ff3398; /* Yellow color, replace with your preferred color */
-  /* Additional styling for digital marketing category */
+  background-color: #b8ff3398;
+}
+.categoryItem.life-hacks {
+  background-color: #d3d3d3;
 }
 .categoryItem.finance:hover {
   background-color: #57c4ff9b !important;
@@ -68,6 +70,9 @@
 .categoryItem.digital-marketing:hover {
   background-color: #ffa733b2; /* Yellow color, replace with your preferred color */
   /* Additional styling for digital marketing category */
+}
+.categoryItem.life-hacks:hover {
+  background-color: #57c4ff9b;
 }
 @media screen and (max-width: 640px) {
   .categoryList a {

@@ -98,9 +98,13 @@
 .category.coding {
   background-color: #5e4fff;
 }
+
 .category.digital-marketing {
   background-color: #b8ff3398; /* Yellow color, replace with your preferred color */
   /* Additional styling for digital marketing category */
+}
+.category.life-hacks {
+  background-color: #d3d3d3;
 }
 
 .desc {

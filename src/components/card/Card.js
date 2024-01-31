@@ -29,49 +29,14 @@ const Card = (body) => {
       case 'Digital Marketing':
         return styles["digital-marketing"]
         break;
+      case 'Life Hacks':
+        return styles["life-hacks"]
+        break;
       default:
         return styles.fashion
         break;
     }
   }
-
-  // const getBlogByCat = (name) => {
-  //   switch (name) {
-  //     case 'Finance':
-  //       return (
-  //         <h2>finance</h2>
-  //       )
-  //       break;
-  //     case 'Coding':
-  //       return (
-  //         <h2>coding</h2>
-  //       )
-  //       break;
-  //     case 'Travel':
-  //       return (
-  //         <h2>travel</h2>
-  //       )
-  //       break;
-  //     case 'Food':
-  //       return (
-  //         <h2>food</h2>
-  //       )
-  //       break;
-  //     case 'Fashion':
-  //       return (
-  //         <h2>fashion</h2>
-  //       )
-  //       break;
-  //     default:
-  //       return (
-  //         <h2>Technology</h2>
-  //       )
-  //       break;
-  //   }
-  // }
-
-  // const blogCategory = getBlogByCat(search);
-
 
   return (
     <>
