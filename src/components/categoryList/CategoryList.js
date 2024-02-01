@@ -16,7 +16,9 @@ const CategoryList = () => {
     finance: 'https://res.cloudinary.com/dcmgkwzbw/image/upload/v1705059799/idkm7qrs1v2brhwndztc.webp',
     sport: 'https://res.cloudinary.com/dcmgkwzbw/image/upload/v1705059879/tzc8tipplqsqfshz5lxx.webp',
     "digital marketing": "https://res.cloudinary.com/dcmgkwzbw/image/upload/v1705559983/iebdpyuozasaf7xbuear.webp",
-    "life hacks": "https://res.cloudinary.com/dcmgkwzbw/image/upload/v1706694426/hnnw1fv9rvsjo8j0yhra.webp"
+    "life hacks": "https://res.cloudinary.com/dcmgkwzbw/image/upload/v1706694426/hnnw1fv9rvsjo8j0yhra.webp",
+    "health": "https://res.cloudinary.com/dcmgkwzbw/image/upload/v1706787502/xo0lwd6yj2a5yyqhahha.webp"
+
   }
   useEffect(() => {
     const fetchCategories = async () => {
