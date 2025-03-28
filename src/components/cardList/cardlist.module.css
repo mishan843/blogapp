@@ -1,136 +1,122 @@
-/* Container styles */
+/* ===== CLASSIC BLOG POST SECTION ===== */
 .container {
-  padding: 10px;
-  width: 100%;
-  margin-top: 20px;
-  flex: 2;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .title {
   text-align: center;
-  text-transform: uppercase;
-  padding-bottom: 5px;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--textColor);
+  margin-bottom: 3rem;
+  position: relative;
+  font-family: 'Playfair Display', serif;
 }
+
+.title::after {
+  content: '';
+  display: block;
+  width: 100px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
+  margin: 1rem auto 0;
+  border-radius: 3px;
+  transition: all 0.5s ease;
+}
+
+.title:hover::after {
+  width: 150px;
+}
+
+.posts {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2.5rem;
+  margin-bottom: 3rem;
+}
+
+/* Loading Animation */
+.loadingContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 300px;
+}
+
 .loading {
-  text-align: center;
-  font-size: 24px;
-  color: #0074b8; /* You can change the color to match your design */
-}
-
-.loading::before {
-  content: "";
   display: inline-block;
-  width: 24px;
-  height: 24px;
-  border-top: 4px solid #0074b8; /* Match the color to your design */
-  border-radius: 50%;
-  animation: spin 1s linear infinite;
-  margin-top: 50%;
+  position: relative;
+  width: 80px;
+  height: 80px;
 }
 
-@keyframes spin {
+.loading:after {
+  content: " ";
+  display: block;
+  border-radius: 50%;
+  width: 0;
+  height: 0;
+  margin: 8px;
+  box-sizing: border-box;
+  border: 32px solid var(--primary);
+  border-color: var(--primary) transparent var(--secondary) transparent;
+  animation: loading 1.2s infinite;
+}
+
+@keyframes loading {
   0% {
-    transform: rotate(0deg);
+    transform: rotate(0);
+    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  }
+  50% {
+    transform: rotate(900deg);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
   }
   100% {
-    transform: rotate(360deg);
+    transform: rotate(1800deg);
   }
 }
 
-.title:after {
-  width: 200px;
-  height: 1px;
-  display: block;
-  content: "";
-  position: relative;
-  margin-top: 10px;
-  left: 50%;
-  margin-left: -100px;
-  background-color: #b80000;
-}
-.title:before {
-  width: 28px;
-  height: 5px;
-  display: none;
-  content: "";
-  position: absolute;
-  bottom: 3px;
-  left: 50%;
-  margin-left: -14px;
-  background-color: #b80000;
-}
-
-/* Comment input styles */
-.write {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 30px;
-}
-
-.input {
-  padding: 15px;
-  width: 100%;
-}
-
-.button {
-  padding: 16px 20px;
-  background-color: teal;
-  color: white;
-  font-weight: bold;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-/* Comments section styles */
-.comments {
-  margin-top: 50px;
-}
-
-.comment {
-  margin-bottom: 50px;
-}
-
-/* User info styles */
-.user {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  margin-bottom: 20px;
-}
-
-.image {
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-}
-
-.userInfo {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-  color: var(--softTextColor);
-}
-
-.username {
-  font-weight: 500;
-}
-
-.date {
-  font-size: 14px;
-}
-
-.desc {
-  font-size: 18px;
-  font-weight: 300;
-}
-
-@media screen and (max-width: 640px) {
-  .category {
-    width: 47%;
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .posts {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
   }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 2rem 1rem;
+  }
+  
   .title {
-    font-size: 20px;
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+  }
+  
+  .posts {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 1.6rem;
+  }
+  
+  .posts {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .title::after {
+    width: 80px;
+  }
+  
+  .title:hover::after {
+    width: 100px;
   }
 }

@@ -17,6 +17,7 @@ export default function RootLayout({ children, includeLayout = true }) {
         <head>
           <meta name="google-site-verification" content="pnYpAezLasKVKt8zLLL9_e9KkSM1Gup1Qeozx-mgO30" />
           <meta name="google-adsense-account" content="ca-pub-7889951321132333" />
+          <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet" />
           <link
             rel="apple-touch-icon"
             href="https://www.bloggersground.com/favicon.ico"

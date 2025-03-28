@@ -1,5 +1,4 @@
 "use client";
-
 import { useEffect, useState, useCallback } from 'react';
 import styles from './cardlist.module.css';
 import Pagination from '../pagination/Pagination';
@@ -18,9 +17,9 @@ const CardList = () => {
   const fetchData = useCallback(async () => {
     try {
       setIsLoading(true);
-      window.scrollTo({ top: 0 });
+      window.scrollTo({ top: 0, behavior: 'smooth' });
 
-      const endpoint = `${process.env.NEXT_PUBLIC_API_URL}/blog/getAllBlogs?categoryFilter=${search || ''}&page=${currentPage}&limit=13`;
+      const endpoint = `${process.env.NEXT_PUBLIC_API_URL}/blog/getAllBlogs?categoryFilter=${search || ''}&page=${currentPage}&limit=12`;
 
       const response = await fetch(endpoint);
       const data = await response.json();
@@ -54,28 +53,27 @@ const CardList = () => {
   }, [totalPages]);
 
   return (
-    <div className={styles.container}>
+    <section className={styles.container}>
       <h2 className={styles.title}>Recent Posts</h2>
       {isLoading ? (
         <div className={styles.loadingContainer}>
-          <div className={styles.loading}>
-            <div className={styles.spinner}></div>
-            <div className={styles.text}></div>
-          </div>
+          <div className={styles.loading}></div>
         </div>
       ) : (
         <>
           <div className={styles.posts}>
             <Card blogs={blogs} blogByCat={blogByCat} search={search} />
           </div>
-          <Pagination
-            onPageChange={handlePageChange}
-            currentPage={currentPage}
-            totalPages={totalPages}
-          />
+          {totalPages > 1 && (
+            <Pagination
+              onPageChange={handlePageChange}
+              currentPage={currentPage}
+              totalPages={totalPages}
+            />
+          )}
         </>
       )}
-    </div>
+    </section>
   );
 };
 

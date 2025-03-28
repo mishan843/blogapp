@@ -1,51 +1,218 @@
 :root {
-  --bg: white;
-  --textColor: black;
-  --softBg: #f0f0f0;
-  --softTextColor: #626262;
+  /* Light Mode Color Palette */
+  --bg-light: #f9fafb;               /* Soft, airy background */
+  --text-primary-light: #1e293b;     /* Deep navy for excellent readability */
+  --text-secondary-light: #475569;   /* Softer slate for secondary text */
+  --accent-primary-light: #3b82f6;   /* Vibrant but professional blue */
+  --accent-secondary-light: #2563eb; /* Deeper blue for interactions */
+  --background-soft-light: #f1f5f9;  /* Very subtle off-white */
+  --border-color-light: #e2e8f0;     /* Delicate border color */
+  --card-bg-light: #ffffff;         /* Pure white cards */
+  --shadow-light: 0 2px 8px rgba(0, 0, 0, 0.05), 
+                  0 4px 16px rgba(0, 0, 0, 0.08); /* Layered shadows */
+
+  /* Dark Mode Color Palette */
+  --bg-dark: #0f172a;               /* Deep navy base */
+  --text-primary-dark: #f1f5f9;     /* Soft white for text */
+  --text-secondary-dark: #94a3b8;   /* Blue-gray for secondary */
+  --accent-primary-dark: #818cf8;   /* Periwinkle accent */
+  --accent-secondary-dark: #6366f1; /* Richer purple for hover */
+  --background-soft-dark: #1e293b;  /* Slightly lighter cards */
+  --border-color-dark: #334155;     /* Subtle borders */
+  --card-bg-dark: #1e293b;         /* Card background */
+  --shadow-dark: 0 2px 12px rgba(0, 0, 0, 0.25),
+                 0 4px 24px rgba(0, 0, 0, 0.3); /* Deeper shadows */
+
+  /* System Colors (Enhanced) */
+  --success-color: #10b981;        /* Emerald green */
+  --success-light: #d1fae5;        /* Success background */
+  --warning-color: #f59e0b;        /* Amber warning */
+  --warning-light: #fef3c7;        /* Warning background */
+  --error-color: #ef4444;          /* Ruby red */
+  --error-light: #fee2e2;          /* Error background */
+  --info-color: #0ea5e9;           /* Sky blue */
+  --info-light: #e0f2fe;           /* Info background */
+
+  /* Transitions (Enhanced) */
+  --transition-base: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-bounce: all 0.5s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+  --transition-fade: opacity 0.15s ease-in-out;
+
+  /* Typography (Enhanced) */
+  --font-serif: 'Lora', 'Playfair Display', serif;
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+  --text-base: 1rem;
+  --text-scale: 1.25; /* Perfect fourth scale */
+  
+  /* Spacing System */
+  --space-unit: 1rem;
+  --space-xs: calc(var(--space-unit) * 0.25);
+  --space-sm: calc(var(--space-unit) * 0.5);
+  --space-md: var(--space-unit);
+  --space-lg: calc(var(--space-unit) * 1.5);
+  --space-xl: calc(var(--space-unit) * 2);
 }
 
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
+/* Light Mode Styles */
+.light {
+  --bg: var(--bg-light);
+  --textColor: var(--text-primary-light);
+  --softTextColor: var(--text-secondary-light);
+  --softBg: var(--background-soft-light);
+  --primary: var(--accent-primary-light);
+  --secondary: var(--accent-secondary-light);
+  --borderColor: var(--border-color-light);
+  --cardBg: var(--card-bg-light);
+  --shadow: var(--shadow-light);
+  --hoverBrightness: 1.03;
+  --activeBrightness: 0.98;
+  
+  /* Component Specific */
+  --input-bg: #ffffff;
+  --input-border: var(--border-color-light);
 }
 
+/* Dark Mode Styles */
+.dark {
+  --bg: var(--bg-dark);
+  --textColor: var(--text-primary-dark);
+  --softTextColor: var(--text-secondary-dark);
+  --softBg: var(--background-soft-dark);
+  --primary: var(--accent-primary-dark);
+  --secondary: var(--accent-secondary-dark);
+  --borderColor: var(--border-color-dark);
+  --cardBg: var(--card-bg-dark);
+  --shadow: var(--shadow-dark);
+  --hoverBrightness: 1.08;
+  --activeBrightness: 0.95;
+  
+  /* Component Specific */
+  --input-bg: #1e293b;
+  --input-border: #334155;
+}
+
+/* Automatic Dark Mode Preference */
+@media (prefers-color-scheme: dark) {
+  :root:not(.light) {
+    --bg: var(--bg-dark);
+    --textColor: var(--text-primary-dark);
+    --softTextColor: var(--text-secondary-dark);
+    --softBg: var(--background-soft-dark);
+    --primary: var(--accent-primary-dark);
+    --secondary: var(--accent-secondary-dark);
+    --borderColor: var(--border-color-dark);
+    --cardBg: var(--card-bg-dark);
+    --shadow: var(--shadow-dark);
+    --hoverBrightness: 1.08;
+    --activeBrightness: 0.95;
+  }
+}
+
+/* Base Styles */
 body {
-  max-width: 100vw;
-  overflow-x: hidden;
+  background-color: var(--bg);
+  color: var(--textColor);
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  transition: 
+    background-color var(--transition-slow),
+    color var(--transition-slow);
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-serif);
+  line-height: 1.2;
+  margin-top: 0;
 }
 
 a {
-  color: inherit;
+  color: var(--primary);
   text-decoration: none;
+  transition: var(--transition-base);
 }
 
-.dark {
-  --bg: #0f172a;
-  --textColor: #a0bfe0;
-  --textColortwo: #0f172a;
-  --softBg: #a0bfe0;
-  --softTextColor: #a6a6a6;
+a:hover {
+  color: var(--secondary);
+  text-decoration: underline;
 }
 
-.light {
-  --bg: #c5dff872;
-  --textColor: #0f172a;
-  --textColortwo: #0f172a;
-  --softBg: #a0bfe0;
-  --softTextColor: #626262;
+button, .btn {
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: var(--font-sans);
+  font-weight: 500;
+  transition: var(--transition-base);
+  box-shadow: var(--shadow);
 }
 
-.container {
-  min-height: 100vh;
-  background-color: var(--bg);
+button:hover, .btn:hover {
+  background-color: var(--secondary);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+/* Form Elements */
+input, textarea, select {
+  background: var(--cardBg);
+  border: 1px solid var(--borderColor);
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  font-family: var(--font-sans);
+  transition: var(--transition-base);
   color: var(--textColor);
 }
 
-.ql-container {
-  font-size: 28px !important;
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(77, 171, 247, 0.2);
 }
-.quill > .ql-container > .ql-editor.ql-blank::before {
-  color: #b3b3b1;
+
+/* Utility Classes */
+.text-primary {
+  color: var(--primary);
+}
+
+.bg-soft {
+  background: var(--softBg);
+}
+
+.border {
+  border: 1px solid var(--borderColor);
+}
+
+.shadow {
+  box-shadow: var(--shadow);
+}
+
+.transition {
+  transition: var(--transition-base);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+/* Responsive Typography */
+@media (max-width: 768px) {
+  html {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 14px;
+  }
 }

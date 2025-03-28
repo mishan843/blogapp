@@ -1,76 +1,210 @@
+/* ===== Modern Responsive Navbar ===== */
 .container {
+  position: sticky;
+  top: 0;
   display: flex;
   align-items: center;
-  height: 80px;
   justify-content: space-between;
-  padding: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-  background-color: var(--softBg);
+  height: 80px;
+  padding: 0 5%;
+  background-color: var(--bg);
+  color: var(--textColor);
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  transition: all 0.3s ease;
+  border-bottom: 1px solid var(--borderColor);
 }
 
+/* Logo Styles */
 .logo {
-  flex: 1;
-  text-align: center;
+  z-index: 1001;
+  transition: transform 0.3s ease;
 }
 
 .logo img {
-  width: 200px;
+  height: 40px;
+  width: auto;
+  transition: all 0.3s ease;
 }
+
+.logo:hover {
+  transform: scale(1.03);
+}
+
+/* Desktop Navigation */
 .links {
   display: flex;
   align-items: center;
-  font-size: 20px;
-  gap: 20px;
-  flex: 1;
-  font-family: serif;
-  justify-content: center;
+  gap: 32px;
 }
 
-.links a {
+.link {
+  position: relative;
+  color: var(--textColor);
+  font-weight: 500;
+  font-size: 1.05rem;
+  padding: 8px 0;
+  transition: all 0.3s ease;
   text-decoration: none;
-  transition: color 0.2s ease-in-out;
-  color: var(--textColortwo);
 }
 
-.links a:hover {
-  color: #ff6b6b;
+.link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--primary);
+  transition: width 0.4s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-@media screen and (max-width: 1280px) {
-  .logo {
-    font-size: 32px;
-  }
+.link:hover {
+  color: var(--primary);
+}
+
+.link:hover::after {
+  width: 100%;
+}
+
+/* Mobile Menu Button */
+.menuButton {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  z-index: 1002;
+}
+
+.hamburger {
+  display: block;
+  width: 28px;
+  height: 2px;
+  background: var(--textColor);
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.hamburger::before,
+.hamburger::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: var(--textColor);
+  transition: all 0.3s ease;
+}
+
+.hamburger::before {
+  top: -8px;
+}
+
+.hamburger::after {
+  top: 8px;
+}
+
+.menuButton.active .hamburger {
+  background: transparent;
+}
+
+.menuButton.active .hamburger::before {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.menuButton.active .hamburger::after {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Mobile Menu */
+.mobileMenu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 85%;
+  max-width: 320px;
+  height: 100vh;
+  background: var(--bg);
+  box-shadow: -5px 0 25px rgba(0, 0, 0, 0.1);
+  padding: 100px 25px 40px;
+  transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.mobileMenu.active {
+  right: 0;
+}
+
+.mobileLink {
+  color: var(--textColor);
+  font-size: 1.15rem;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--borderColor);
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.mobileLink:hover {
+  color: var(--primary);
+  padding-left: 10px;
+}
+
+/* Overlay */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+  z-index: 999;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
   .links {
-    font-size: 18px;
-    gap: 15px;
+    gap: 24px;
   }
 }
-@media screen and (max-width: 1024px) {
-  .logo {
-    text-align: left;
-  }
-  .logo img {
-    width: 200px;
-  }
-}
-@media screen and (max-width: 768px) {
-  .logo {
-    font-size: 24px;
-  }
-  .link {
+
+@media (max-width: 768px) {
+  .links {
     display: none;
   }
-}
-@media screen and (max-width: 640px) {
+
+  .menuButton {
+    display: block;
+  }
+
   .logo img {
-    width: 200px;
+    height: 36px;
   }
-  .links {
-    justify-content: flex-end;
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 20px;
   }
-  .link {
-    display: none;
+
+  .mobileMenu {
+    width: 90%;
+    padding: 90px 20px 30px;
+  }
+
+  .mobileLink {
+    font-size: 1.1rem;
+    padding: 10px 0;
   }
 }
